@@ -149,9 +149,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                # Allauth context processors
-                 # `allauth` needs this from django
-                'django.template.context_processors.request',
+                'django.template.context_processors.media',  # For media files
+                                                             # in dev and pro
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
