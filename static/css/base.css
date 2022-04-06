@@ -7,5 +7,17 @@ body {
 }
 
 nav {
-    background-image: linear-gradient(to bottom left, rgb(152, 1, 1), rgb(3, 146, 58));
+    background-image: linear-gradient(to bottom left, rgb(32, 29, 29), rgb(146, 34, 3));
 }
+
+nav a:hover {
+    background-color: rgb(239, 181, 181) !important;
+    border-radius: 40%;
+    color: black !important;
+}
+
+/* 
+.bg-linear {
+    background-image: linear-gradient(to bottom left, rgb(187, 10, 10), rgb(231, 239, 234));
+    color: white !important;
+} */
