@@ -1,3 +1,32 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.views import generic, View
+from .models import Post
 
-# Create your views here.
+
+class ListOfPosts(generic.ListView):
+    """ Displaying posts on a landing page """
+    model = Post
+    queryset = Post.objects.filter(status=1).order_by('-created')
+    template_name = 'index.html'
+    paginate_by = 6
+
+
+class Detail(View):
+
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.filter(approved=True).order_by("-created")
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        return render(
+            request,
+            "detail_view.html",
+            {
+                "post": post,
+                "comments": comments,
+                "liked": liked
+            },
+        )

@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom right, rgb(152, 1, 1), rgb(255, 242, 0));
+    font-family: 'Playfair Display', serif;
+
+}
+
+nav {
+    background-image: linear-gradient(to bottom left, rgb(152, 1, 1), rgb(3, 146, 58));
+}
