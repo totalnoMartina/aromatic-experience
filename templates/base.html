@@ -4,7 +4,6 @@
 
 <head>
     {% block meta %}
-    <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,7 +90,7 @@
         </div>
     </div>
 
-    <main class="flex-shrink-0 main-bg">
+    <main class="flex-shrink-0 main-bg mb-3">
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
@@ -108,10 +107,9 @@
     </script>
 
     {% endblock %}
-    <!-- Footer -->
-    <footer class="container">
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>© 2017-2019 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    <footer class="w-100 p-1 mt-4 text-center rounded-top fixed-bottom">
+        <a href="#" class="text-white">BACK TO TOP<i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+        </a>
     </footer>
 
 </body>

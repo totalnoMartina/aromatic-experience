@@ -2,32 +2,33 @@
 
 {% block content %}
 
-<header>
-    <div class="row mt-5">
-        <div class="col mx-4 bg-white rounded p-3 text-black mt-3">
-            Introduction to purpose of the Blog
-        </div>
-        <div class="col mx-4 bg-white rounded p-3 text-black mt-3">
-            Where do Essential Oils Come From?
-            A variety of plants cover the Earth in different shapes,
-            sizes, colors, and scents. Many of these plants contain
-            compounds that typically can't be seen with the naked eye—they
-            hide within the roots, flowers, seeds, bark, or other areas of
-            the plant. These compounds are known as essential oils. They are
-            highly concentrated, making them extremely potent. Also referred
-            to as volatile aromatic compounds, essential oils give a plant its
-            aroma, protect it from harsh environmental conditions and insects,
-            and even play a part in plant pollination.
-        </div>
-    </div>
-</header>
+
 
 <div class="container-fluid">
+    <header>
+        <div class="row mt-5">
+            <div class="col mx-4 bg-white rounded p-3 text-black mt-3">
+                Introduction to purpose of the Blog
+            </div>
+            <div class="col mx-4 bg-white rounded p-3 text-black mt-3">
+                Where do Essential Oils Come From?
+                A variety of plants cover the Earth in different shapes,
+                sizes, colors, and scents. Many of these plants contain
+                compounds that typically can't be seen with the naked eye—they
+                hide within the roots, flowers, seeds, bark, or other areas of
+                the plant. These compounds are known as essential oils. They are
+                highly concentrated, making them extremely potent. Also referred
+                to as volatile aromatic compounds, essential oils give a plant its
+                aroma, protect it from harsh environmental conditions and insects,
+                and even play a part in plant pollination.
+            </div>
+        </div>
+    </header>
     <div class="row">
 
 
         <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 px-3 left">
+        <div class="col-12 mt-3 px-4 left">
             <div class="row">
                 {% for post in post_list %}
                 <div class="col-md-4">

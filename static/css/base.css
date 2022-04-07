@@ -10,7 +10,8 @@ body {
 
 }
 
-nav {
+nav,
+footer {
     background-image: linear-gradient(to bottom left, rgb(235, 227, 227), rgb(146, 34, 3));
 }
 
@@ -20,6 +21,11 @@ nav a:hover {
     color: black !important;
 }
 
+footer a:hover {
+    color: black !important;
+    background-color: rgb(228, 75, 75) !important;
+    border-radius: 50%;
+}
 
 /* 
 .bg-linear {
