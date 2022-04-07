@@ -25,11 +25,15 @@ footer {
     background-image: linear-gradient(to top, rgb(235, 227, 227), rgb(146, 34, 3)) !important;
 }
 
-footer a:hover {
+footer a:hover,
+.dotera:hover {
     color: black !important;
     background-color: rgb(228, 75, 75) !important;
     border-radius: 20%;
+    padding: 1px;
 }
+
+
 
 a {
     text-decoration: none !important;

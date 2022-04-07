@@ -57,7 +57,7 @@
                     <a class="nav-link dropdown-toggle text-body" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         My Profile
                     </a>
-                    <div class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                         <a class="dropdown-item text-dark" href="{% url 'admin:index' %}">Management</a>

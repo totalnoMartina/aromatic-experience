@@ -9,7 +9,9 @@
         <div class="row mt-5">
             <div class="col mx-4 bg-white rounded p-3 text-black mt-3">
                 <h3>How This All Started</h3>
-                I have been working with Doterra Company with distributing
+                I have been working with
+                <a href="https://www.doterra.com/GB/en_GB" class="dotera" target="_blank">Doterra</a>
+                Company with distributing
                 collections of essential oils, and all this from home. Recently,
                 I came to realize that my friends enjoy the blends I come up with
                 and have been encouraging me to share my insights on this topic.
@@ -64,7 +66,7 @@
                                 {{ post.num_of_likes }}</p>
                             {% for comment in comments %}
                             {% with comments.count as total_comments %}
-                            <strong class="text-secondary"><i class="far fa-comments"></i>
+                            <strong class="text-body"><i class="far fa-comments"></i>
                                 <!-- Our total_comments variable goes before the closing strong tag -->
                                 {{ total_comments }}</strong>
                             {% endwith %}
