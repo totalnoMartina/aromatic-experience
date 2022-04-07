@@ -53,7 +53,6 @@
                 <li class="nav-item active">
                     <a class="nav-link text-body" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-body" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         My Profile
@@ -72,13 +71,13 @@
                 </li>
             </ul>
         </div>
-        </div>
+
     </nav>
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 {% if messages %}
-                <ul class="list-group" id="msg">
+                <ul class="list-group text-white intro" id="msg">
                     {% for message in messages %}
                     <div class="alert {{ message.tags }} alert-dismissable">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -107,7 +106,7 @@
     </script>
 
     {% endblock %}
-    <footer class="w-100 p-1 mt-4 text-center rounded-top fixed-bottom">
+    <footer class="w-100 p-2 mt-4 text-center rounded-top fixed-bottom">
         <a href="#" class="text-white">BACK TO TOP<i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
         </a>
     </footer>

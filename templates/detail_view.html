@@ -22,7 +22,7 @@
     </div>
 </div>
 
-<div class="container my-3">
+<div class="container my-4">
     <div class="row">
         <div class="col card my-4 top">
             <div class="card-body">
@@ -68,18 +68,13 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 card my-3 ">
+    <div class="row mb-4">
+        <div class="col-md-6 card my-4 mr-3">
             <h3>Comments:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
+                <div class="comments" style="padding: 5px;">
                     <p class="font-weight-bold">
                         <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                         {{ comment.name }}
@@ -95,7 +90,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 card my-3">
+        <div class="col-md-4 card my-4">
             <div class="card-body rounded">
                 <!-- For later -->
                 {% if commented %}
