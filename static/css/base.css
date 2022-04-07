@@ -10,21 +10,56 @@ body {
 
 }
 
-nav,
-footer {
-    background-image: linear-gradient(to bottom left, rgb(235, 227, 227), rgb(146, 34, 3));
+nav {
+    background-image: linear-gradient(to bottom, rgb(235, 227, 227), rgb(174, 45, 10));
 }
 
 nav a:hover {
     background-color: rgb(239, 181, 181) !important;
     border-radius: 40%;
     color: black !important;
+    border-radius: 20%;
+}
+
+footer {
+    background-image: linear-gradient(to top, rgb(235, 227, 227), rgb(146, 34, 3));
 }
 
 footer a:hover {
     color: black !important;
     background-color: rgb(228, 75, 75) !important;
-    border-radius: 50%;
+    border-radius: 20%;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.card-title {
+    color: black !important;
+}
+
+.card-title:hover {
+    color: rgb(91, 11, 11) !important;
+    background-color: rgb(245, 144, 131);
+
+}
+
+.intro {
+    background-color: rgba(221, 82, 82, 0.2) !important;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.btn-com {
+    background-color: rgb(146, 34, 3) !important;
+    color: whitesmoke;
+
+}
+
+.btn-com:hover {
+    color: black !important;
+    background-color: rgb(227, 177, 163) !important;
 }
 
 /* 
