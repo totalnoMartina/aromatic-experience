@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="static/css/base.css">
     {% endblock %}
 
     {% block extra_css %}
@@ -45,7 +45,7 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top rounded-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top rounded-bottom p-2">
         <a class="navbar-brand text-white btn-yellow" href="{% url 'home' %}">Aromatic Therapy</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,19 +53,19 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link active text-white" aria-current="page" href="{% url 'home' %}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         My Profile
                     </a>
-                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
-                        <a class="dropdown-item text-white" href="{% url 'admin:index' %}">Management</a>
+                        <a class="dropdown-item text-dark" href="{% url 'admin:index' %}">Management</a>
                         {% endif %}
-                        <a class="dropdown-item text-white" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="dropdown-item text-dark" href="{% url 'account_logout' %}">Logout</a>
                         {% else %}
                         <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
                         <a class="dropdown-item" href="{% url 'account_login' %}"> Login</a>
