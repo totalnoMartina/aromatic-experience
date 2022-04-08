@@ -53,22 +53,22 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav navbar__menu">
                     <li class="nav-item active">
-                        <a class="nav-link text-body navbar__menu-item" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link text-body navbar__menu--item" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-body navbar__menu-item" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-body navbar__menu--item" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             My Profile
                         </a>
                         <div class="dropdown-menu dropdown__menu" aria-labelledby="navbarDropdownMenuLink">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <div> Welcome {{user.username}}</div>
-                            <a class="dropdown-item dropdown__menu-item" href="{% url 'admin:index' %}">Blog Management</a>
+                            <div class="dropdown__menu--item dropdown__menu--welcome"> Welcome {{user.username}}</div>
+                            <a class="dropdown-item dropdown__menu--item" href="{% url 'admin:index' %}">Blog Management</a>
                             {% endif %}
-                            <a class="dropdown-item dropdown__menu-item" href="{% url 'account_logout' %}">Logout</a>
+                            <a class="dropdown-item dropdown__menu--item" href="{% url 'account_logout' %}">Logout</a>
                             {% else %}
-                            <a class="dropdown-item dropdown__menu-item" href="{% url 'account_signup' %}">Register</a>
-                            <a class="dropdown-item dropdown__menu-item" href="{% url 'account_login' %}"> Login</a>
+                            <a class="dropdown-item dropdown__menu--item" href="{% url 'account_signup' %}">Register</a>
+                            <a class="dropdown-item dropdown__menu--item" href="{% url 'account_login' %}"> Login</a>
                             {% endif %}
                         </div>
                     </li>
