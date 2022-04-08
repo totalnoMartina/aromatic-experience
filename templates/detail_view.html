@@ -2,18 +2,17 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-
 <div class="container mt-5">
     <div class="row">
-        <div class="col-md-6 intro mt-4">
+        <div class="col-md-6 intro my-4 shadow rounded">
             <h1 class="post-title">{{ post.title }}</h1>
             <p class="post-subtitle">{{ post.author }} | {{ post.created }}</p>
         </div>
         <div class="d-none d-md-block col-md-6 masthead-image">
-            {% if "placeholder" in post.featured_image.url %}
+            {% if "placeholder" in post.related_img.url %}
             <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
             {% else %}
-            <img src=" {{ post.related_image.url }}" width="100%">
+            <img src=" {{ post.related_img.url }}" width="100%" class="m-3 shadow rounded">
             {% endif %}
         </div>
     </div>
@@ -23,13 +22,10 @@
     <div class="row">
         <div class="col card my-4 top">
             <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
                     {{ post.content | safe }}
                 </p>
                 <div class="row">
-
                     <div class="col-1">
                         <strong>
                             {% if user.is_authenticated %}
@@ -51,8 +47,9 @@
                             {% endif %}
                             <span class="text-secondary"> {{ post.num_of_likes }}</span>
                         </strong>
-                        <!-- The number of likes goes before the closing strong tag -->
+                        <!-- The number of likes  -->
                         <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.num_of_likes }} </strong>
+
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
@@ -62,6 +59,7 @@
                         {% endwith %}
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

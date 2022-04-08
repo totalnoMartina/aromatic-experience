@@ -61,6 +61,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
+                        <div> Welcome {{user.username}}</div>
                         <a class="dropdown-item text-dark" href="{% url 'admin:index' %}">Management</a>
                         {% endif %}
                         <a class="dropdown-item text-dark" href="{% url 'account_logout' %}">Logout</a>
