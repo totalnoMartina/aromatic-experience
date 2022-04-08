@@ -136,3 +136,13 @@ Forking the repository allows you to make a copy of the original in your GitHub 
 7. Alternatively, select "Open with Github Desktop".
 
 # Credits
+
+- The original idea is based on CI Walkthrough project 'codestar' providing users a signup/login system and to comment posts and like
+- The code for messages is also inspired by the same project, and the step further was to create you custom message for when user comments. 
+- The images were found using Google Search for anything connected to topic, and here are the respective links:
+ [Image of the grapefruit](https://www.doterra.com/GB/en_GB/p/grapefruit-oil) , [Aroma Image](https://5.imimg.com/data5/TK/QV/MY-45444487/aroma-oil-500x500.jpg), 
+
+
+
+- Text that inspired posts is also taken from [Doterra](https://www.doterra.com/GB/en_GB) as an example of lerevant information this Blog would be about
+- [Google Fonts](https://fonts.google.com/specimen/Playfair+Display?query=play) for the 'Playfair Display'
