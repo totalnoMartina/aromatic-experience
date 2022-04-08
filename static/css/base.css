@@ -137,8 +137,9 @@ body {
 
 
 
-/* Cards */
-.blog {
+/* Cards with grid display */
+
+.blog-container {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -147,10 +148,15 @@ body {
 }
 
 
+.blog {
+    width: 100%;
+    display: grid;
+    grid-row: 2fr 0.1fr 1fr 0.1fr;
+}
+
 .blog__card {
     background-color: white;
     display: grid;
-    grid-row: 2fr 0.1fr 1fr 0.1fr;
     padding: 0.8em;
     gap: 0.5rem;
     border-radius: var(--br);
