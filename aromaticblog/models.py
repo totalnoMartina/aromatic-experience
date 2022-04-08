@@ -20,14 +20,16 @@ class Post(models.Model):
         ordering = ['-created']
 
     def __str__(self):
+        """ A helper method for displaying the  """
         return f'A post named {self.title} was posted by {self.author}'
 
     def num_of_likes(self):
+        """ A helper method to count the likes """
         return self.likes.count()
 
 
-
 class Comment(models.Model):
+    """ A model structure for comments """
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")
     name = models.CharField(max_length=80)
@@ -37,7 +39,9 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
 
     class Meta:
+        """"""
         ordering = ["created"]
 
     def __str__(self):
+        """ A helper method to display data saved """
         return f"Comment {self.body} by {self.name}"

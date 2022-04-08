@@ -43,23 +43,20 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="nav__container navbar navbar-expand-lg navbar-light fixed-top rounded-bottom p-2 font-weight-bold">
-        <div class="nav__content">
-            <a class="nav__logo navbar-brand text-white btn-yellow" href="{% url 'home' %}">Aromatic Therapy</a>
+    <header class="nav__container">
+        <nav class="nav__content navbar navbar-expand-lg navbar-light">
+            <a class="nav__logo navbar-brand" href="{% url 'home' %}">Aromatic Therapy</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav navbar__menu">
-                    <li class="nav-item active">
-                        <a class="nav-link text-body navbar__menu--item" aria-current="page" href="{% url 'home' %}">Home</a>
-                    </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-body navbar__menu--item" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle navbar__menu--item" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             My Profile
                         </a>
                         <div class="dropdown-menu dropdown__menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item navbar__menu--item" href="#"></a>
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                             <div class="dropdown__menu--item dropdown__menu--welcome"> Welcome {{user.username}}</div>
@@ -74,8 +71,9 @@
                     </li>
                 </ul>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
+
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
