@@ -25,7 +25,7 @@
             <div class="socialaccount_ballot text-white">
                 <div class="socialaccount_providers">
                     {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-                    <a href="{% provider_login_url 'facebook' method='js_sdk' %}">Sign in with Facebook
+                    <a href="{% provider_login_url 'facebook' method='oauth2' %}" target="blank">Sign in with Facebook
                     </a>
 
 
