@@ -1,13 +1,10 @@
 {% extends "base.html" %}
-
 {% block content %}
 
-
-
-<div class="container-fluid">
-    <header>
-        <div class="row mt-5">
-            <div class="col mx-4 bg-white rounded p-3 text-black mt-3">
+<div class="">
+    <div class="hero">
+        <div class="hero__section">
+            <div class="hero__section--item">
                 <h3>How This All Started</h3>
                 I have been working with
                 <a href="https://www.doterra.com/GB/en_GB" class="dotera" target="_blank">Doterra</a>
@@ -21,9 +18,8 @@
                 blended oils for any occasion. If you have some ideas and would like
                 to contribute to this platform, feel free to leave a comment relating
                 to this, and I am happy to have a video call.
-
             </div>
-            <div class="col mx-4 bg-white rounded p-3 text-black mt-3">
+            <div class="hero__section--item">
                 <h3>Where do Essential Oils Come From?</h3>
                 A variety of plants cover the Earth in different shapes,
                 sizes, colors, and scents. Many of these plants contain
@@ -36,68 +32,54 @@
                 and even play a part in plant pollination.
             </div>
         </div>
-    </header>
-    <div class="row">
+    </div>
 
-
+    {% for post in post_list %}
+    <div class="blog">
         <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 px-4 left">
-            <div class="row">
-                {% for post in post_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body intro">
-                            <div class="image-container">
-                                {% if "placeholder" in post.related_image.url %}
-                                <img class="card-img-top" src="https://pixelz.cc/images/essential-oils-uhd-4k-wallpaper/">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ post.related_img.url }}" style="height: 250px;">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author text-body">Author: {{ post.author }}</p>
-                                </div>
-                            </div>
-                            <a href="{% url 'post_detail' post.slug  %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
-                            </a>
-                            <hr>
-                            <p class="card-text text-muted h6">{{ post.created}} <i class="far fa-heart"></i>
-                                {{ post.num_of_likes }}</p>
-                            <div>
-                                {% if comment in comments %}
-                                {% with comments.count as total_comments %}
-                                <strong class="text-body"><i class="fal fa-comments"></i>
-                                    {{ total_comments }}</strong>
-                                {% endwith %}
-                                {% endif %}
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row mb-4">
+        <div class="blog__card">
+            <div class="blog__card--image">
+                {% if "placeholder" in post.related_image.url %}
+                <img class="card-img-top" src="https://pixelz.cc/images/essential-oils-uhd-4k-wallpaper/">
+                {% else %}
+                <img class="card-img-top" src=" {{ post.related_img.url }}" style="height: 250px;">
                 {% endif %}
-                {% endfor %}
-
+            </div>
+            <div class="blog__card--author">
+                <p class="author text-body">Author: {{ post.author }}</p>
+            </div>
+            <a href="{% url 'post_detail' post.slug  %}" class="blog__card--link">
+                <h2 class="card-title">{{ post.title }}</h2>
+                <p class="card-text">{{ post.excerpt }}</p>
+            </a>
+            <div class="blog__card--data">
+                <p>{{ post.created }} <i class="far fa-heart"></i>
+                    {{ post.num_of_likes }}</p>
             </div>
         </div>
     </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+</div>
+</div>
+{% if forloop.counter|divisibleby:3 %}
+</div>
 
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
+{% endif %}
+{% endfor %}
+
+</div>
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
 </div>
 
 {% endblock %}
