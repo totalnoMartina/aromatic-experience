@@ -11,17 +11,19 @@ class ListOfPosts(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created')
     template_name = 'index.html'
-    paginate_by = 6
+    paginate_by = 4
 
 
 class Detail(View):
-    """ A view for details of the blog post """
+    """ For rendering details of the blog post """
     def get(self, request, slug, *args, **kwargs):
-        """ A method to get posts and render all arguments """
+        """ A method to get posts and render filtering by status """
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
+        # Comments are ordered in order by most recent and published
         comments = post.comments.filter(approved=True).order_by("-created")
         liked = False
+        # Only users who are logged in can like
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
@@ -38,7 +40,7 @@ class Detail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
-        """ Defining post method for getting arguments """
+        """ A method for getting the comments and request approval """
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created")
@@ -53,8 +55,8 @@ class Detail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+            # Using module django messages
             messages.add_message(request, messages.SUCCESS, 'Thank you, your comment matters!')
-
         else:
             comment_form = CommentForm()
 
@@ -71,14 +73,16 @@ class Detail(View):
         )
 
 
-class PostLike(View):
+class TheLikes(View):
     """ The view for the users to Like the posts or comment """
     def post(self, request, slug, *args, **kwargs):
-        """ Defining our post method """
+        """ Connecting to a particular post by slug """
         post = get_object_or_404(Post, slug=slug)
+        # If user already liked, then is removing like
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
+            # If user did not like yet, add like
             post.likes.add(request.user)
-
+        # Redirecting to the post detail page
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
