@@ -1,4 +1,4 @@
-# Holiday Apartments
+# Aromatic Experience
 # Contents
 
 * [Project Overview](#project-overview)
