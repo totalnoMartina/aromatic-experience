@@ -43,7 +43,7 @@
 </head>
 
 <body>
-    <header class="nav__container">
+    <header class="nav__container sticky-top">
         <nav class="nav__content navbar navbar-expand-lg navbar-light">
             <a class="nav__logo navbar-brand" href="{% url 'home' %}">Aromatic Therapy</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -98,6 +98,7 @@
 
 
     {% block postloadjs %}
+    <!-- A script for timeout of the messages  -->
     <script>
         setTimeout(function() {
             let messages = document.getElementById('msg');
@@ -106,6 +107,19 @@
         }, 2500);
     </script>
 
+    <script>
+        /// When you click everywhere in the document
+        $(document).click(function(event) {
+
+            /// If *navbar-collapse* is not among targets of event
+            if (!$(event.target).is('.navbar-collapse *')) {
+
+                /// Collapse every *navbar-collapse*
+                $('.navbar-collapse').removeClass('show');
+
+            }
+        });
+    </script>
     {% endblock %}
     <footer class="w-100 p-2 mt-4 text-center rounded-top fixed-bottom">
         <a href="#" class="text-white">BACK TO TOP<i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
