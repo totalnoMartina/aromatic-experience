@@ -210,11 +210,12 @@ Deploy. The app can now be viewed live on this link [here](https://aromatic-mart
 # Credits
 
 - [Stackoverflow](https://stackoverflow.com/)
-
 - [YouTube](www.youtube.com) tutorials
 - Code Institute Slack community
 - Tutors at the Code Institute, in particular Igor, Ed and Ger for help with testing and deployment
-
+- A tutorial that helped me understand [Testing in Django](https://www.youtube.com/watch?v=GBgRMdjAx_c&list=PLOLrQ9Pn6cay7t8VZ3wmn6QdAxzTx60F3&index=4) a bit better
+- Also [this link here](https://stackoverflow.com/questions/44604686/how-to-test-a-model-that-has-a-foreign-key-in-django#:~:text=To%20write%20a%20test%20for,target%20model%20for%20the%20test.)
+- [Django Docs on Testing Tools](https://docs.djangoproject.com/en/3.2/topics/testing/tools/#django.test.SimpleTestCase)
 - The original idea is based on CI Walkthrough project 'I Think Therefore I Blog'
 - The code for messages is also inspired by the same project, and the step further was to create you custom message for when user comments. 
 - The images were found using Google Search for anything connected to topic, and here are the respective links:

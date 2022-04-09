@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load media %}
 {% block content %}
 
 
@@ -9,7 +9,7 @@
         <div class="hero__section">
             <div class="hero__section--item">
                 <div class="hero__image--container">
-                    <img src="media/images/olive.png" alt="" class="hero__image--small ">
+                    <img src="{% media 'images/flower.png' %}" alt="flower image" class="hero__image--small ">
                 </div>
                 <h3>How This All Started</h3>
                 <p>I have been working with
@@ -28,7 +28,7 @@
             </div>
             <div class="hero__section--item">
                 <div class="hero__image--container hero__image--flower">
-                    <img src="media/images/flower.png" alt="" class="hero__image--small ">
+                    <img src="{% media 'images/olive.png' %}" alt="" class="hero__image--small ">
                 </div>
                 <h3>Oils origin</h3>
                 <p>
