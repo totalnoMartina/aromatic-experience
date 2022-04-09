@@ -34,6 +34,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="{% static 'js/script.js' %}"></script>
     {% endblock %}
 
 
@@ -45,7 +46,7 @@
 <body>
     <header class="nav__container sticky-top">
         <nav class="nav__content navbar navbar-expand-lg navbar-light">
-            <a class="nav__logo navbar-brand" href="{% url 'home' %}">Aromatic Therapy</a>
+            <a class="nav__logo navbar-brand text-white" href="{% url 'home' %}">Aromatic Therapy</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -89,41 +90,62 @@
             </div>
         </div>
     </div>
-
-    <main class="flex-shrink-0 main-bg mb-3 main__container">
+    <main class="flex-shrink-0 main-bg main__container">
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
     </main>
-
-
     {% block postloadjs %}
-    <!-- A script for timeout of the messages  -->
-    <script>
-        setTimeout(function() {
-            let messages = document.getElementById('msg');
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 2500);
-    </script>
-
-    <script>
-        /// When you click everywhere in the document
-        $(document).click(function(event) {
-
-            /// If *navbar-collapse* is not among targets of event
-            if (!$(event.target).is('.navbar-collapse *')) {
-
-                /// Collapse every *navbar-collapse*
-                $('.navbar-collapse').removeClass('show');
-
-            }
-        });
-    </script>
     {% endblock %}
-    <footer class="w-100 p-2 mt-4 text-center rounded-top fixed-bottom">
-        <a href="#" class="text-white">BACK TO TOP<i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
-        </a>
+    <footer class="footer__main">
+
+        <div class="w-100 p-2 mt-4 text-center rounded-top fixed-bottom footer button__top">
+            <a href="#" class="text-white">BACK TO TOP<i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="footer__content">
+
+            <div class="footer__content--logo">
+                Aromatic Therapy
+            </div>
+            <div class="footer__content--info">
+                <div class="footer__content--creator">
+                    <div class="creator__name">Blog developed by: <span>Martina Grganic</span></div>
+                    <ul class="creator__links">
+                        <li class="creator__link">
+                            <a href="https://www.linkedin.com/in/martina-grganic/" alt="A linkedIn link of a developer" target="_blank" rel="noopener" aria-label="Visit Martina Grganic LinkedIn page">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="creator__link">
+                            <a href="https://github.com/totalnoMartina" title="A github link of a developer" target="_blank" rel="noopener" aria-label="Visit Martina Grganic GitHub page">
+                                <i class="fab fa-github-square"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__content--sponsor">
+                    <div class="sponsor">Blog sponsored by: <span><a href="https://www.doterra.com/GB/en_GB" class="dotera" target="_blank">Doterra</a></span></div>
+                    <ul class="sponsor__links">
+                        <li class="sponsor__link">
+                            <a href="https://www.instagram.com/doterra/?hl=en" title="Link to Doterra Instagram" target="_blank" rel="noopener" aria-label="Visit Doterra instagram page">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="sponsor__link">
+                            <a href="https://www.facebook.com/doterra/" title="Link to Doterra Facebook" target="_blank" rel="noopener" aria-label="Visit Doterra facebook page">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <!-- <li class="sponsor__link">
+                            <a href="" target="_blank" rel="noopener" aria-label="Visit Doterra facebook page">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
 
 </body>

@@ -15,11 +15,13 @@
 
 # Project Overview
 
-Aromatic Experience is a blog started by a passionate individual who wants the world to know about benefits of oils. Educated in Herbalism and a Representative of [Doterra](https://www.doterra.com/GB/en_GB), I am creating this website for all lovers of aromatherapy and 'DYI' blends that can be shared in this platform. With an option to like/unlike a post or leave a comment.
+Aromatic Experience is a blog started by a passionate individual who wants the world to know about benefits of oils. As a Representation oils and sponsored by [Doterra](https://www.doterra.com/GB/en_GB), this website is for all lovers of oils, aromatherapy and 'DYI' blends that can be shared in this platform. With an option to like/unlike a post or leave a comment.
 
 # User Experience Design
 
-Thi first layout that was thought of ![](media/images/first_layout.png?raw=true)
+Thi original, first idea of a layout ![](media/images/first_layout.png?raw=true)
+
+Final layout ![](media/images/final-layout.png?raw=true)
 ## Strategy
 As a small business owner, a representative for Doterra Company, I want to have a way to promote the importance of using essential oils in every day life. The strategy here is to start small, gather a community and together smell the roses. I could possibly make more income based on this blog, since audience will know my secret recipes here. Main Objective: To grow.
 
@@ -74,7 +76,7 @@ Mostly for a small business owners usage, possibly for the ones who work from ho
 
 ## Structure
 
-A Structure of this Website is aiming to be simple, with warm color palette and a simple navbar. The content main objective is in the center split into two columns when seeing published posts.While seeing one post, the title and front image streches to imporve visual experience.
+A Structure of this Website is aiming to be simple, with warm color palette and a simple navbar. The content main objective is in the center split into two columns when seeing published posts.While seeing one post, the title and front image streches to improve visual experience.
 
 ## Skeleton
 
@@ -92,7 +94,7 @@ A Structure of this Website is aiming to be simple, with warm color palette and 
 **Color scheme**
 
 
-This site uses a [Coolors](https://coolors.co/) palette picker, and this is the final choice
+This site uses a [ColorSpace](https://mycolor.space/) palette picker, and this is the final choice
 ![Color Palette](media/images/final_color_palette.png?raw=true)
 **Imagery**
 

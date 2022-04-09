@@ -4,42 +4,50 @@
 
 
 
-<div class="">
+<div class="home">
     <div class="hero">
         <div class="hero__section">
             <div class="hero__section--item">
+                <div class="hero__image--container">
+                    <img src="media/images/olive.png" alt="" class="hero__image--small ">
+                </div>
                 <h3>How This All Started</h3>
-                I have been working with
-                <a href="https://www.doterra.com/GB/en_GB" class="dotera" target="_blank">Doterra</a>
-                Company with distributing
-                collections of essential oils, and all this from home. Recently,
-                I came to realize that my friends enjoy the blends I come up with
-                and have been encouraging me to share my insights on this topic.
-                As I am also a writer, I decided to take up on this challenge and
-                create a community platform for all of us passionate about blends
-                and essential oils. I hope we all put together a nice collection of
-                blended oils for any occasion. If you have some ideas and would like
-                to contribute to this platform, feel free to leave a comment relating
-                to this, and I am happy to have a video call.
-
+                <p>I have been working with
+                    <a href="https://www.doterra.com/GB/en_GB" class="dotera" target="_blank">Doterra</a>
+                    Company with distributing
+                    collections of essential oils, and all this from home. Recently,
+                    I came to realize that my friends enjoy the blends I come up with
+                    and have been encouraging me to share my insights on this topic.
+                    As I am also a writer, I decided to take up on this challenge and
+                    create a community platform for all of us passionate about blends
+                    and essential oils. I hope we all put together a nice collection of
+                    blended oils for any occasion. If you have some ideas and would like
+                    to contribute to this platform, feel free to leave a comment relating
+                    to this, and I am happy to have a video call.
+                </p>
             </div>
             <div class="hero__section--item">
-                <h3>Where do Essential Oils Come From?</h3>
-                A variety of plants cover the Earth in different shapes,
-                sizes, colors, and scents. Many of these plants contain
-                compounds that typically can't be seen with the naked eye—they
-                hide within the roots, flowers, seeds, bark, or other areas of
-                the plant. These compounds are known as essential oils. They are
-                highly concentrated, making them extremely potent. Also referred
-                to as volatile aromatic compounds, essential oils give a plant its
-                aroma, protect it from harsh environmental conditions and insects,
-                and even play a part in plant pollination.
+                <div class="hero__image--container hero__image--flower">
+                    <img src="media/images/flower.png" alt="" class="hero__image--small ">
+                </div>
+                <h3>Oils origin</h3>
+                <p>
+                    A variety of plants cover the Earth in different shapes,
+                    sizes, colors, and scents. Many of these plants contain
+                    compounds that typically can't be seen with the naked eye—they
+                    hide within the roots, flowers, seeds, bark, or other areas of
+                    the plant. These compounds are known as essential oils. They are
+                    highly concentrated, making them extremely potent. Also referred
+                    to as volatile aromatic compounds, essential oils give a plant its
+                    aroma, protect it from harsh environmental conditions and insects,
+                    and even play a part in plant pollination.
+                </p>
+
             </div>
         </div>
     </div>
     <div class="blog-container">
         {% for post in post_list %}
-
         <div class="blog">
             <!-- Blog Entries Column -->
             <div class="blog__card">
@@ -66,19 +74,19 @@
             </div>
         </div>
         {% if forloop.counter|divisibleby:4 %}
-    </div>
-    <div class="row">
         {% endif %}
         {% endfor %}
+    </div>
 
+    <div class="blog__navigation">
         {% if is_paginated %}
-        <nav aria-label="Page navigation" class="mb-5 text-body">
-            <ul class="pagination justify-content-center mb-4">
+        <nav aria-label="Page navigation" class="">
+            <ul class="pagination">
                 {% if page_obj.has_previous %}
-                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link text-body">&laquo; PREV </a></li>
                 {% endif %}
                 {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+                <li class="text-body"><a href="?page={{ page_obj.next_page_number }}" class="page-link text-body"> NEXT &raquo;</a></li>
 
                 {% endif %}
             </ul>

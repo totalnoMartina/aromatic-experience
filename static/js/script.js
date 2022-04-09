@@ -1,33 +1,19 @@
-jQuery(function($) {
-    $(window).on('scroll', function() {
-        if ($(this).scrollTop() >= 200) {
-            $('.navbar').addClass('fixed-top');
-        } else if ($(this).scrollTop() == 0) {
-            $('.navbar').removeClass('fixed-top');
-        }
-    });
+// A script for timeout of the messages
 
-    function adjustNav() {
-        var winWidth = $(window).width(),
-            dropdown = $('.dropdown'),
-            dropdownMenu = $('.dropdown-menu');
+setTimeout(function() {
+    let messages = document.getElementById('msg');
+    let alert = new bootstrap.Alert(messages);
+    alert.close();
+}, 2500);
 
-        if (winWidth >= 768) {
-            dropdown.on('mouseenter', function() {
-                $(this).addClass('show')
-                    .children(dropdownMenu).addClass('show');
-            });
+/// When you click everywhere in the document
+$(document).click(function(event) {
 
-            dropdown.on('mouseleave', function() {
-                $(this).removeClass('show')
-                    .children(dropdownMenu).removeClass('show');
-            });
-        } else {
-            dropdown.off('mouseenter mouseleave');
-        }
+    /// If *navbar-collapse* is not among targets of event
+    if (!$(event.target).is('.navbar-collapse *')) {
+
+        /// Collapse every *navbar-collapse*
+        $('.navbar-collapse').removeClass('show');
+
     }
-
-    $(window).on('resize', adjustNav);
-
-    adjustNav();
 });
