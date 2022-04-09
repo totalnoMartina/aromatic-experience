@@ -7,4 +7,5 @@ class TestPostModel(TestCase):
     def test_post_title_unique(self):
         """ Test for a name to be set to unique """
         post = Post.objects.create(title='Mock Post')
-        self.assertFalse(post.related_img)
+        content = Post.objects.create(content='Some Content')
+        self.assertEqual(str(tittle), 'Mock Post')

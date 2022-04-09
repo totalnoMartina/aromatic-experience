@@ -44,9 +44,9 @@ class Detail(View):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created")
-        liked = False
+        liked = False  # Originally comments are not 'liked'
         if post.likes.filter(id=self.request.user.id).exists():
-            liked = True
+            liked = True  # Users that have a profile can like
 
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():

@@ -68,8 +68,15 @@ As a small business owner, a representative for Doterra Company, I want to have 
 Mostly for a small business owners usage, possibly for the ones who work from home, even though it is easily maintained to be a regular little hobby on the side. And the scope here is to be topic oriented, targeting aromatherapy benefits and connect all interested with the commenting feature, providing relevant informations. Help small business connected to aromatherapy grow.
 ### Features
 
+
+add screenshots here -->
+
 - Authentication System - Users can login and easily comment/like
+
+
 - Administrator can mainpulate comments that are going to be published, approve them
+- Django Messages are used to let user know on 'login/logout' status and on commenting sent to be approved
+- Not able to screen shot but there is a snippet of JavaScipt code for Navigation to toggle close (if clicked) when user cliks outside of the navbar
 - Facebook login set up (At the moment, there is a bug, which does not allow login using Facebook, but it worked once before, so I keep trying)
 
 **Future features**
@@ -82,13 +89,11 @@ Mostly for a small business owners usage, possibly for the ones who work from ho
 
 A Structure of this Website is aiming to be simple, with warm color palette and a simple navbar. The content main objective is in the center split into two columns when seeing published posts.While seeing one post, the title and front image streches to improve visual experience.
 
-Thi original, first idea of a layout ![](media/images/first_layout.png?raw=true)
+This is the original, first idea of a layout ![](media/images/first_layout.png?raw=true)
 
 Second idea of a layout ![](media/images/final-layout.png?raw=true)
 
 Final idea of a layout ![](media/images/final-img.png?raw=true)
-
-
 
 
 ## Skeleton
@@ -128,15 +133,19 @@ Django is a framework, relational database is postgres, check for heroku to shar
 
 
 # Issues
+
+There was some issues while setting up Facebook Login, as I had another app connecte to Facebook Login button earler, deleting it did not yet solve the issue as this is what I am getting, possibly when fully deployet it should work as I triple checked everything and have not found yet a better solution then setting Debug to 'False' and trying it again.
+
+
 # Deployment
 
-**How to fork the GitHub Repository**
-
-Forking the repository allows you to make a copy of the original in your GitHub account, and make changes without affecting the original.
+**How to fork this GitHub Repository**
 
 1. Log onto Github.
-2. From the list of repositories, select CatherineTrevor/the_marketing_ally.
-3. At the top of the repository, select the "Fork" button.
+2. Navigate to this direct link for the repository [here](https://github.com/totalnoMartina/aromatic-experience) or type in search 'totalnoMartina/aromatic-experience'
+3. You can fork any repo by clicking the fork button in the upper right hand corner of a repo page. Now click Fork.
+4. When you fork a repo on GitHub, the forked repo is copied to your GitHub account, and you can edit it as the repo owner.
+5. GitHub will take you to your copy (your fork) of the 'aromatic-experience' repository.
 4. This should create a copy within your account.
 
 **How to run this project locally**
@@ -153,7 +162,9 @@ Forking the repository allows you to make a copy of the original in your GitHub 
 
 This project was developed using Gitpod, committed to git and pushed to Github using the built-in functionality.
 
-It was then deployed to Heroku.
+At early stages it was then deployed to Heroku.
+
+### Details
 
 * Create an account or log into Heroku.
 * Navigate to Create New App within the New dropdown.
@@ -174,15 +185,19 @@ Connect using Github (if appropriate)
 
 Select the branch for deployment
 
-Deploy. The app can now be viewed live.
+Deploy. The app can now be viewed live on this link [here](https://aromatic-martina.herokuapp.com/)
 
 ![Heroku](media/images/heroku-build-fin.png?raw=true)
 
-
-
 # Credits
 
-- The original idea is based on CI Walkthrough project 'codestar' providing users a signup/login system and to comment posts and like
+- [Stackoverflow](https://stackoverflow.com/)
+
+- [YouTube](www.youtube.com) tutorials
+- Code Institute Slack community
+- Tutors at the Code Institute, in particular Igor, Ed and Ger for help with testing and deployment
+
+- The original idea is based on CI Walkthrough project 'I Think Therefore I Blog'
 - The code for messages is also inspired by the same project, and the step further was to create you custom message for when user comments. 
 - The images were found using Google Search for anything connected to topic, and here are the respective links:
  [Image of the grapefruit](https://www.doterra.com/GB/en_GB/p/grapefruit-oil) , [Aroma Image](https://5.imimg.com/data5/TK/QV/MY-45444487/aroma-oil-500x500.jpg)
@@ -210,3 +225,5 @@ some of them deleted due to small space on 'Heroku', [link for Apartments](https
 [Facebook Login](https://www.youtube.com/watch?v=E6LxUleoloU),
 [Building Social Login](https://www.youtube.com/watch?v=oAWUyg_PPLk), [Django Restaurant System](https://www.youtube.com/watch?v=r0mjZRKmNC8&t=25s),
 [Create a Diary App](https://www.youtube.com/watch?v=YkpEtE_x6xk)
+
+- Help with documenting deployment was found on this link [How to get started with Git](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#forking-a-repository) and inspired by [Catherine Trevor](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#forking-a-repository)'s README.md

@@ -2,10 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+# Status of the posts, so that if not ready to be published, is stored
 STATUS = ((0, 'Draft'), (1, 'Published'))
 
 
 class Post(models.Model):
+    """ A model for post structure """
     title = models.CharField(max_length=150, unique=True)
     content = models.TextField()
     related_img = CloudinaryField('image', default='placeholder')
@@ -18,6 +20,7 @@ class Post(models.Model):
     likes = models.ManyToManyField(
         User, related_name='blogpost_like', blank=True)
     class Meta:
+        """ Using the order to be reversed for the most recent posts """
         ordering = ['-created']
 
     def __str__(self):
@@ -40,7 +43,7 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
 
     class Meta:
-        """"""
+        """ To create an order of comments, first are on top """
         ordering = ["created"]
 
     def __str__(self):
