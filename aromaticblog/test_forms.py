@@ -13,3 +13,6 @@ class TestCommentForm(TestCase):
         self.assertIn('body', form.errors.keys())
         self.assertEqual(form.errors['body'][0], 'This field is required.')
 
+
+if __name__ == '__main__':
+    unittest.main()
