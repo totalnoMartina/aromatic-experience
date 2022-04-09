@@ -1,4 +1,8 @@
 # Aromatic Experience
+
+![](media/images/final-img.png?raw=true)
+
+
 # Contents
 
 * [Project Overview](#project-overview)
@@ -17,13 +21,10 @@
 
 Aromatic Experience is a blog started by a passionate individual who wants the world to know about benefits of oils. As a Representation oils and sponsored by [Doterra](https://www.doterra.com/GB/en_GB), this website is for all lovers of oils, aromatherapy and 'DYI' blends that can be shared in this platform. With an option to like/unlike a post or leave a comment.
 
-# User Experience Design
+# User Experience Design Thinking
 
-Thi original, first idea of a layout ![](media/images/first_layout.png?raw=true)
-
-Final layout ![](media/images/final-layout.png?raw=true)
 ## Strategy
-As a small business owner, a representative for Doterra Company, I want to have a way to promote the importance of using essential oils in every day life. The strategy here is to start small, gather a community and together smell the roses. I could possibly make more income based on this blog, since audience will know my secret recipes here. Main Objective: To grow.
+As a small business owner, a representative for Doterra Company, I want to have a way to promote the importance of using essential oils in every day life. The strategy here is to start small, gather a community and together 'smell the roses'. There is a possibility to make more income based on this blog, since audience will know some secret recipes here. Main Objective: To grow small business, share ideas.
 
 ### Target audience
 
@@ -78,6 +79,15 @@ Mostly for a small business owners usage, possibly for the ones who work from ho
 
 A Structure of this Website is aiming to be simple, with warm color palette and a simple navbar. The content main objective is in the center split into two columns when seeing published posts.While seeing one post, the title and front image streches to improve visual experience.
 
+Thi original, first idea of a layout ![](media/images/first_layout.png?raw=true)
+
+Second idea of a layout ![](media/images/final-layout.png?raw=true)
+
+Final idea of a layout ![](media/images/final-img.png?raw=true)
+
+
+
+
 ## Skeleton
 
 ### Wireframes
@@ -108,7 +118,7 @@ The site uses the following languages;
 * Django
 * Python
 
-Django is a framework, relational database i postgres, check for heroku to share more details
+Django is a framework, relational database is postgres, check for heroku to share more details
 
 # Testing
 
