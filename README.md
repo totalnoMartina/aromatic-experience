@@ -19,7 +19,7 @@ Aromatic Experience is a blog started by a passionate individual who wants the w
 
 # User Experience Design
 
-images of navbar, posts and detail view.html
+Thi first layout that was thought of ![](media/images/first_layout.png?raw=true)
 ## Strategy
 As a small business owner, a representative for Doterra Company, I want to have a way to promote the importance of using essential oils in every day life. The strategy here is to start small, gather a community and together smell the roses. I could possibly make more income based on this blog, since audience will know my secret recipes here. Main Objective: To grow.
 
@@ -106,7 +106,7 @@ The site uses the following languages;
 * Django
 * Python
 
-Django is a framework, check for postgress and heroku to share more details
+Django is a framework, relational database i postgres, check for heroku to share more details
 
 # Testing
 
@@ -144,5 +144,5 @@ Forking the repository allows you to make a copy of the original in your GitHub 
 
 
 
-- Text that inspired posts is also taken from [Doterra](https://www.doterra.com/GB/en_GB) as an example of lerevant information this Blog would be about
+- Text that inspired posts is also taken from [Doterra](https://www.doterra.com/GB/en_GB) as an example of relevant information this Blog would be about
 - [Google Fonts](https://fonts.google.com/specimen/Playfair+Display?query=play) for the 'Playfair Display'
