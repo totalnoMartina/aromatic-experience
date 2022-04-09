@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-
+<!-- Blog post article  -->
 <div class="article">
     <div class="article__header shadow">
         <div class="article__header--item">
@@ -10,7 +10,7 @@
         </div>
         <div class="article__header--item">
             {% if "placeholder" in post.related_img.url %}
-            <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+            <img src="https://www.nicepng.com/png/full/104-1048864_engine-oil-png-background-image-cooking-oil-drop.png" width="100%">
             {% else %}
             <img src=" {{ post.related_img.url }}" width="100%" class="m-3 shadow">
             {% endif %}
@@ -22,6 +22,7 @@
             <div class="col card my-4 top">
                 <div class="card-body">
                     <p class="card-text ">
+                        <!-- Filter 'safe' for decoding characters rendered from blog posts -->
                         {{ post.content | safe }}
                     </p>
                     <div class="row">

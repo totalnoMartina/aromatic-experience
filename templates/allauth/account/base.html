@@ -1,5 +1,7 @@
 {% extends "base.html" %}
-<!-- Code to show facebook login button on the relevant pages -->
+<!-- Code to show facebook login button on the relevant pages from this base -->
 
 <div id="fb-root"></div>
+{% block extra_js %}
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0&appId=1144720626328135&autoLogAppEvents=1" nonce="pZbSXYeV"></script>
+{% endblock %}

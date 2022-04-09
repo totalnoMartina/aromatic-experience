@@ -1,7 +1,8 @@
-{% extends "account/base.html" %}
-{% load account socialaccount %}
+{% extends "base.html" %}
+{% load static %}
 
 {% load i18n %}
+{% load account socialaccount %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
@@ -20,9 +21,14 @@
             <a href="{% provider_login_url 'facebook' method='oauth2' %}" target="blank">Sign in with Facebook
             </a>
         </div>
+        <!-- Code to check Facebook 'login-status' -->
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>
+
         <div class="login-or">{% trans 'or' %}</div>
     </div>
     {% include "socialaccount/snippets/login_extra.html" %}
+    <div class="fb-login-button" data-width="" data-size="medium" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
 
     <h1>{% trans "Sign Up" %}</h1>
 

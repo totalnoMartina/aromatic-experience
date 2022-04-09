@@ -1,6 +1,6 @@
-{% load static %}
 <!doctype html>
 <html lang="en">
+{% load static %}
 
 <head>
     {% block meta %}
@@ -28,8 +28,7 @@
     {% endblock %}
 
     {% block corejs %}
-    <!-- script links with minified jQuery  -->
-    <!-- Font awesome -->
+    <!-- script links for Bootstrap 4.4 with minified jQuery and Font awesome  -->
     <script src="https://kit.fontawesome.com/0ab8070b0e.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -37,16 +36,17 @@
     <script src="{% static 'js/script.js' %}"></script>
     {% endblock %}
 
-
     {% block extra_js %}
     {% endblock %}
+    <!-- Title  -->
     <title>Aromatic Experience</title>
 </head>
 
 <body>
+    <!-- Navigation content wrapped in a header element -->
     <header class="nav__container sticky-top">
         <nav class="nav__content navbar navbar-expand-lg navbar-light">
-            <a class="nav__logo navbar-brand text-white" href="{% url 'home' %}">Aromatic Therapy</a>
+            <a class="nav__logo navbar-brand text-white" href="{% url 'home' %}">Aromatic Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -60,6 +60,7 @@
                             <a class="dropdown-item navbar__menu--item" href="#"></a>
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
+                            <!-- Showing to the user under which account username is he logged in -->
                             <div class="dropdown__menu--item dropdown__menu--welcome"> Welcome {{user.username}}</div>
                             <a class="dropdown-item dropdown__menu--item" href="{% url 'admin:index' %}">Blog Management</a>
                             {% endif %}
@@ -74,7 +75,7 @@
             </div>
         </nav>
     </header>
-
+    <!-- Messages for users for comment, login/logout notifications -->
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
@@ -92,22 +93,22 @@
     </div>
     <main class="flex-shrink-0 main-bg main__container">
         {% block content %}
-        <!-- Content Goes here -->
+        <!-- Content from other pages goes here -->
         {% endblock content %}
     </main>
     {% block postloadjs %}
     {% endblock %}
+    <!-- Footer with a 'Back to top' button with smooth scroll on -->
     <footer class="footer__main">
-
         <div class="w-100 p-2 mt-4 text-center rounded-top fixed-bottom footer button__top">
             <a href="#" class="text-white">BACK TO TOP<i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
             </a>
         </div>
         <div class="footer__content">
-
             <div class="footer__content--logo">
                 Aromatic Therapy
             </div>
+            <!-- Footer links to Sponsor and Website creator -->
             <div class="footer__content--info">
                 <div class="footer__content--creator">
                     <div class="creator__name">Blog developed by: <span>Martina Grganic</span></div>
@@ -137,11 +138,6 @@
                                 <i class="fab fa-facebook-square"></i>
                             </a>
                         </li>
-                        <!-- <li class="sponsor__link">
-                            <a href="" target="_blank" rel="noopener" aria-label="Visit Doterra facebook page">
-                                <i class="fab fa-facebook-square"></i>
-                            </a>
-                        </li> -->
                     </ul>
                 </div>
             </div>
