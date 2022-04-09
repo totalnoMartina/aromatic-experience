@@ -89,8 +89,13 @@ Homepage for first time users to 'Register' or 'Login'
 
 ![](media/images/messages-signedout.png?raw=true)
 
-- Not able to screen shot but there is a snippet of JavaScipt code for Navigation to toggle close (if clicked) when user cliks outside of the navbar
+- Not able to screenshot but there is a snippet of JavaScipt code for Navigation to toggle close (if clicked) when user cliks outside of the navbar
 - Facebook login set up (At the moment, there is a bug, which does not allow login using Facebook, but it worked once before, so I keep trying)
+
+![](media/images/messages-signedin.png?raw=true)
+
+
+
 
 **Future features**
 
@@ -116,7 +121,7 @@ Final idea of a layout ![](media/images/final-img.png?raw=true)
 ![Wireframe](media/images/aromatic.png?raw=true)
 
 ### Database schema
-
+--> ERD 
 
 ## Surface
 

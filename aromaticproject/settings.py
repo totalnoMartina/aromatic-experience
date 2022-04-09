@@ -147,8 +147,9 @@ if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-else 'test' in sys.argv:
-DATABASES = {
+    # Tim recommends to put 'else' but for testing now this works
+elif 'test' in sys.argv:
+    DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
