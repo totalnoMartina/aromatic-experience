@@ -17,7 +17,30 @@ Image of the CSS3 validation shows an error in the '.blog' class (line 198) that
 ![CSS3 Validator](media/images/css-validation-error.png?raw=true)
 
 
-Add Python PEP8 validation
+### Python Validation
+
+Python code was checked using [PEP8 Validator](http://pep8online.com/)
+
+-- admin.py
+![PEP8 Validator](media/images/admin-pep8.png?raw=true)
+-- app.py
+![PEP8 Validator](media/images/pep8-app.png?raw=true)
+-- settings.py
+![PEP8 Validator](media/images/pep8-settings-indent-line-too-long.png?raw=true)
+-- forms.py
+![PEP8 Validator](media/images/pep8-forms.png?raw=true)
+-- views.py
+![PEP8 Validator](media/images/pep8-indent-or-line-too-long-views.png?raw=true)
+-- models.py
+![PEP8 Validator](media/images/pep8indent-or-line-too-long-models.png?raw=true)
+-- test-forms.py
+![PEP8 Validator](media/images/pep8-test-forms.png?raw=true)
+-- url.py(project)
+![PEP8 Validator](media/images/pep8-urls-project.png?raw=true)
+-- urls.py(app)
+![PEP8 Validator](media/images/pep8-urls.png?raw=true)
+-- wsgi.py
+![PEP8 Validator](media/images/pep8-wsgi.png?raw=true)
 
 
 
@@ -44,8 +67,12 @@ The relationship between data models are straightforward, there is a User with a
 | 1. I want to easily log into my account                                                        | Log in from the top navigation                                                                              
 | **Site administrator:**                                                                                                                  |                                                                                                                   |   
 | 1. I want to log into the admin
-## Issues
 
+## Bugs 
+### Fixed Bugs
+
+### Unfixed bugs
+## Issues
 
 The early deployment worked quite well from the start, as I practiced with redoing the walthrough projects within LMS, and all documents were rendering well from the start as I gathered only relevant dependencies combining videos of 'I Think, Therefore I Blog' and 'Boutique Ado'. 
 

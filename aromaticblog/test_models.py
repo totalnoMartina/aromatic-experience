@@ -26,3 +26,8 @@ class TestModels(TestCase):
     #     title = Post.objects.create(title='Mock Post')
     #     self.assertEqual(str(title), 'Mock Post')
     #     self.assertIsInstance(User, Post)
+
+
+if __name__ == '__main__':
+    unittest.main()
+    

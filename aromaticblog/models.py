@@ -12,7 +12,8 @@ class Post(models.Model):
     content = models.TextField()
     related_img = CloudinaryField('image', default='placeholder')
     slug = models.SlugField(max_length=150, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
+    author = models.ForeignKey(User, on_delete=models.CASCADE,
+        related_name='blog_posts')
     excerpt = models.TextField(blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -26,7 +27,7 @@ class Post(models.Model):
 
     def __str__(self):
         """ A helper method for displaying the  """
-        return f'A post named {self.title} was posted by {self.author}'
+        return f"A post named {self.title} was posted by {self.author}"
 
     def num_of_likes(self):
         """ A helper method to count the likes """
