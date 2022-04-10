@@ -19,6 +19,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='blogpost_like', blank=True)
+
     class Meta:
         """ Using the order to be reversed for the most recent posts """
         ordering = ['-created']
