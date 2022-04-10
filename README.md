@@ -16,7 +16,6 @@ A personal blog website, focused on Aromatherapy and essential oils, working on 
    * [Surface](#surface)
 * [Technologies Used](#technologies-used)
 * [Testing](#testing)
-* [Issues](#issues)
 * [Deployment](#deployment)
 * [Credits](#credits)
 
@@ -78,10 +77,6 @@ Homepage for first time users to 'Register' or 'Login'
 ![](media/images/signup.png?raw=true)
 
 
-
-
-
-
 - Administrator can mainpulate comments that are going to be published, approve them
 - Django Messages are used to let user know on 'login/logout' status and on commenting sent to be approved
 
@@ -93,9 +88,6 @@ Homepage for first time users to 'Register' or 'Login'
 - Facebook login set up (At the moment, there is a bug, which does not allow login using Facebook, but it worked once before, so I keep trying)
 
 ![](media/images/messages-signedin.png?raw=true)
-
-
-
 
 **Future features**
 
@@ -140,7 +132,8 @@ This site uses a [ColorSpace](https://mycolor.space/) palette picker, and this i
 The site uses the following languages;
 
 * HTML5
-* CSS
+* CSS3
+* Bootstrap
 * JavaScript
 * Django
 * Python
@@ -149,12 +142,10 @@ Django is a framework, relational database is postgres, check for heroku to shar
 
 # Testing
 A separate file for Testing is in another file
-# Issues
 
-There was some issues while setting up Facebook Login, as I had another app connecte to Facebook Login button earler, deleting it did not yet solve the issue as this is what I am getting, possibly when fully deployet it should work as I triple checked everything and have not found yet a better solution then setting Debug to 'False' and trying it again.
+# Deployment Steps
 
-
-# Deployment
+This website is deployed on Github for Front End and on Heroku for Backend. --> write this better
 
 **How to fork this GitHub Repository**
 
