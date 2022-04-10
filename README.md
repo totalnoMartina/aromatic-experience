@@ -13,7 +13,6 @@ A personal blog website, focused on Aromatherapy and essential oils, working on 
    * [Scope](#scope)
    * [Structure](#structure)
    * [Skeleton](#skeleton)
-   * [Surface](#surface)
 * [Technologies Used](#technologies-used)
 * [Testing](#testing)
 * [Deployment](#deployment)
@@ -67,7 +66,6 @@ As a small business owner, a representative for Doterra Company, I want to have 
 Mostly for a small business owners usage, possibly for the ones who work from home, even though it is easily maintained to be a regular little hobby on the side. And the scope here is to be topic oriented, targeting aromatherapy benefits and connect all interested with the commenting feature, providing relevant informations. Help small business connected to aromatherapy grow.
 ### Features
 
-
 - Authentication System - Users can login and easily comment/like
 
 Homepage for first time users to 'Register' or 'Login'
@@ -78,7 +76,6 @@ Homepage for first time users to 'Register' or 'Login'
 
 
 - Administrator can manipulate comments that are going to be published, approve them![](media/images/admin-comment-approve.png?raw=true)
-
 
 
 - Django Messages are used to let user know on 'login/logout' status and on commenting sent to be approved![](media/images/messages-signedin.png?raw=true)
@@ -110,14 +107,8 @@ Final idea of a layout ![](media/images/final-img.png?raw=true)
 
 ### Wireframes
 
-![Wireframe](media/images/aromatic.png?raw=true)
+![Wireframe](media/images/aromatic-wireframe.png?raw=true)
 
-### Database schema
---> ERD 
-
-## Surface
-
-**Database models**
 
 
 **Color scheme**
@@ -125,11 +116,10 @@ Final idea of a layout ![](media/images/final-img.png?raw=true)
 
 This site uses a [ColorSpace](https://mycolor.space/) palette picker, and this is the final choice
 ![Color Palette](media/images/final_color_palette.png?raw=true)
-**Imagery**
 
 # Technologies Used
 
-The site uses the following languages;
+The site uses the following technologies;
 
 * HTML5
 * CSS3
@@ -137,8 +127,8 @@ The site uses the following languages;
 * JavaScript
 * Django
 * Python
-
-Django is a framework, relational database is postgres, check for heroku to share more details
+* Postgres
+* Cloudinary
 
 # Testing
 [See separate Testing file](TESTING.md) for information on testing and issues.
@@ -188,11 +178,12 @@ Reveal the Config Variables and enter the following information to connect to Po
 
 ![Heroku](media/images/heroku-config.png?raw=true)
 
-Connect using Github (if appropriate)
+Connect using Github (if appropriate) with a button in the middle of 'Deploy' section and search for the name of your Github repository, when you find, click 'Connect'.
+![Heroku](media/images/heroku-github-deploy.png?raw=true)
 
-Select the branch for deployment
-
-Deploy. The app can now be viewed live on this link [here](https://aromatic-martina.herokuapp.com/)
+Next, select the branch for deployment(commonly 'main')
+Click 'Deploy' button. After a few moments the building of your app with the log can be observed, right under the 'Deploy' button.
+Finally, the app can now be viewed live on this link [here](https://aromatic-martina.herokuapp.com/)
 
 ![Heroku](media/images/heroku-build-fin.png?raw=true)
 

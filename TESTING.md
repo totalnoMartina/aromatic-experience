@@ -65,13 +65,11 @@ Python code was checked using [PEP8 Validator](http://pep8online.com/)
 
 ![PEP8 Validator](media/images/pep8-wsgi.png?raw=true)
 
-
 ## Database Entity Relationship Diagram
 
 ![ERD](media/images/erd-full.png?raw=true)
 
 The relationship between data models are straightforward, there is a User with an 'ID' that is able to create posts, and related to an 'author' . The comment model is relating to the post, and in the model,a 'name' represents a user who, for now, can only comment the posts. Likes are an optin that is set to 'False' initially.
-
 
 ## Database Models Scheme
 
@@ -79,7 +77,7 @@ The relationship between data models are straightforward, there is a User with a
 
 ## User journey
 
-![CSS3 Validator](media/images/users-journey.png?raw=true)
+![User journey through site](media/images/users-journey.png?raw=true)
 
 ## User story testing
 
