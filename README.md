@@ -77,12 +77,12 @@ Homepage for first time users to 'Register' or 'Login'
 ![](media/images/signup.png?raw=true)
 
 
-- Administrator can mainpulate comments that are going to be published, approve them
-- Django Messages are used to let user know on 'login/logout' status and on commenting sent to be approved
+- Administrator can manipulate comments that are going to be published, approve them![](media/images/admin-comment-approve.png?raw=true)
 
-![](media/images/messages-signedin.png?raw=true)
 
-![](media/images/messages-signedout.png?raw=true)
+
+- Django Messages are used to let user know on 'login/logout' status and on commenting sent to be approved![](media/images/messages-signedin.png?raw=true)
+- ![](media/images/messages-signedout.png?raw=true)
 
 - Not able to screenshot but there is a snippet of JavaScipt code for Navigation to toggle close (if clicked) when user cliks outside of the navbar
 - Facebook login set up (At the moment, there is a bug, which does not allow login using Facebook, but it worked once before, so I keep trying)

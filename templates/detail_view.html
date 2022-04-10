@@ -10,100 +10,98 @@
         </div>
         <div class="article__header--item">
             {% if "placeholder" in post.related_img.url %}
-            <img src="https://www.nicepng.com/png/full/104-1048864_engine-oil-png-background-image-cooking-oil-drop.png" alt="placeholder">
+            <img src="https://www.nicepng.com/png/full/104-1048864_engine-oil-png-background-image-cooking-oil-drop.png" alt="placeholder" class="article__header--item">
             {% else %}
             <img src=" {{ post.related_img.url }}" alt="image related to post">
             {% endif %}
         </div>
     </div>
 
-    <div class="container my-4">
-        <div class="row">
-            <div class="col card my-4 top">
-                <div class="card-body">
-                    <div class="card-text ">
-                        <!-- Filter 'safe' for decoding characters rendered from blog posts -->
-                        {{ post.content | safe }}
-                        <div class="row">
-                            <div class="col-1">
-                                {% if user.is_authenticated %}
-                                <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                                    {% csrf_token %}
-                                    {% if liked %}
-                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like bg-primary">
-                                        <i class="fas fa-heart"></i>
-                                    </button>
-                                    {% else %}
-                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like bg-primary">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    {% endif %}
+    <div class="container-fluid my-4">
+        <div class="col card my-4 top">
+            <div class="card-body">
+                <div class="card-text ">
+                    <!-- Filter 'safe' for decoding characters rendered from blog posts -->
+                    {{ post.content | safe }}
+                    <div class="row">
+                        <div class="col-1">
+                            {% if user.is_authenticated %}
+                            <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                {% csrf_token %}
+                                {% if liked %}
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like bg-primary">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                {% else %}
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like bg-primary">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                {% endif %}
 
-                                    {% else %}
-                                    <span> <i class="far fa-heart"></i></span>
-                                    {% endif %}
-                                    <span class="text-secondary"> {{ post.num_of_likes }}</span>
-                                    <!-- The number of likes  -->
-                                </form>
-                            </div>
-                            <div class="col-1">
-                                {% with comments.count as total_comments %}
-                                <strong class="text-secondary"><i class="far fa-comments"></i>
-                                    <!-- Our total_comments variable goes before the closing strong tag -->
-                                    {{ total_comments }}</strong>
-                                {% endwith %}
-                            </div>
+                                {% else %}
+                                <span> <i class="far fa-heart"></i></span>
+                                {% endif %}
+                                <span class="text-secondary"> {{ post.num_of_likes }}</span>
+                                <!-- The number of likes  -->
+                            </form>
                         </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-md-6 card my-4 mr-3">
-                    <h3>Comments:</h3>
-                    <div class="card-body">
-                        <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
-                        {% for comment in comments %}
-                        <div class="comments" style="padding: 5px;">
-                            <p class="font-weight-bold">
-                                <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                                {{ comment.name }}
-                                <span class=" text-muted font-weight-normal">
-                                    <!-- The comment's created date goes here -->
-                                    {{ comment.created }}
-                                </span> wrote:
-                            </p>
-                            <!-- The body of the comment goes before the | -->
-                            {{ comment.body | linebreaks }}
+                        <div class="col-1">
+                            {% with comments.count as total_comments %}
+                            <strong class="text-secondary"><i class="far fa-comments"></i>
+                                <!-- Our total_comments variable goes before the closing strong tag -->
+                                {{ total_comments }}</strong>
+                            {% endwith %}
                         </div>
-                        <!-- Our for loop ends here -->
-                        {% endfor %}
-                    </div>
-                </div>
-                <div class="col-md-4 card my-4">
-                    <div class="card-body rounded">
-                        <!-- For later -->
-                        {% if commented %}
-                        <div class="alert alert-success" role="alert">
-                            Your comment is awaiting approval
-                        </div>
-                        {% else %}
-                        {% if user.is_authenticated %}
-
-                        <h3>Leave a comment:</h3>
-                        <p>Posting as: {{ user.username }}</p>
-                        <form method="post">
-                            {{ comment_form | crispy }}
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-com btn-lg btn__submit">Submit</button>
-                        </form>
-                        {% endif %}
-                        {% endif %}
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="row mb-4">
+        <div class="col-md-6 card my-4">
+            <h3>Comments:</h3>
+            <div class="card-body">
+                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+                {% for comment in comments %}
+                <div class="comments" style="padding: 5px;">
+                    <p class="font-weight-bold">
+                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
+                        {{ comment.name }}
+                        <span class=" text-muted font-weight-normal">
+                            <!-- The comment's created date goes here -->
+                            {{ comment.created }}
+                        </span> wrote:
+                    </p>
+                    <!-- The body of the comment goes before the | -->
+                    {{ comment.body | linebreaks }}
+                </div>
+                <!-- Our for loop ends here -->
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-4 card my-4">
+            <div class="card-body rounded">
+                <!-- For later -->
+                {% if commented %}
+                <div class="alert alert-success" role="alert">
+                    Your comment is awaiting approval
+                </div>
+                {% else %}
+                {% if user.is_authenticated %}
+
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-com btn-lg btn__submit">Submit</button>
+                </form>
+                {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
 {% endblock content %}

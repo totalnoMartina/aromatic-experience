@@ -289,8 +289,8 @@ body {
     background-color: white;
     color: var(--clr-neutral--900);
     font-size: 1.1rem;
-    padding: 1.8em;
-    width: 50%;
+    padding: 1.1em;
+    width: 100%;
 }
 
 .btn {
@@ -485,7 +485,31 @@ body {
         height: 9rem;
         top: -2.5rem;
     }
+
+    .article__header {
+        width: 100%;
+    }
+
+    .article__header--item {
+        padding: 1.2em;
+    }
+
+    .article__header--item img {
+        height: auto;
+        max-width: 100%;
+        justify-content: flex-start;
+    }
+
+    .post-title {
+        max-width: 50%;
+    }
+
+    .article__header--item img {
+        max-width: 50%;
+    }
+
 }
+
 
 @media all and (max-width: 550px) {
 
@@ -499,6 +523,10 @@ body {
 
     .card-body {
         font-size: 0.9rem;
+    }
+
+    .article__header {
+        display: grid;
     }
 }
 

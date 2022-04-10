@@ -99,6 +99,8 @@ A 'favicon' error showing up in Chrome Developer Tools while Inspecting, resolve
 A smooth scroll was tried with JavaScript code, with a method of 'animate' which somehow did not work and after the idea of 'scroll-behavior: smooth;' in css for html element it worked better.
 
 ### Unfixed bugs
+
+At the moment 'Facebook Login' is in the 'Login' page, instead on a 'SignUp Page', I cannot seem to find any videos about controlling 'allauth' templates
 ## Issues
 
 The early deployment worked quite well from the start, as I practiced with redoing the walthrough projects within LMS, and all documents were rendering well from the start as I gathered only relevant dependencies combining videos of 'I Think, Therefore I Blog' and 'Boutique Ado'. 
