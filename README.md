@@ -149,7 +149,7 @@ Django is a framework, relational database is postgres, check for heroku to shar
 
 # Testing
 
-HTML5 Documents are Validated with [Validator W3](https://validator.w3.org/)
+HTML5 Documents are Validated with [Validator W3](https://validator.w3.org/) and there were errors since django uses Jinja tags which interfered a bit
 
 # Issues
 

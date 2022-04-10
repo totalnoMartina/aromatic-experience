@@ -2,6 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Set up for root colors for easier reusability through variables */
 :root {
     --clr-primary--100: #F6E0DF;
     --clr-primary--500: #FF7256;
@@ -14,8 +15,7 @@ html {
     --br: 0.4em;
 }
 
-/* Setting root colors and initial style setup */
-
+/* Root style */
 body {
     width: 100%;
     background-color: var(--clr-primary--100);
@@ -101,13 +101,13 @@ body {
 
 /* Main styles for the homepage */
 
-.home {
-    /* width: 100%; */
-    /* display: flex;
+/* .home { */
+/* width: 100%; */
+/* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; */
-}
+/* } */
 
 .main__container {
     margin-top: 15vh;
@@ -370,6 +370,17 @@ body {
 .creator__link a i:hover,
 .sponsor__link a i:hover {
     color: #ffffffa8;
+}
+
+.pagination li>a {
+    border-radius: 10%;
+    color: #A86867;
+}
+
+.pagination li>a:hover {
+    background-color: var(--clr-primary--500);
+    color: white;
+
 }
 
 .button__top {
