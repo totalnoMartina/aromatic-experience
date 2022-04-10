@@ -23,36 +23,27 @@ Add Python PEP8 validation
 
 ## Database Entity Relationship Diagram
 
+![ERD](media/images/erd-full.png?raw=true)
 
-The relationship between data models are straightforward, there is a User with an 'ID' that is able to create posts, and related to an 'author' . The comment model is relating to the post, and in the model,a 'name' represents a user who, for now, can only comment the posts.
-![CSS3 Validator](media/images/erd-models.png?raw=true)
+The relationship between data models are straightforward, there is a User with an 'ID' that is able to create posts, and related to an 'author' . The comment model is relating to the post, and in the model,a 'name' represents a user who, for now, can only comment the posts. Likes are an optin that is set to 'False' initially.
+
+
+## Database Models Scheme
+
+![Database models scheme](media/images/erd-models.png?raw=true)
+
+## User journey
+
+![CSS3 Validator](media/images/users-journey.png?raw=true)
+
 ## User story testing
 
 | User story   | Requirement met  | Image |
-|------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|-------|
-| **New site visitors:**                                                                                                                  |                                                                                                                   |       |
-| 1. I want to quickly understand the purpose of the site and the products/services offered                             | Welcome text on the top of the homepage explaining who they are and briefly the services offered                  |   ![1]()
-| 2. I want to easily register an account                                                                | Top navigation Register link                                                                                      |   ![2a]() 
-| 3. I want to feel confident that the data I enter is secure                                              | Sign up verification steps include entering the email twice, password twice and then a verification email is sent |    ![2]() 
-| 4. I want to understand the benefits of creating an account                                                                              | Text throughout the site explains the benefits of having an account                                                               | Text throughout the site explains the benefits of having an account                                               |   ![Picture4]()    |
-| 5. I want to purchase a marketing template quickly and securely, without the need to register an account                                 | Guest checkout option is available                                                                                |    ![Picture5]()   |
-| 6. I want to easily purchase work hours for a project                                                                                    | Products can be added on the place an order page                                                                  |    ![Picture7]()   |
-| 7. I want to complete a contact form, filling in project requirement details for more detailed work                                      | This page is easily accessible from the top navigation                                                            |   ![Picture18]()    |
-| 8. I want to feel confident that my payment was successful and my order received                                                         | User is redirected to the checkout confirmation page upon purchase                                 |   ![Picture8]()    |
-| 9. I want to be informed at every step of the purchase process, including information about any errors                                   | Pop-ups / Toasts give information throughout the buying process                                                   |  ![Picture9]()
-| 10. I want to see previous projects carried out by the consultant and/or companies worked with as proof of the level of work carried out | Portfolio information available on the homepage   | ![Picture10]()                                                        
+|                                     |                                                   
 | **Returning visitors:**                                                                                                                  |                                                                                                                   |       |
-| 1. I want to easily log into my account                                                        | Log in from the top navigation and various places in the site                                                     |   ![Picture11]()    |
-| 2. I want to book project hours and feel confident that the online purchase is secure                                                    |        Payments are handled by a third party site and no records saved to the deployed site                           |     ![Picture12]()  |
-| 3. I want to see previous hours purchased                                                              | Available in an account's profile                                                                                 |   ![Picture13]()  
-| 4. I want to purchase online templates                                                                                                   | Available to purchase as a guest or logged in                                                                     |     ![Picture5]() 
-| 5. I want the ability to delete my order before a purchase is made                                                               | Site users can remove items from the bag                                                                          |      ![Picture14]()
-| 6. I want the ability to review my order before a purchase is made                                                                       | Visitors are taken to a review page before checkout                                                               |      ![Picture15]()
+| 1. I want to easily log into my account                                                        | Log in from the top navigation                                                                              
 | **Site administrator:**                                                                                                                  |                                                                                                                   |   
-| 1. I want to log into the administration area quickly and easily                                                                         | Same log in page as users, but can access administration                                                          |   ![Picture11](https://user-images.githubusercontent.com/76033080/137578292-8cab359a-8de0-4d68-a094-8ae94b5aba01.jpg) |
-| 2. I want to see what orders and contact requests have been made           | Order requests available in the administration section of the site                                               |![Picture19]() |
-| 3. I want to easily add more online templates for users to purchase                                                                      | Add products available to admin only                                                                              |  ![Picture17](https://user-images.githubusercontent.com/76033080/137578273-625e18b5-5892-4ee5-8c00-4e97e9a4ee89.jpg) |
-
+| 1. I want to log into the admin
 ## Issues
 
 

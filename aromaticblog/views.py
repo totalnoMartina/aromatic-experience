@@ -78,7 +78,7 @@ class TheLikes(View):
     def post(self, request, slug, *args, **kwargs):
         """ Connecting to a particular post by slug """
         post = get_object_or_404(Post, slug=slug)
-        # If user already liked, then is removing like
+        # If there is likes already, clicking deletes it
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:

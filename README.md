@@ -234,5 +234,6 @@ some of them deleted due to small space on 'Heroku', [link for Apartments](https
 [Facebook Login](https://www.youtube.com/watch?v=E6LxUleoloU),
 [Building Social Login](https://www.youtube.com/watch?v=oAWUyg_PPLk), [Django Restaurant System](https://www.youtube.com/watch?v=r0mjZRKmNC8&t=25s),
 [Create a Diary App](https://www.youtube.com/watch?v=YkpEtE_x6xk)
+- The ERD was made using [SmartDraw](https://www.smartdraw.com/)
 
 - Help with documenting deployment was found on this link [How to get started with Git](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#forking-a-repository) and inspired by [Catherine Trevor](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#forking-a-repository)'s README.md

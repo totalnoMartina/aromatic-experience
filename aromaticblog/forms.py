@@ -8,4 +8,4 @@ class CommentForm(forms.ModelForm):
     class Meta:
         """ A class for displaying body of a comment"""
         model = Comment
-        fields = ('body', )
+        fields = ('body', 'name', )
