@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 // A script for timeout of the messages
 
 setTimeout(function() {

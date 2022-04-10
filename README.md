@@ -141,7 +141,7 @@ The site uses the following languages;
 Django is a framework, relational database is postgres, check for heroku to share more details
 
 # Testing
-A separate file for Testing is in another file
+[See separate Testing file](TESTING.md) for information on testing and issues.
 
 # Deployment Steps
 
@@ -170,7 +170,7 @@ This website is deployed on Github for Front End and on Heroku for Backend. --> 
 
 This project was developed using Gitpod, committed to git and pushed to Github using the built-in functionality.
 
-At early stages it was then deployed to Heroku.
+At early stages it was then deployed to Heroku with guidance of videos for 'I Think Therefore I Blog' walkthrough
 
 ### Details
 
@@ -179,7 +179,6 @@ At early stages it was then deployed to Heroku.
 * Enter App name and select a region
 
 Reveal the Config Variables and enter the following information to connect to Postgress with 'DATABASE_URL', connect to Media database using 'CLOUDINARY_URL', and the last two are for the Facebook login button to work:
-
 
 * DATABASE_URL
 * CLOUDINARY_URL

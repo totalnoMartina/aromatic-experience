@@ -7,41 +7,63 @@ HTML5 and CSS3 documents have been validated using [Validator W3](https://valida
 
 ### HTML5
 
-Images for index and detail pages
+Index Page
 ![Index Validator](media/images/index-validated.png?raw=true)
+Detail Page
 ![Detail page Validator](media/images/detail-validated.png?raw=true)
 
 ### CSS3
 
-Image of the CSS3 validation shows an error in the '.blog' class (line 198) that specifies positioning of the blog elements which are rendered using Jinja (Django), and that includes image, date, title, author's name, likes and content of the post. The code for this styling is helping responsiveness, and works impeccable on different screen devices keeping a consistent layout and this is why I am keeping it this way. I will look more into better ways of doing this.
+Image of the CSS3 validation shows an error in the '.blog' class (line 198) that specifies positioning of the blog elements which are rendered using Jinja (Django), and that includes image, date, title, author's name, likes and content of the post. The code for this styling is helping responsiveness, and works impeccable on different screen devices keeping a consistent layout and this is why I am keeping it this way. I will look more into better ways of doing this so there is no errors.
 ![CSS3 Validator](media/images/css-validation-error.png?raw=true)
 
+### JavaScript Validator
+
+For validating JavaScript code [JSHint](https://jshint.com/) is used 
+![CSS3 Validator](media/images/jshint-validation.png?raw=true)
 
 ### Python Validation
 
 Python code was checked using [PEP8 Validator](http://pep8online.com/)
 
 -- admin.py
+
 ![PEP8 Validator](media/images/admin-pep8.png?raw=true)
+
 -- app.py
+
 ![PEP8 Validator](media/images/pep8-app.png?raw=true)
+
 -- settings.py
+
 ![PEP8 Validator](media/images/pep8-settings-indent-line-too-long.png?raw=true)
+
 -- forms.py
+
 ![PEP8 Validator](media/images/pep8-forms.png?raw=true)
+
 -- views.py
+
 ![PEP8 Validator](media/images/pep8-indent-or-line-too-long-views.png?raw=true)
+
 -- models.py
 ![PEP8 Validator](media/images/pep8indent-or-line-too-long-models.png?raw=true)
--- test-forms.py
-![PEP8 Validator](media/images/pep8-test-forms.png?raw=true)
--- url.py(project)
-![PEP8 Validator](media/images/pep8-urls-project.png?raw=true)
--- urls.py(app)
-![PEP8 Validator](media/images/pep8-urls.png?raw=true)
--- wsgi.py
-![PEP8 Validator](media/images/pep8-wsgi.png?raw=true)
 
+-- test-forms.py
+
+![PEP8 Validator](media/images/pep8-test-forms.png?raw=true)
+
+-- url.py(project)
+
+![PEP8 Validator](media/images/pep8-urls-project.png?raw=true)
+
+-- urls.py(app)
+
+![PEP8 Validator](media/images/pep8-urls.png?raw=true)
+
+-- wsgi.py
+
+![PEP8 Validator](media/images/pep8-wsgi.png?raw=true)
 
 
 ## Database Entity Relationship Diagram
@@ -61,15 +83,20 @@ The relationship between data models are straightforward, there is a User with a
 
 ## User story testing
 
-| User story   | Requirement met  | Image |
-|                                     |                                                   
-| **Returning visitors:**                                                                                                                  |                                                                                                                   |       |
-| 1. I want to easily log into my account                                                        | Log in from the top navigation                                                                              
-| **Site administrator:**                                                                                                                  |                                                                                                                   |   
-| 1. I want to log into the admin
+| User story                 |      Requirement met  |         Image     |
+|------------------------------------------------------------------|
+|1. As an admin I want  |         Yes           |
+|to manage my account   |
+| securely              |
+|2.Create Posts, publish|
+| posts and approve use |
+| comments              |
 
 ## Bugs 
 ### Fixed Bugs
+
+A 'favicon' error showing up in Chrome Developer Tools while Inspecting, resolved with code for HTML that uses element of 'link' for and empty 'href'.
+A smooth scroll was tried with JavaScript code, with a method of 'animate' which somehow did not work and after the idea of 'scroll-behavior: smooth;' in css for html element it worked better.
 
 ### Unfixed bugs
 ## Issues
