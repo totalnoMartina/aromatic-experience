@@ -6,8 +6,6 @@
         <div class="hero__section">
             <div class="hero__section--item">
                 <div class="hero__image--container">
-                    <!-- Image for visual effect -->
-                    <img src="{{ MEDIA_URL }}olive.png" alt="olive leaf image" class="hero__image--small ">
                 </div>
                 <h3>How This All Started</h3>
                 <p>I have been working with
@@ -25,9 +23,8 @@
                 </p>
             </div>
             <div class="hero__section--item">
-                <div class="hero__image--container hero__image--flower">
+                <div class="hero__image--flower">
                     <!-- Image for visual effect -->
-                    <img src="{{ MEDIA_URL }}flower.png" alt="decorative flower image" class="hero__image--small ">
                 </div>
                 <h3>Oils origin</h3>
                 <p>
@@ -52,7 +49,6 @@
             <div class="blog__card">
                 <div class="blog__card--image">
                     <!-- Check this one tomorrow ####  -->
-                    <img class="card-img-top">
                     <!-- Image related to the blog post with a placeholder if no image selected -->
                     {% if "placeholder" in post.related_image.url %}
                     <img class="card-img-top" src="https://www.nicepng.com/png/full/104-1048864_engine-oil-png-background-image-cooking-oil-drop.png" alt="image placeholder for oils">

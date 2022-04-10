@@ -148,9 +148,7 @@ The site uses the following languages;
 Django is a framework, relational database is postgres, check for heroku to share more details
 
 # Testing
-
-HTML5 Documents are Validated with [Validator W3](https://validator.w3.org/) and there were errors since django uses Jinja tags which interfered a bit
-
+A separate file for Testing is in another file
 # Issues
 
 There was some issues while setting up Facebook Login, as I had another app connecte to Facebook Login button earler, deleting it did not yet solve the issue as this is what I am getting, possibly when fully deployet it should work as I triple checked everything and have not found yet a better solution then setting Debug to 'False' and trying it again.
