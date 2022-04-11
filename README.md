@@ -40,8 +40,6 @@ As a small business owner, a representative for Doterra Company, I want to have 
 - Users who dont know anything about oils but have a keen interest to find out
 - Users who have some emotional imbalance and looking for natural way of getting back to balance
 - Users who want to connect to more alike-thinkers
-
-
 ## User stories
 
 **First-time User:**
@@ -63,8 +61,6 @@ As a small business owner, a representative for Doterra Company, I want to have 
 1. I want to log in quickly and easily
 2. I want to see what comments have been recently requested to be published
 3. I want to have an option on my navigation to go straight to Admnistration when logged in
-
-
 ## Scope
 
 Mostly for a small business owners usage, possibly for the ones who work from home, even though it is easily maintained to be a regular little hobby on the side. Essential oils - topic oriented, targeting aromatherapy benefits and connect all interested with the commenting feature, providing relevant informations. Help small business connected to aromatherapy grow.
@@ -78,9 +74,7 @@ Homepage for first time users to 'Register' or 'Login'
 'Sign Up' page
 ![](media/images/signup.png?raw=true)
 
-
 - Administrator can manipulate comments that are going to be published, approve them![](media/images/admin-comment-approve.png?raw=true)
-
 
 - Django Messages are used to let user know on 'login/logout' status and on commenting sent to be approved![](media/images/messages-signedin.png?raw=true)
 - ![](media/images/messages-signedout.png?raw=true)
@@ -89,13 +83,11 @@ Homepage for first time users to 'Register' or 'Login'
 - Facebook login set up (At the moment, there is a bug, which does not allow login using Facebook, but it worked once before, so after trying, I decided to leave it there until I turn debug to False to see final effect)
 
 ![](media/images/messages-signedin.png?raw=true)
-
 **Future features**
 
 - Add an oil review section/category - where users can review oils from specific companies and share amongst each other which are high/low quality, since entering a category this time and made me destroy my db, I left it for future feature
 - Add login using Google - tried many times, postponed
 - Inspired by the app called [abillion](https://www.abillion.com/) it would be great to make every review giving users 1Euro for every review they make and then, this one euro would go to a specific company that already is involved in production of oils or contributing in some way, as this can be collected and donated. No money can be withdrawn, which makes it even more noble. 
-
 ## Structure
 
 A Structure of this website is aiming to be simple, with warm color palette and a simple navbar. The content main objective is in the center split into two columns when seeing published posts on 14inch screens -the screen size in which this website is made, in  a Chrome Browser.While seeing one post, the title and front image streches to improve visual experience.
@@ -105,7 +97,6 @@ This is the original, first idea of a layout ![](media/images/first_layout.png?r
 Second idea of a layout ![](media/images/final-layout.png?raw=true)
 
 Final idea of a layout ![](media/images/final-img.png?raw=true)
-
 ## Browser Compatibility
 
 The Website is made in [Chrome Browser](https://www.google.com/intl/en_ie/chrome/) on a Chromebook, to be exact --> Chrome is made possible by the Chromium open source project as well as other open source software.
@@ -124,8 +115,6 @@ There were some issues on IPhone 6S, showing unstable alignment which doesn't sh
 ![IOS Image](media/images/iphone2-bad.png?raw=true)
 ![IOS Image](media/images/iphone-good.png?raw=true)
 ![IOS Image](media/images/iphone2-good.png?raw=true)
-
-
 # Skeleton
 ## Wireframes
 
@@ -149,10 +138,8 @@ The site uses the following technologies;
 * Python (Django)
 * Postgres
 * Cloudinary
-
 # Testing
 [See separate Testing file](TESTING.md) for information on testing and issues.
-
 # Deployment Steps
 
 This website is deployed on Github for Front End and on Heroku for Backend
@@ -177,11 +164,9 @@ This website is deployed on Github for Front End and on Heroku for Backend
 7. Alternatively, select "Open with Github Desktop".
 
 ## Deployment on Heroku
-
 This project was developed using Gitpod, committed to git and pushed to Github using the built-in functionality.
 
 At early stages it was then deployed to Heroku with guidance of videos for 'I Think Therefore I Blog' walkthrough
-
 ### Steps for Heroku
 
 * Create an account or log into Heroku.
@@ -197,7 +182,6 @@ Reveal the Config Variables and enter the following information to connect to Po
 * SOCIAL_AUTH_FACEBOOK_SECRET
 
 ![Heroku](media/images/heroku-config.png?raw=true)
-
 Connect using Github (if appropriate) with a button in the middle of 'Deploy' section and search for the name of your Github repository, when you find, click 'Connect'.
 ![Heroku](media/images/heroku-github-deploy.png?raw=true)
 
@@ -206,7 +190,6 @@ Click 'Deploy' button. After a few moments the building of your app with the log
 Finally, the app can now be viewed live on this link [here](https://aromatic-martina.herokuapp.com/)
 
 ![Heroku](media/images/heroku-build-fin.png?raw=true)
-
 # Credits
 
 - [Stackoverflow](https://stackoverflow.com/)
@@ -249,4 +232,5 @@ Each of them helped me grow enormously
 
 - Help with documenting deployment was found on this link [How to get started with Git](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#forking-a-repository) and inspired by [Catherine Trevor](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#forking-a-repository)'s README.md example as well as ideas from Iulia Konovalova and Tim Nelson for making README better in details.
 
-Also in the last moment, after having dealt with 'staticfiles' numerous times, I had to find out how to render hero images properly an used the example from Catherine Trevor's 'The Marketing Ally' website.
+Also in the last moment, after having dealt with 'staticfiles' numerous times, I had to find out how to render hero images properly an used the example from Catherine Trevor's 'The Marketing Ally's website.
+
