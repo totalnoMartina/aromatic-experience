@@ -120,7 +120,7 @@ body {
     position: relative;
     background-color: white;
     color: var(--clr-neutral--900);
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     border-radius: var(--br);
     padding: 1.8em;
     width: 50%;
@@ -153,36 +153,7 @@ body {
     margin: 0;
 }
 
-.hero__image--container {
-    position: absolute;
-    right: -1.2rem;
-    top: -4rem;
-    width: 10rem;
-    height: 10rem;
-    transform: rotate(20deg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url('../media/olive.png');
-}
 
-.hero__image--flower {
-    position: absolute;
-    right: -1.2rem;
-    top: -4rem;
-    width: 10rem;
-    height: 10rem;
-    background-image: url('../media/flower.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.hero__image--small {
-    width: 100%;
-    object-fit: contain;
-    display: block;
-}
 
 /* Landing page style */
 
@@ -384,7 +355,6 @@ body {
     width: 100%;
     margin: 0 auto;
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-content: center;
     font-size: 1.2rem;
@@ -537,18 +507,8 @@ body {
         margin-left: 0.5em;
     }
 
-    .hero__image--container {
-        right: 0rem;
-        top: -3.5rem;
-        width: 8rem;
-        height: 8rem;
-        transform: rotate(20deg);
-    }
-
-    .hero__image--flower {
-        width: 9rem;
-        height: 9rem;
-        top: -2.5rem;
+    .hero {
+        font-size: 0.8rem;
     }
 
     .article__header {
@@ -598,7 +558,7 @@ body {
     }
 
     .hero {
-        font-size: 1.1rem;
+        font-size: smaller;
     }
 
     .card-body {
@@ -611,19 +571,6 @@ body {
 }
 
 @media all and (max-width: 495px) {
-    .hero__image--container {
-        right: 0rem;
-        top: -2.5rem;
-        width: 5rem;
-        height: 5rem;
-        transform: rotate(20deg);
-    }
-
-    .hero__image--flower {
-        width: 6rem;
-        height: 6rem;
-        top: -1.5rem;
-    }
 
     .comments {
         width: 100%;

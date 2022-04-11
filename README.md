@@ -80,7 +80,11 @@ Homepage for first time users to 'Register' or 'Login'
 - ![](media/images/messages-signedout.png?raw=true)
 
 - Not able to screenshot but there is a snippet of JavaScipt code for Navigation to toggle close (if clicked) when user cliks outside of the navbar
-- Facebook login set up (At the moment, there is a bug, which does not allow login using Facebook, but it worked once before, so after trying, I decided to leave it there until I turn debug to False to see final effect)
+- Facebook login not entirely set up (At the moment, there is a bug, which does not allow login using Facebook, but it worked once before, so after trying, I decided to leave it there until I turn debug to False to see final effect)
+
+- User cannot comment if not logged in
+![](media/images/post-detail-pagelogged-out.png?raw=true)
+
 
 ![](media/images/messages-signedin.png?raw=true)
 **Future features**
