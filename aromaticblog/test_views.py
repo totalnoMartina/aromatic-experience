@@ -4,7 +4,6 @@ from django.test import TestCase, Client, SimpleTestCase
 from django.urls import reverse
 from django.db import models
 from django.test.utils import isolate_apps
-# from .views import ListOfPosts, Detail, TheLikes
 
 
 class TestViews(TestCase):
@@ -16,13 +15,6 @@ class TestViews(TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html')
-
-    def test_if_title_is_unique(self):
-        """ Testing for name to be unique """
-        class TestModel(models.Model):
-            pass
-        self.assertIs(self.apps.get_model('aromaticblog', 'TestModel'), TestModel)
-
 
 if __name__ == '__main__':
     unittest.main()

@@ -71,10 +71,6 @@ class Detail(View):
             },
         )
 
-# class UpdateComment(UpdateView):
-#     model = Comment
-#     template_name = 'update_comment.html'
-#     form_class = UpdateComment
 
 class TheLikes(View):
     """ The view for the users to Like the posts or comment """

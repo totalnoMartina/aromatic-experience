@@ -1,9 +1,8 @@
 # Aromatic Experience
 
-A personal blog website, focused on Aromatherapy and essential oils, used to improve one's wellbeing naturally. The website is working on all screen devices for a good UX as preented in the image
+A personal blog website, focused on Aromatherapy and essential oils, used to improve one's wellbeing in a natural way. The website is working on all screen devices for a good UX as preented in the image.
 
 ![](media/images/responsiveness.png?raw=true)
-
 
 # Contents
 
@@ -68,7 +67,7 @@ As a small business owner, a representative for Doterra Company, I want to have 
 
 ## Scope
 
-Mostly for a small business owners usage, possibly for the ones who work from home, even though it is easily maintained to be a regular little hobby on the side. And the scope here is to be topic oriented, targeting aromatherapy benefits and connect all interested with the commenting feature, providing relevant informations. Help small business connected to aromatherapy grow.
+Mostly for a small business owners usage, possibly for the ones who work from home, even though it is easily maintained to be a regular little hobby on the side. Essential oils - topic oriented, targeting aromatherapy benefits and connect all interested with the commenting feature, providing relevant informations. Help small business connected to aromatherapy grow.
 ## Features
 
 - Authentication System - Users can login and easily comment/like
@@ -87,19 +86,19 @@ Homepage for first time users to 'Register' or 'Login'
 - ![](media/images/messages-signedout.png?raw=true)
 
 - Not able to screenshot but there is a snippet of JavaScipt code for Navigation to toggle close (if clicked) when user cliks outside of the navbar
-- Facebook login set up (At the moment, there is a bug, which does not allow login using Facebook, but it worked once before, so I keep trying)
+- Facebook login set up (At the moment, there is a bug, which does not allow login using Facebook, but it worked once before, so after trying, I decided to leave it there until I turn debug to False to see final effect)
 
 ![](media/images/messages-signedin.png?raw=true)
 
 **Future features**
 
-- Add an oil review section/category - where users can review oils from specific companie and share amongst each other which are high/low quality
-- Add login using Google
+- Add an oil review section/category - where users can review oils from specific companies and share amongst each other which are high/low quality, since entering a category this time and made me destroy my db, I left it for future feature
+- Add login using Google - tried many times, postponed
 - Inspired by the app called [abillion](https://www.abillion.com/) it would be great to make every review giving users 1Euro for every review they make and then, this one euro would go to a specific company that already is involved in production of oils or contributing in some way, as this can be collected and donated. No money can be withdrawn, which makes it even more noble. 
 
 ## Structure
 
-A Structure of this Website is aiming to be simple, with warm color palette and a simple navbar. The content main objective is in the center split into two columns when seeing published posts.While seeing one post, the title and front image streches to improve visual experience.
+A Structure of this website is aiming to be simple, with warm color palette and a simple navbar. The content main objective is in the center split into two columns when seeing published posts on 14inch screens -the screen size in which this website is made, in  a Chrome Browser.While seeing one post, the title and front image streches to improve visual experience.
 
 This is the original, first idea of a layout ![](media/images/first_layout.png?raw=true)
 
@@ -109,10 +108,25 @@ Final idea of a layout ![](media/images/final-img.png?raw=true)
 
 ## Browser Compatibility
 
-Iphone Safari, Ecosia, Chrome
-- images
-# Skeleton
+The Website is made in [Chrome Browser](https://www.google.com/intl/en_ie/chrome/) on a Chromebook, to be exact --> Chrome is made possible by the Chromium open source project as well as other open source software.
+Chrome OS is made possible by Linux OS, as is Linux [development environment](chrome://crostini-credits/).
 
+![Chrome Image](media/images/chrom-front.png?raw=true)
+![Chrome Image](media/images/chrome-post.png?raw=true)
+![Chrome Image](media/images/chrome-footer-submit.png?raw=true)
+![Chrome Image](media/images/chrome-signout.png?raw=true)
+![Chrome Image](media/images/chrome-loggedin.png?raw=true)
+
+There were some issues on IPhone 6S, showing unstable alignment which doesn't show in dev tools like that, but here are some screenshots
+
+![IOS Image](media/images/image_from_ios.png?raw=true)
+![IOS Image](media/images/iphone-bad.png?raw=true)
+![IOS Image](media/images/iphone2-bad.png?raw=true)
+![IOS Image](media/images/iphone-good.png?raw=true)
+![IOS Image](media/images/iphone2-good.png?raw=true)
+
+
+# Skeleton
 ## Wireframes
 
 Original setup is similar to the end product, navigation is chaged about 3+ times
@@ -141,7 +155,7 @@ The site uses the following technologies;
 
 # Deployment Steps
 
-This website is deployed on Github for Front End and on Heroku for Backend. --> write this better
+This website is deployed on Github for Front End and on Heroku for Backend
 
 **How to fork this GitHub Repository**
 

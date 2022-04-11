@@ -3,7 +3,7 @@ from django_summernote.admin import SummernoteModelAdmin
 from .models import Post, Comment
 
 
-# Registering an app
+# Register Models
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     """ For admin to see specific informations on post model """
@@ -13,7 +13,7 @@ class PostAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content',)
 
-
+# Register Models
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     """ For admin to see the specific informations on comments """

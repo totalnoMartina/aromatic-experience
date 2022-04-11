@@ -14,7 +14,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+X_FRAME_OPTIONS = 'SAMEORIGIN'  # The page can be displayed in a frame of same origin
 
 ALLOWED_HOSTS = ['aromatic-martina.herokuapp.com', 'localhost']
 
@@ -133,19 +133,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'aromaticproject.wsgi.application'
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-    # Tim recommends to put 'else' but for testing now this works
 elif 'test' in sys.argv:
     DATABASES = {
         'default': {
