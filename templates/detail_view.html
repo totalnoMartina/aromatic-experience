@@ -81,6 +81,7 @@
                     {% endfor %}
                 </div>
             </div>
+            {% if user.is_authenticated %}
             <div class="col-md-4 card my-4">
                 <div class="card-body rounded">
                     <!-- For later -->
@@ -89,8 +90,6 @@
                         Your comment is awaiting approval
                     </div>
                     {% else %}
-                    {% if user.is_authenticated %}
-
                     <h3>Leave a comment:</h3>
                     <p>Posting as: {{ user.username }}</p>
                     <form method="post">
@@ -99,9 +98,9 @@
                         <button type="submit" class="btn btn-com btn-lg btn__submit">Submit</button>
                     </form>
                     {% endif %}
-                    {% endif %}
                 </div>
             </div>
+            {% endif %}
         </div>
     </div>
 </div>

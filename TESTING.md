@@ -1,29 +1,19 @@
 # Testing
-
-## Validators of Front End
-
-
+## Validators
 HTML5 and CSS3 documents have been validated using [Validator W3](https://validator.w3.org/)
-
 ### HTML5
-
 Index Page
 ![Index Validator](media/images/index-validated.png?raw=true)
 Detail Page
 ![Detail page Validator](media/images/detail-validated.png?raw=true)
 
 ### CSS3
-
 Image of the CSS3 validation shows an error in the '.blog' class (line 198) that specifies positioning of the blog elements which are rendered using Jinja (Django), and that includes image, date, title, author's name, likes and content of the post. The code for this styling is helping responsiveness, and works impeccable on different screen devices keeping a consistent layout and this is why I am keeping it this way. I will look more into better ways of doing this so there is no errors.
 ![CSS3 Validator](media/images/css-validation-error.png?raw=true)
-
 ### JavaScript Validator
-
 For validating JavaScript code [JSHint](https://jshint.com/) is used 
 ![CSS3 Validator](media/images/jshint-validation.png?raw=true)
-
-### Python Validation
-
+Python Validation
 Python code was checked using [PEP8 Validator](http://pep8online.com/)
 
 -- admin.py
@@ -66,32 +56,28 @@ Python code was checked using [PEP8 Validator](http://pep8online.com/)
 ![PEP8 Validator](media/images/pep8-wsgi.png?raw=true)
 
 ## Database Entity Relationship Diagram
-
 ![ERD](media/images/erd-full.png?raw=true)
 
 The relationship between data models are straightforward, there is a User with an 'ID' that is able to create posts, and related to an 'author' . The comment model is relating to the post, and in the model,a 'name' represents a user who, for now, can only comment the posts. Likes are an optin that is set to 'False' initially.
-
 ## Database Models Scheme
-
 ![Database models scheme](media/images/erd-models.png?raw=true)
-
 ## User journey
-
 ![User journey through site](media/images/users-journey.png?raw=true)
+## User story MOSCOW on Github
 
-## User story testing
-
-add image for each succesfull user story
+![Database models scheme](media/images/git-opened-stories.png?raw=true)
+![Database models scheme](media/images/user-stories-git.png?raw=true)
 ## Bugs 
 ### Fixed Bugs
-
 A 'favicon' error showing up in Chrome Developer Tools while Inspecting, resolved with code for HTML that uses element of 'link' for and empty 'href'.
 A smooth scroll was tried with JavaScript code, with a method of 'animate' which somehow did not work and after the idea of 'scroll-behavior: smooth;' in css for html element it worked better.
 
 ### Unfixed bugs
-
-At the moment 'Facebook Login' is in the 'Login' page, instead on a 'SignUp Page', I cannot seem to find any videos about controlling 'allauth' templates
-Tried to implement Update/Delete Comments, most tutorials show how to do same but with Post only, so I could not understand how to manipulate a comment that is between a post and user.
+At the moment 'Facebook Login' is in the 'Login' page, instead on a 'SignUp Page', I cannot seem to find any videos about controlling 'allauth' templates, also, waiting until last moment to check if this if working.
+Tried to implement Update/Delete Comments, most tutorials show how to do same, but with Post only, so I could not understand how to manipulate a comment that is between a post and user. I tried about 4 times and unfrotunately, it seems to me I did not understand some important part that needs to be to put these pieces together. 
+Iphone S6 screen outlook is not fixable, also smooth-scroll behaviour doesn't work on 'Safari'
+I will keep learning.
+Many of my bugs are connected to all these three months of working on this project, as there was a 'Contact Form', 'Sending Email' function, 'Booking apartments' function, and now while learning they seem all like 'Bugs' but I am completely aware that the steps that I am taking are possibly not as accurate as I am wanting them to be, so I am really planning on making PP5 so much better, and not to go astray in many topics. I could say that this is the outcome of my personal panic mode. Just keep trying until the last moment. There were times, while making this project, when the new type of bug would make me happy as opposed to the same ones.
 ## Issues
 
 The early deployment worked quite well from the start, as I practiced with redoing the walthrough projects within LMS, and all documents were rendering well from the start as I gathered only relevant dependencies combining videos of 'I Think, Therefore I Blog' and 'Boutique Ado'. 
@@ -104,12 +90,9 @@ Media files were not rendering if targeted using Jinja, like the hero images of 
 
 There was some issues while setting up Facebook Login, as I had another app connected to Facebook Login button earler, deleting it did not yet solve the issue as this is what I am getting, possibly when fully deployet it should work as I triple checked everything and have not found yet a better solution then setting Debug to 'False' and trying it again.
 
-
-
-
 # Testing forms
-## Manually trying to 'submit' form when the field is empty 
--- image of this here
+
+
 # Testing Python code with 'unittest' module - automated
 
 -- Testing Comment Form for the fields that are required to be filled before posting 

@@ -224,11 +224,11 @@ Finally, the app can now be viewed live on this link [here](https://aromatic-mar
 - Text that inspired posts is also taken from [Doterra](https://www.doterra.com/GB/en_GB) as an example of relevant information this Blog would be about
 - [Google Fonts](https://fonts.google.com/specimen/Playfair+Display?query=play) for the 'Playfair Display'
 
-- For people that helped me throught the journey of creating this project, credits got to my mentor for moral and technical support, at times when I really needed it, resolving the authentication issues, image setting in carousel and many many more problems that Tim helped me solve, eternally grateful for that
+- For people that helped me throught the journey of creating this project, credits go to my mentor for moral and technical support, at times when I really needed it, resolving the authentication issues, image setting in carousel and many many more problems that Tim helped me solve, eternally grateful for that
 
-- Also, one of CI students, in my opinon an expert in Front End, [Julia Konovalova](https://github.com/IuliiaKonovalova) and became a good friend for some time, help me think outside of (flex)box and grid, made me learn so much while she advised me on front end outlook, as originally I was a 'linear-gradient-fan' and she helped me organize footer better. Very grateful for CI and all connection made here, and still making.
+- Also, one of CI students, in my opinon an expert in Front End, [Julia Konovalova](https://github.com/IuliiaKonovalova) and became a good friend for some time now, helped me think outside of (flex)box and grid, made me learn so much while she advised me on front end outlook, as originally I was a 'linear-gradient-fan' and she helped me organize footer better. She is such an amazing teacher, and we learned a lot together. Very grateful for CI and all connection made here, and still continue to make.
 
-- Also, while making this project, I had many doubts, mostly in myself, and that made me make a few more applications which were all my ideas in how to use Django in Full Stack Development. My first idea was a 'Django Chatbot' that would be a source of communication for people when they want to chat, to be reponded by AI Chatbot. Other ideas were: Apartment booking website - for my parents house in Croatia (over 4 versions of this project on Github can be seen 
+- Also, while making this project, I had many doubts, mostly in myself, and that made me make a few more applications which were all my ideas in how to use Django in Full Stack Development. My first idea was a 'Django Chatbot' that would be a source of communication for people when they want to chat, to be responded by AI Chatbot. I got as far as creating 'intentions' file and a module for storing data was not working. I followed this [tutorial](https://www.google.com/search?q=chatbot+module+th+django&rlz=1CAKDUD_enIE947&sxsrf=APq-WBvyn1KR_8LIDcKa-76rblEZSiGMYw%3A1649660280638&ei=eNFTYqfWJoOo8gKa74ioBA&ved=0ahUKEwin8pu4t4v3AhUDlFwKHZo3AkUQ4dUDCA4&uact=5&oq=chatbot+module+th+django&gs_lcp=Cgdnd3Mtd2l6EAMyBwghEAoQoAE6BwgAEEcQsAM6BQghEKABSgQIQRgASgQIRhgAUMkCWOcJYJkMaAFwAXgAgAGGAYgBmgWSAQM1LjKYAQCgAQHIAQjAAQE&sclient=gws-wiz). Other ideas were: Apartment booking website - for my parents house in Croatia (over 4 versions of this project on Github can be seen 
 * [version1](https://github.com/totalnoMartina/apartments-django)
 * [version2](https://github.com/totalnoMartina/jasna-apartments)
 * [version3](https://github.com/totalnoMartina/happy-holiday)
@@ -236,6 +236,7 @@ Finally, the app can now be viewed live on this link [here](https://aromatic-mar
 * [version5](https://github.com/totalnoMartina/holiday-home) -> very similar to the heroku one
 ), 
 some of them deleted due to limited space on 'Heroku', [link for Apartments](https://holiday-martina.herokuapp.com/)), Wholesale Bakery Website (only on Github, [Bakery Website](https://github.com/totalnoMartina/golden-mine-bakery)), Blog about plants&plant swapping (one of the deleted, based on CI walkthrough 'I think Therefore I Blog').
+Each of them helped me grow enormously
 
 - As my original idea was 'Apartments Booking' I found modules for 'booking' in django docs, but only compatible with Django 4.0, and I found reservation module 'reservations' which is compatible with older versions of Django, so I kept hopeful, thinking I can make up the function for booking myself, Thanks to the tutorials on [YouTube](www.youtube.com) I learned about the compatibility between apps and modules a lot.
 
