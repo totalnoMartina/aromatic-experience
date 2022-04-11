@@ -90,9 +90,6 @@ Media files were not rendering if targeted using Jinja, like the hero images of 
 
 There was some issues while setting up Facebook Login, as I had another app connected to Facebook Login button earler, deleting it did not yet solve the issue as this is what I am getting, possibly when fully deployet it should work as I triple checked everything and have not found yet a better solution then setting Debug to 'False' and trying it again.
 
-# Testing forms
-
-
 # Testing Python code with 'unittest' module - automated
 
 -- Testing Comment Form for the fields that are required to be filled before posting 
@@ -102,6 +99,11 @@ There was some issues while setting up Facebook Login, as I had another app conn
 -- Test passing as the content is rendering on the homepage i view function
 
 ![Test views.py view1](media/images/views_test_pass1.png?raw=true)
+
+-- Testing fails if I enter a wrong character - as it should. As far as testing python, these were helpful since they were presented in 'I Think Therefore I Blog' walthrough, and unfortunately I haven't been able to figure out tests manipulation entirely, after having spent over a week exploring and trying it out in different ways.
+![Test views.py view1](media/images/test-view-failed-with-a-typo.png?raw=true)
+
+
 
 # Testing JavaScript manually
 
