@@ -90,8 +90,9 @@ Media files were not rendering if targeted using Jinja, like the hero images of 
 
 There was some issues while setting up Facebook Login, as I had another app connected to Facebook Login button earler, deleting it did not yet solve the issue as this is what I am getting, possibly when fully deployet it should work as I triple checked everything and have not found yet a better solution then setting Debug to 'False' and trying it again.
 
-Last moment issue was that static media images for landing page are showing a 404 Error, and before this, Heroku deployment failed specifically because of these images of an olive and a flower. I searched on Slack about these
- ![Test forms.py](media/images/chrom-front.png?raw=true)
+Last moment issue was that static media images for landing page are showing a 404 Error, and before this, Heroku deployment failed specifically because of these images of an olive and a flower. I searched on Slack about these and found that Cloudinary must have all the used images, so I tried storing my two just there.
+ ![Issue - Should be rendering images](media/images/chrom-front.png?raw=true)
+ ![Issue - no images](media/images/last-issue.png?raw=true)
 
 # Testing Python code with 'unittest' module - automated
 

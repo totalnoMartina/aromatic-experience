@@ -163,7 +163,7 @@ body {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('../media/olive.png');
+    background-image: url('../images/olive.png');
 }
 
 .hero__image--flower {
@@ -172,7 +172,7 @@ body {
     top: -4rem;
     width: 10rem;
     height: 10rem;
-    background-image: url('../media/flower.png');
+    background-image: url('../images/flower.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

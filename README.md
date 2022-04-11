@@ -126,7 +126,6 @@ Original setup is similar to the end product, navigation is chaged about 3+ time
 
 This site uses a [ColorSpace](https://mycolor.space/) palette picker, and this is the final choice
 ![Color Palette](media/images/final_color_palette.png?raw=true)
-
 # Technologies Used
 
 The site uses the following technologies;
