@@ -110,7 +110,7 @@ body {
 /* } */
 
 .main__container {
-    margin-top: 15vh;
+    margin-top: 10vh;
     padding: 0 2em;
 }
 
@@ -291,6 +291,17 @@ body {
     font-size: 1.1rem;
     padding: 1.1em;
     width: 100%;
+
+}
+
+.article__header--item:last-child {
+    width: 100%;
+}
+
+.article__header--item:last-child img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
 }
 
 .btn {
@@ -411,6 +422,10 @@ body {
 
 /* 1248px for cards info */
 @media all and (max-width: 1097px) {
+    .nav__content {
+        justify-content: space-between;
+    }
+
     .hero__section {
         width: 100%;
         display: flex;
@@ -470,12 +485,27 @@ body {
         margin-bottom: 1.5em;
     }
 
-    .article__header--item img {
-        max-width: 100%;
+    .article__header--item h1 {
+        font-size: 1.6rem;
+    }
+
+    .article__header--item p {
+        font-size: 1rem;
     }
 }
 
 @media all and (max-width: 624px) {
+
+    .nav__content {
+        padding: 0.5em;
+        justify-content: space-between;
+    }
+
+    .nav__logo {
+        font-size: 1.2rem;
+        margin-left: 0.5em;
+    }
+
     .hero__image--container {
         right: 0rem;
         top: -3.5rem;
@@ -507,11 +537,35 @@ body {
         max-width: 100%;
     }
 
-    .article__header--item img {
+    /* .article__header--item img {
         max-width: 100%;
-    }
+    } */
 
 }
+
+@media all and (max-width: 566px) {
+
+    .main__container {
+        /* margin-top: 6vh; */
+        padding: 0 0.7em;
+    }
+
+    .article__header--item:first-child {
+        /* font-size: 1.3rem; */
+        width: 60%;
+    }
+
+    .article__header--item h1 {
+        font-size: 1.2rem;
+    }
+
+    .article__header--item:last-child {
+        width: 40%;
+    }
+
+
+}
+
 
 @media all and (max-width: 550px) {
 
@@ -527,12 +581,8 @@ body {
         font-size: 0.9rem;
     }
 
-    .article__header {
-        display: grid;
-    }
-
-    .article__header--item img {
-        max-width: 80%;
+    .article__header--item p {
+        font-size: 0.8rem;
     }
 }
 
@@ -551,7 +601,4 @@ body {
         top: -1.5rem;
     }
 
-    .article__header--item img {
-        max-width: 70%;
-    }
 }

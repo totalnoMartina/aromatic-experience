@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
-from django.views.generic import UpdateView
 from django.views import generic, View
 from django.contrib import messages
 from .models import Post, Comment
@@ -75,8 +74,7 @@ class Detail(View):
 # class UpdateComment(UpdateView):
 #     model = Comment
 #     template_name = 'update_comment.html'
-#     fields = ['body', ]
-#     form = CommentForm
+#     form_class = UpdateComment
 
 class TheLikes(View):
     """ The view for the users to Like the posts or comment """

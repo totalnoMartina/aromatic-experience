@@ -91,6 +91,7 @@ A smooth scroll was tried with JavaScript code, with a method of 'animate' which
 ### Unfixed bugs
 
 At the moment 'Facebook Login' is in the 'Login' page, instead on a 'SignUp Page', I cannot seem to find any videos about controlling 'allauth' templates
+Tried to implement Update/Delete Comments, most tutorials show how to do same but with Post only, so I could not understand how to manipulate a comment that is between a post and user.
 ## Issues
 
 The early deployment worked quite well from the start, as I practiced with redoing the walthrough projects within LMS, and all documents were rendering well from the start as I gathered only relevant dependencies combining videos of 'I Think, Therefore I Blog' and 'Boutique Ado'. 
@@ -101,18 +102,26 @@ Later on, while trying to add a 'category' to the model of Post, I made a mistak
 
 Media files were not rendering if targeted using Jinja, like the hero images of flower.png and olive.png that are stored in 'media' folder, did not load originally, but following 'Boutique Ado' the teacher is using css rule for targeting an element, adding property of background image (in his case homepage image) and rendering it through an 'url' and later they were loading properly.
 
-There was some issues while setting up Facebook Login, as I had another app connecte to Facebook Login button earler, deleting it did not yet solve the issue as this is what I am getting, possibly when fully deployet it should work as I triple checked everything and have not found yet a better solution then setting Debug to 'False' and trying it again.
+There was some issues while setting up Facebook Login, as I had another app connected to Facebook Login button earler, deleting it did not yet solve the issue as this is what I am getting, possibly when fully deployet it should work as I triple checked everything and have not found yet a better solution then setting Debug to 'False' and trying it again.
 
-# Testing Python code with 'unittest' module
 
--- Testing Comment Form for the field that is required to be filled before posting
+
+
+# Testing forms
+## Manually trying to 'submit' form when the field is empty 
+-- image of this here
+# Testing Python code with 'unittest' module - automated
+
+-- Testing Comment Form for the fields that are required to be filled before posting 
 
 ![Test forms.py](media/images/test-comment-form.png?raw=true)
 
--- Test passing as the content is rendering on the homepage
+-- Test passing as the content is rendering on the homepage i view function
 
 ![Test views.py view1](media/images/views_test_pass1.png?raw=true)
 
+# Testing JavaScript manually
 
+There are two functions that are written in JavaScript, one for the Navigation bar to close on clicking/touching anywhere in the page when navigation is toggled down and has been checked on Linux Chromebook in [Chrome](https://www.google.com/chrome/?brand=FKPE&gclid=Cj0KCQjwgMqSBhDCARIsAIIVN1XJTFLf7Smggn3UEcd8GRZYuT51exkyCHhR5AqWR5V6U1EGsDtVT1QaAu7oEALw_wcB&gclsrc=aw.ds) Browser and it works well. Also in [Ecosia](https://www.ecosia.org/?c=en) mobile version, closing navigation works well, as well as in the laptop version of Ecosia. It also works on Iphone [Safari](https://www.apple.com/safari/) version.
 
-# Testing JavaScript with Jest
+Another function is a 'Timeout' function for the 'django-messages' to disappear after certain time. It  works on all the browsers, same as the toggle function.

@@ -10,9 +10,14 @@ A personal blog website, focused on Aromatherapy and essential oils, used to imp
 * [Project Overview](#project-overview)
 * [User Experience Design](#user-experience-design)
    * [Strategy](#strategy)
+   * [Target audience](#target-audience)
+   * [User Stories](#user-stories)
    * [Scope](#scope)
+   * [Features](#features)
    * [Structure](#structure)
-   * [Skeleton](#skeleton)
+   * [Browser Compatibility](#browser-compatibility)
+* [Skeleton](#skeleton)
+   * [Wireframes](#wireframes)
 * [Technologies Used](#technologies-used)
 * [Testing](#testing)
 * [Deployment](#deployment)
@@ -27,7 +32,7 @@ Aromatic Experience is a blog started by a passionate individual who wants the w
 ## Strategy
 As a small business owner, a representative for Doterra Company, I want to have a way to promote the importance of using essential oils in every day life. The strategy here is to start small, gather a community and together 'smell the roses'. There is a possibility to make more income based on this blog, since audience will know some secret recipes here. Main Objective: To grow small business, share ideas.
 
-### Target audience
+## Target audience
 
 - Users passionate about skin/hair/nails care in natural ways
 - Users interested in healing with sense of smell
@@ -38,7 +43,7 @@ As a small business owner, a representative for Doterra Company, I want to have 
 - Users who want to connect to more alike-thinkers
 
 
-### User stories
+## User stories
 
 **First-time User:**
 
@@ -64,7 +69,7 @@ As a small business owner, a representative for Doterra Company, I want to have 
 ## Scope
 
 Mostly for a small business owners usage, possibly for the ones who work from home, even though it is easily maintained to be a regular little hobby on the side. And the scope here is to be topic oriented, targeting aromatherapy benefits and connect all interested with the commenting feature, providing relevant informations. Help small business connected to aromatherapy grow.
-### Features
+## Features
 
 - Authentication System - Users can login and easily comment/like
 
@@ -102,10 +107,13 @@ Second idea of a layout ![](media/images/final-layout.png?raw=true)
 
 Final idea of a layout ![](media/images/final-img.png?raw=true)
 
+## Browser Compatibility
 
-## Skeleton
+Iphone Safari, Ecosia, Chrome
+- images
+# Skeleton
 
-### Wireframes
+## Wireframes
 
 Original setup is similar to the end product, navigation is chaged about 3+ times
 
@@ -192,7 +200,7 @@ Finally, the app can now be viewed live on this link [here](https://aromatic-mar
 - Code Institute Slack community
 - Tutors at the Code Institute, in particular Igor, Ed and Ger for help with testing and deployment
 - A tutorial that helped me understand [Testing in Django](https://www.youtube.com/watch?v=GBgRMdjAx_c&list=PLOLrQ9Pn6cay7t8VZ3wmn6QdAxzTx60F3&index=4) a bit better
-- Also [this link here](https://stackoverflow.com/questions/44604686/how-to-test-a-model-that-has-a-foreign-key-in-django#:~:text=To%20write%20a%20test%20for,target%20model%20for%20the%20test.)
+- I used this help for trying to do testing python code [this link here](https://stackoverflow.com/questions/44604686/how-to-test-a-model-that-has-a-foreign-key-in-django#:~:text=To%20write%20a%20test%20for,target%20model%20for%20the%20test.)
 - [Django Docs on Testing Tools](https://docs.djangoproject.com/en/3.2/topics/testing/tools/#django.test.SimpleTestCase)
 - The original idea is based on CI Walkthrough project 'I Think Therefore I Blog'
 - The code for messages is also inspired by the same project, and the step further was to create you custom message for when user comments. 
