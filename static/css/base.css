@@ -73,7 +73,6 @@ body {
     width: 100%;
 }
 
-
 .dropdown__menu--item {
     width: 100%;
     margin: 0 auto;
@@ -98,16 +97,6 @@ body {
 .dropdown__menu--welcome:hover {
     color: white;
 }
-
-/* Main styles for the homepage */
-
-/* .home { */
-/* width: 100%; */
-/* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-/* } */
 
 .main__container {
     margin-top: 10vh;
@@ -171,7 +160,6 @@ body {
     width: 10rem;
     height: 10rem;
     transform: rotate(20deg);
-    /* background-image: url('../../media/images/olive.png'); */
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -358,7 +346,7 @@ body {
     color: var(--clr-primary--500);
 }
 
-/* Footer Style  */
+/* Footer Styles  */
 
 .footer__main {
     margin-top: 6vh;
@@ -454,9 +442,7 @@ body {
     background-color: #a868679f;
 }
 
-
 /* Media Queries */
-
 /* Start for media queries for mobile/smaller devices */
 
 @media all and (max-width: 1970px) {
@@ -582,10 +568,6 @@ body {
         max-width: 100%;
     }
 
-    /* .article__header--item img {
-        max-width: 100%;
-    } */
-
 }
 
 @media all and (max-width: 566px) {
@@ -607,10 +589,7 @@ body {
     .article__header--item:last-child {
         width: 40%;
     }
-
-
 }
-
 
 @media all and (max-width: 550px) {
 
@@ -661,5 +640,4 @@ body {
         flex-direction: column;
         text-align: center;
     }
-
 }
