@@ -1,6 +1,6 @@
 # Aromatic Experience
 
-A personal blog website, focused on Aromatherapy and essential oils, working on all screen devices for a good UX
+A personal blog website, focused on Aromatherapy and essential oils, used to improve one's wellbeing naturally. The website is working on all screen devices for a good UX as preented in the image
 
 ![](media/images/responsiveness.png?raw=true)
 
@@ -22,7 +22,7 @@ A personal blog website, focused on Aromatherapy and essential oils, working on 
 
 Aromatic Experience is a blog started by a passionate individual who wants the world to know about benefits of oils. As a Representation oils and sponsored by [Doterra](https://www.doterra.com/GB/en_GB), this website is for all lovers of oils, aromatherapy and 'DYI' blends that can be shared in this platform. With an option to like/unlike a post or leave a comment.
 
-# User Experience Design Thinking
+# User Experience Design
 
 ## Strategy
 As a small business owner, a representative for Doterra Company, I want to have a way to promote the importance of using essential oils in every day life. The strategy here is to start small, gather a community and together 'smell the roses'. There is a possibility to make more income based on this blog, since audience will know some secret recipes here. Main Objective: To grow small business, share ideas.
@@ -42,7 +42,7 @@ As a small business owner, a representative for Doterra Company, I want to have 
 
 **First-time User:**
 
-1. I want to understand the purpose of the site and the topic objective easily
+1. I want to understand the purpose of the site and the topic objective easily 
 2. I want to easily register an account, possibly using social media account
 3. I want to feel confident that the data I enter is secure
 4. I want to understand the benefits of creating an account
@@ -107,12 +107,11 @@ Final idea of a layout ![](media/images/final-img.png?raw=true)
 
 ### Wireframes
 
+Original setup is similar to the end product, navigation is chaged about 3+ times
+
 ![Wireframe](media/images/aromatic-wireframe.png?raw=true)
 
-
-
 **Color scheme**
-
 
 This site uses a [ColorSpace](https://mycolor.space/) palette picker, and this is the final choice
 ![Color Palette](media/images/final_color_palette.png?raw=true)
@@ -125,8 +124,7 @@ The site uses the following technologies;
 * CSS3
 * Bootstrap
 * JavaScript
-* Django
-* Python
+* Python (Django)
 * Postgres
 * Cloudinary
 
@@ -146,7 +144,7 @@ This website is deployed on Github for Front End and on Heroku for Backend. --> 
 5. GitHub will take you to your copy (your fork) of the 'aromatic-experience' repository.
 4. This should create a copy within your account.
 
-**How to run this project locally**
+**How to run this project locally - clone**
 
 1. Log onto Github: create an account if required.
 2. From the list of repositories, select 'the repo name/project name'
@@ -162,7 +160,7 @@ This project was developed using Gitpod, committed to git and pushed to Github u
 
 At early stages it was then deployed to Heroku with guidance of videos for 'I Think Therefore I Blog' walkthrough
 
-### Details
+### Steps for Heroku
 
 * Create an account or log into Heroku.
 * Navigate to Create New App within the New dropdown.
@@ -208,16 +206,16 @@ Finally, the app can now be viewed live on this link [here](https://aromatic-mar
 
 - Also, one of CI students, in my opinon an expert in Front End, [Julia Konovalova](https://github.com/IuliiaKonovalova) and became a good friend for some time, help me think outside of (flex)box and grid, made me learn so much while she advised me on front end outlook, as originally I was a 'linear-gradient-fan' and she helped me organize footer better. Very grateful for CI and all connection made here, and still making.
 
-- Also, while making this project, I had many doubts, mostly in myself, and that made me make a few more applications which were all my ideas in how to use Django in Full Stack Development. Some of them are: Apartment booking website - for my parents house in Croatia (over 3 versions of this project on Github can be seen 
+- Also, while making this project, I had many doubts, mostly in myself, and that made me make a few more applications which were all my ideas in how to use Django in Full Stack Development. My first idea was a 'Django Chatbot' that would be a source of communication for people when they want to chat, to be reponded by AI Chatbot. Other ideas were: Apartment booking website - for my parents house in Croatia (over 4 versions of this project on Github can be seen 
 * [version1](https://github.com/totalnoMartina/apartments-django)
 * [version2](https://github.com/totalnoMartina/jasna-apartments)
 * [version3](https://github.com/totalnoMartina/happy-holiday)
 * [version4](https://github.com/totalnoMartina/booking-klanfari)
 * [version5](https://github.com/totalnoMartina/holiday-home) -> very similar to the heroku one
 ), 
-some of them deleted due to small space on 'Heroku', [link for Apartments](https://holiday-martina.herokuapp.com/)), Wholesale Bakery Website (only on Github, [Bakery Website](https://github.com/totalnoMartina/golden-mine-bakery)), Blog about plats&plant swapping (one of the deleted, based on CI walkthrough 'I think Therefore I Blog'), Aromatic Blog as the final website that I am submitting. 
+some of them deleted due to limited space on 'Heroku', [link for Apartments](https://holiday-martina.herokuapp.com/)), Wholesale Bakery Website (only on Github, [Bakery Website](https://github.com/totalnoMartina/golden-mine-bakery)), Blog about plants&plant swapping (one of the deleted, based on CI walkthrough 'I think Therefore I Blog').
 
-- As my original idea was 'Apartments Booking' I found modules for 'booking' in django docs, but only compatible with Django 4.0, and I found reservation module 'reservartions' which is compatible with older versions of Django, so I kept hopeful, thinking I can make up the function for booking myself, Thanks to the tutorials on [YouTube](www.youtube.com) I learned about the compatibility between apps and modules matters a lot.
+- As my original idea was 'Apartments Booking' I found modules for 'booking' in django docs, but only compatible with Django 4.0, and I found reservation module 'reservations' which is compatible with older versions of Django, so I kept hopeful, thinking I can make up the function for booking myself, Thanks to the tutorials on [YouTube](www.youtube.com) I learned about the compatibility between apps and modules a lot.
 
 - Links for some of the YouTube tutorials I used to better understand Django: 
 [Booking HMS](https://www.youtube.com/watch?v=-9dhCQ7FdD0&) - watched over 10 times, list=PL_6Ho1hjJirn8WbY4xfVUAlcn51E4cSbY&index=2), 
@@ -226,4 +224,4 @@ some of them deleted due to small space on 'Heroku', [link for Apartments](https
 [Create a Diary App](https://www.youtube.com/watch?v=YkpEtE_x6xk)
 - The ERD was made using [SmartDraw](https://www.smartdraw.com/)
 
-- Help with documenting deployment was found on this link [How to get started with Git](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#forking-a-repository) and inspired by [Catherine Trevor](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#forking-a-repository)'s README.md
+- Help with documenting deployment was found on this link [How to get started with Git](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#forking-a-repository) and inspired by [Catherine Trevor](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#forking-a-repository)'s README.md example as well as ideas from Iulia Konovalova and Tim Nelson for making README better in details.

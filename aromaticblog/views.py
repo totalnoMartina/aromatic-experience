@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
+from django.views.generic import UpdateView
 from django.views import generic, View
 from django.contrib import messages
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm
 
 
@@ -20,7 +21,7 @@ class Detail(View):
         """ A method to get posts and render filtering by status """
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
-        # Comments are ordered in order by most recent and published
+        # Comments are filtered in order by most recent and published
         comments = post.comments.filter(approved=True).order_by("-created")
         liked = False
         # Only users who are logged in can like
@@ -50,7 +51,6 @@ class Detail(View):
 
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
-            comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
             comment.post = post
@@ -72,6 +72,11 @@ class Detail(View):
             },
         )
 
+# class UpdateComment(UpdateView):
+#     model = Comment
+#     template_name = 'update_comment.html'
+#     fields = ['body', ]
+#     form = CommentForm
 
 class TheLikes(View):
     """ The view for the users to Like the posts or comment """

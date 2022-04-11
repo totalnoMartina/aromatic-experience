@@ -81,15 +81,7 @@ The relationship between data models are straightforward, there is a User with a
 
 ## User story testing
 
-| User story                 |      Requirement met  |         Image     |
-|------------------------------------------------------------------|
-|1. As an admin I want  |         Yes           |
-|to manage my account   |
-| securely              |
-|2.Create Posts, publish|
-| posts and approve use |
-| comments              |
-
+add image for each succesfull user story
 ## Bugs 
 ### Fixed Bugs
 
@@ -111,3 +103,16 @@ Media files were not rendering if targeted using Jinja, like the hero images of 
 
 There was some issues while setting up Facebook Login, as I had another app connecte to Facebook Login button earler, deleting it did not yet solve the issue as this is what I am getting, possibly when fully deployet it should work as I triple checked everything and have not found yet a better solution then setting Debug to 'False' and trying it again.
 
+# Testing Python code with 'unittest' module
+
+-- Testing Comment Form for the field that is required to be filled before posting
+
+![Test forms.py](media/images/test-comment-form.png?raw=true)
+
+-- Test passing as the content is rendering on the homepage
+
+![Test views.py view1](media/images/views_test_pass1.png?raw=true)
+
+
+
+# Testing JavaScript with Jest

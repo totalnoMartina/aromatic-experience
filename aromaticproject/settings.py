@@ -60,9 +60,6 @@ AUTHENTICATION_BACKENDS = [
 
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
-
-    # for logging in using facebook
-    # 'social_core.backends.facebook.FacebookOAuth2',
 ]
 
 # For details about facebook social account connecting

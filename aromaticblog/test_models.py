@@ -19,6 +19,7 @@ class TestModels(TestCase):
 
 
         def test_if_post_has_required_author(self):
+            """ Post must have an author - admin """
             self.assertEqual(self.post.author.name, self.author_)
 
     # def test_post_title_unique(self):
@@ -30,4 +31,3 @@ class TestModels(TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-    
