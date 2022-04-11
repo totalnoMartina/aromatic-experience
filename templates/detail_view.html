@@ -23,17 +23,17 @@
                 <div class="card-text ">
                     <!-- Filter 'safe' for decoding characters rendered from blog posts -->
                     {{ post.content | safe }}
-                    <div class="row">
-                        <div class="col-1">
+                    <div class="row likes__data">
+                        <div class="col-1 likes">
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like bg-primary">
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
                                     <i class="fas fa-heart"></i>
                                 </button>
                                 {% else %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like bg-primary">
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
                                     <i class="far fa-heart"></i>
                                 </button>
                                 {% endif %}
@@ -45,11 +45,13 @@
                                 <!-- The number of likes  -->
                             </form>
                         </div>
-                        <div class="col-1">
+                        <div class="col-1 likes">
                             {% with comments.count as total_comments %}
-                            <strong class="text-secondary"><i class="far fa-comments"></i>
+                            <div class="text-secondary">
+                                <i class="far fa-comments"></i>
                                 <!-- Our total_comments variable goes before the closing strong tag -->
-                                {{ total_comments }}</strong>
+                                <div>{{ total_comments }}</div>
+                            </div>
                             {% endwith %}
                         </div>
                     </div>
@@ -58,7 +60,7 @@
             </div>
         </div>
         <div class="row mb-4">
-            <div class="col-md-6 card my-4 mr-3">
+            <div class="col-md-6 card my-4 comments">
                 <h3>Comments:</h3>
                 <div class="card-body">
                     <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
