@@ -71,6 +71,9 @@ class Detail(View):
             },
         )
 
+# Update and delete comment needs to be here
+# if user is authenticated to be only able to updata/delete his own
+# comment, and admin also
 
 class TheLikes(View):
     """ The view for the users to Like the posts or comment """
