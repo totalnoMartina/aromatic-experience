@@ -71,22 +71,29 @@ Mostly for a small business owners usage, possibly for the ones who work from ho
 Homepage for first time users to 'Register' or 'Login'
 ![](media/images/login-reg.png?raw=true)
 
-'Sign Up' page
+- 'Sign Up' page
+
 ![](media/images/signup.png?raw=true)
 
-- Administrator can manipulate comments that are going to be published, approve them![](media/images/admin-comment-approve.png?raw=true)
+- Administrator can manipulate comments that are going to be published, approve them
 
-- Django Messages are used to let user know on 'login/logout' status and on commenting sent to be approved![](media/images/messages-signedin.png?raw=true)
-- ![](media/images/messages-signedout.png?raw=true)
+![](media/images/admin-comment-approve.png?raw=true)
+
+Django Messages are used to let user know on 'login/logout' status and on commenting sent to be approved
+
+![](media/images/messages-signedin.png?raw=true)
+![](media/images/messages-signedout.png?raw=true)
 
 - Not able to screenshot but there is a snippet of JavaScipt code for Navigation to toggle close (if clicked) when user cliks outside of the navbar
 - Facebook login not entirely set up (At the moment, there is a bug, which does not allow login using Facebook, but it worked once before, so after trying, I decided to leave it there until I turn debug to False to see final effect)
 
 - User cannot comment if not logged in
+
 ![](media/images/post-detail-pagelogged-out.png?raw=true)
 
 
-![](media/images/messages-signedin.png?raw=true)
+![](media/images/messages-signedin.png?raw=true) 
+
 **Future features**
 
 - Add an oil review section/category - where users can review oils from specific companies and share amongst each other which are high/low quality, since entering a category this time and made me destroy my db, I left it for future feature
@@ -134,13 +141,13 @@ This site uses a [ColorSpace](https://mycolor.space/) palette picker, and this i
 
 The site uses the following technologies;
 
-* HTML5
-* CSS3
-* Bootstrap
-* JavaScript
-* Python (Django)
-* Postgres
-* Cloudinary
+* [HTML5](https://html5.org/)
+* [CSS3](https://www.css3.com/)
+* [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+* [JavaScript](https://www.javascript.com/)
+* [Python](https://www.python.org/)
+* [Django](https://www.djangoproject.com/)
+* [Cloudinary](https://cloudinary.com/)
 # Testing
 [See separate Testing file](TESTING.md) for information on testing and issues.
 # Deployment Steps
