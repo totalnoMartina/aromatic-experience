@@ -26,6 +26,11 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
+.btn__sign {
+    background-color: #F6E0DF;
+    border-radius: 20%;
+}
+
 /* Navigation style */
 
 .nav__container {
