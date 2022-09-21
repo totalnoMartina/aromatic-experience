@@ -27,8 +27,9 @@ body {
 }
 
 .btn__sign {
-    background-color: #F6E0DF;
-    border-radius: 20%;
+    background-color: #F6E0DF !important;
+    border-radius: 20% !important;
+    color: #2a2b2e !important;
 }
 
 /* Navigation style */

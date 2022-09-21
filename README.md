@@ -101,6 +101,8 @@ Django Messages are used to let user know on 'login/logout' status and on commen
 - Not able to screenshot but there is a snippet of JavaScipt code for Navigation to toggle close (if clicked) when user cliks outside of the navbar
 - Facebook login not entirely set up (At the moment, there is a bug, which does not allow login using Facebook, but it worked once before, so after trying, I decided to leave it there until I turn debug to False to see final effect)
 
+![](media/images/fb-log-fail.png?raw=true)
+
 - User cannot comment if not logged in
 
 ![](media/images/post-detail-pagelogged-out.png?raw=true)
