@@ -40,15 +40,32 @@ As a small business owner, a representative for Doterra Company, I want to have 
 - Users who dont know anything about oils but have a keen interest to find out
 - Users who have some emotional imbalance and looking for natural way of getting back to balance
 - Users who want to connect to more alike-thinkers
+
 ## User stories
 
 **First-time User:**
 
-1. I want to understand the purpose of the site and the topic objective easily 
-2. I want to easily register an account, possibly using social media account
-3. I want to feel confident that the data I enter is secure
-4. I want to understand the benefits of creating an account
-5. I want to connect to new people by commenting, liking posts
+[#1](https://github.com/totalnoMartina/aromatic-experience/issues/1). I want to easily register for an account
+
+[#5](https://github.com/totalnoMartina/aromatic-experience/issues/5). I want to be presented with the topic objective easily on the Homepage
+
+[#3](https://github.com/totalnoMartina/aromatic-experience/issues/3). As a User I want to see Posts and Comments to get informations and insight
+
+[#4](https://github.com/totalnoMartina/aromatic-experience/issues/4). I want to be anuthenticated user so that I dont need to put my login information every time
+
+[#5](https://github.com/totalnoMartina/aromatic-experience/issues/5). I want to understand the purpose of the website with some Introduction information on the Homepage
+
+[#6](https://github.com/totalnoMartina/aromatic-experience/issues/6). As the user have the ability to Update and delete the comments
+
+[#8](https://github.com/totalnoMartina/aromatic-experience/issues/8). As a User I want to navigate Website easily through pagination, to be aware which page user is browsing
+
+[#10](https://github.com/totalnoMartina/aromatic-experience/issues/10). Create DB Diagram to be able to visualise the path of users within the app
+
+[#11](https://github.com/totalnoMartina/aromatic-experience/issues/11). Implement Dajngo messages so that users are notified whenever any action took effect ???
+
+### Issue left for further improvement
+
+[#9](https://github.com/totalnoMartina/aromatic-experience/issues/9). Create documentation that helps users to understand the purpose of the website just by seeing README.md and testing files --not completed on automatised testing, documentation is finished, further testing with automatised testing tools planned
 
 **Returning Users:**
 
@@ -61,6 +78,7 @@ As a small business owner, a representative for Doterra Company, I want to have 
 1. I want to log in quickly and easily
 2. I want to see what comments have been recently requested to be published
 3. I want to have an option on my navigation to go straight to Admnistration when logged in
+
 ## Scope
 
 Mostly for a small business owners usage, possibly for the ones who work from home, even though it is easily maintained to be a regular little hobby on the side. Essential oils - topic oriented, targeting aromatherapy benefits and connect all interested with the commenting feature, providing relevant informations. Help small business connected to aromatherapy grow.
