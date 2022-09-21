@@ -43,8 +43,6 @@ As a small business owner, a representative for Doterra Company, I want to have 
 
 ## User stories
 
-**First-time User:**
-
 [#1](https://github.com/totalnoMartina/aromatic-experience/issues/1). I want to easily register for an account
 
 [#5](https://github.com/totalnoMartina/aromatic-experience/issues/5). I want to be presented with the topic objective easily on the Homepage
@@ -63,21 +61,12 @@ As a small business owner, a representative for Doterra Company, I want to have 
 
 [#11](https://github.com/totalnoMartina/aromatic-experience/issues/11). Implement Dajngo messages so that users are notified whenever any action took effect ???
 
-### Issue left for further improvement
+
+### Issues left for further improvement
 
 [#9](https://github.com/totalnoMartina/aromatic-experience/issues/9). Create documentation that helps users to understand the purpose of the website just by seeing README.md and testing files --not completed on automatised testing, documentation is finished, further testing with automatised testing tools planned
 
-**Returning Users:**
-
-1. I want to easily log back into my account
-2. I want to be able to see the latest posts displaying in the homepage
-3. I want to be able to have good Ux in all versions pf screens
-
-**Site administrator:**
-
-1. I want to log in quickly and easily
-2. I want to see what comments have been recently requested to be published
-3. I want to have an option on my navigation to go straight to Admnistration when logged in
+[#12](https://github.com/totalnoMartina/aromatic-experience/issues/12). Users can login in easily using [Google](https://www.google.com/)
 
 ## Scope
 
