@@ -4,6 +4,8 @@ A personal blog website, focused on Aromatherapy and essential oils, used to imp
 
 ![](media/images/responsiveness.png?raw=true)
 
+The link to live site can be found [here](https://aromatic-martina.herokuapp.com/)
+
 # Contents
 
 * [Project Overview](#project-overview)
