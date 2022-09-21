@@ -106,7 +106,7 @@ Django Messages are used to let user know on 'login/logout' status and on commen
 **Future features**
 
 - Add an oil review section/category - where users can review oils from specific companies and share amongst each other which are high/low quality, since entering a category this time and made me destroy my db, I left it for future feature
-- Add login using Google - tried many times, postponed
+- Add login using Google - tried many times, postponed to be added as future feature
 - Inspired by the app called [abillion](https://www.abillion.com/) it would be great to make every review giving users 1Euro for every review they make and then, this one euro would go to a specific company that already is involved in production of oils or contributing in some way, as this can be collected and donated. No money can be withdrawn, which makes it even more noble. 
 ## Structure
 
@@ -251,5 +251,5 @@ Each of them helped me grow enormously
 
 - Help with documenting deployment was found on this link [How to get started with Git](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#forking-a-repository) and inspired by [Catherine Trevor](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#forking-a-repository)'s README.md example as well as ideas from Iulia Konovalova and Tim Nelson for making README better in details.
 
-Also in the last moment, after having dealt with 'staticfiles' numerous times, I had to find out how to render hero images properly an used the example from Catherine Trevor's 'The Marketing Ally's website.
+Also in the last moment, after having dealt with 'staticfiles' numerous times, I had to find out how to render hero images properly an used the example from Catherine Trevor's 'The Marketing Ally's [repository](https://github.com/CatherineTrevor/the_marketing_ally).
 

@@ -75,6 +75,7 @@ class Detail(View):
 # if user is authenticated to be only able to updata/delete his own
 # comment, and admin also
 
+
 class TheLikes(View):
     """ The view for the users to Like the posts or comment """
     def post(self, request, slug, *args, **kwargs):
