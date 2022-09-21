@@ -43,6 +43,11 @@ As a small business owner, a representative for Doterra Company, I want to have 
 - Users who have some emotional imbalance and looking for natural way of getting back to balance
 - Users who want to connect to more alike-thinkers
 
+
+## Kanban Board
+
+For Issues management- User Stories, a kanban board is used 
+![Kanban Image](/media/images/kanban-aromatic.png?raw=true)
 ## User stories
 
 [#1](https://github.com/totalnoMartina/aromatic-experience/issues/1). I want to easily register for an account
