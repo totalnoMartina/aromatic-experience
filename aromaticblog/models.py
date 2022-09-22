@@ -42,7 +42,7 @@ class Comment(models.Model):
     body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
-    author = models.ForeignKey(User, on_delete=models.CASCADE,
+    comment_author = models.ForeignKey(User, on_delete=models.CASCADE,
                                 related_name='comment_user', blank=True, null=True)
 
     class Meta:

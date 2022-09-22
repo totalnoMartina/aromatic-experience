@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from django.views import generic, View
 from django.contrib import messages
 from .models import Post
@@ -54,7 +55,7 @@ class Detail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-            # Using module django messages
+            # Alert user with django messages
             messages.add_message(request, messages.SUCCESS, 'Thank you, your comment matters!')
         else:
             comment_form = CommentForm()
@@ -71,6 +72,15 @@ class Detail(View):
             },
         )
 
+
+@login_required
+def update_comment(request, slug):
+    pass
+
+
+@login_required
+def delete_comment(request, slug):
+    pass
 # Update and delete comment needs to be here
 # if user is authenticated to be only able to updata/delete his own
 # comment, and admin also
@@ -89,3 +99,5 @@ class TheLikes(View):
             post.likes.add(request.user)
         # Redirecting to the post detail page
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
