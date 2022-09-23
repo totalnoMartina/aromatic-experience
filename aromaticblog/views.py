@@ -1,9 +1,9 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.views import generic, View
 from django.contrib import messages
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm
 
 
@@ -74,16 +74,36 @@ class Detail(View):
 
 
 @login_required
-def update_comment(request, slug):
-    pass
+def update_comment(request, slug, *args, **kwargs):
+    """ A view to update comments by users who created them/admin """
+    comment = get_object_or_404(Comment, pk=slug)
+    if request.method == 'POST':
+        form = CommentForm(request.POST, request.FILES, instance=comment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated comment!')
+            return redirect('detail_view.html', args=[comment.id])
+        else:
+            messages.error(request,
+            'Failed updating. Please ensure the form is valid.')
+    else:
+        form = Comment(instance=comment)
+        messages.info(request, f'You are editing {comment.title}')
+    template = 'edit_comment.html'
+    context = {
+        'form': form,
+        'comment': comment,
+    }
+    return render(request, template, context)
 
 
 @login_required
 def delete_comment(request, slug):
-    pass
-# Update and delete comment needs to be here
-# if user is authenticated to be only able to updata/delete his own
-# comment, and admin also
+    """ A view for users/admin to delete their own comments """
+    comment = get_object_or_404(Comment, pk=slug)
+    comment.delete()
+    comment.success(request, 'Item deleted!')
+    return redirect(reverse('post_detail'))
 
 
 class TheLikes(View):
