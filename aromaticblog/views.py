@@ -76,9 +76,9 @@ class Detail(View):
 @login_required
 def update_comment(request, pk):
     """ A view to update comments by users who created them/admin """
-    post = get_object_or_404(Post)
-    comment = Comment.objects.get(pk=id)
-    form = CommentForm(instance=comment, data=request.POST)
+    post = get_object_or_404(Post, slug=slug)
+    comment = Comment.objects.get(pk=comment_id)
+    form = CommentForm(instance=comment)
     context = {
         'form': form,
         'comment': comment,
@@ -89,6 +89,7 @@ def update_comment(request, pk):
         if form.is_valid():
             form.save()
             messages.success(request, 'Amazing update')
+            
     return render(request, 'edit_comment.html', context)
 
 

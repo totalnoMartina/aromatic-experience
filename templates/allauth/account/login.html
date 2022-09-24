@@ -14,29 +14,6 @@
             <hr>
             <h2 class="logo-font mb-4 mt-5">{% trans "Log In" %}</h2>
             <hr>
-
-            {% get_providers as socialaccount_providers %}
-
-            {% if socialaccount_providers %}
-            <p>{% blocktrans with site.name as site_name %}Please log in with one
-                of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-                for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
-
-            <div class="socialaccount_ballot text-white">
-                <div class="socialaccount_providers">
-                    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-                    <a href="{% provider_login_url 'facebook' method='oauth2' %}" target="blank">Sign in with Facebook
-                    </a>
-                </div>
-                <!-- Code to check Facebook 'login-status' -->
-                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-                </fb:login-button>
-                <div class="login-or">{% trans 'or' %}</div>
-            </div>
-            <!-- Facebook login button -->
-            {% include "socialaccount/snippets/login_extra.html" %}
-            <div class="fb-login-button" data-width="" data-size="medium" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
-
             {% else %}
             <p>{% blocktrans %}If you have not created an account yet, then please
                 <a href="{{ signup_url }}" class="btn__sign">sign up</a> first.{% endblocktrans %}</p>
@@ -57,51 +34,5 @@
         </div>
     </div>
 </div>
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId: '{your-app-id}',
-            cookie: true,
-            xfbml: true,
-            version: '{api-version}'
-        });
-
-        FB.AppEvents.logPageView();
-
-    };
-
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-            return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
-<script>
-    FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-    });
-
-    {
-        status: 'connected',
-        authResponse: {
-            accessToken: '...',
-            expiresIn: '...',
-            signedRequest: '...',
-            userID: '...'
-        }
-    }
-
-
-    function checkLoginState() {
-        FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-        });
-    }
-</script>
 
 {% endblock %}
