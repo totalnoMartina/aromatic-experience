@@ -4,7 +4,7 @@
 {% load i18n %}
 {% load account socialaccount %}
 
-<div class="container">
+<div class="container text-center">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
             {% block head_title %}{% trans "Log In" %}{% endblock %}
@@ -42,7 +42,7 @@
                 <a href="{{ signup_url }}" class="btn__sign">sign up</a> first.{% endblocktrans %}</p>
             {% endif %}
 
-            <form class="login text-center" method="POST" action="{% url 'account_login' %}">
+            <form class="login" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
                 {{ form|crispy }}
                 {% if redirect_field_value %}
