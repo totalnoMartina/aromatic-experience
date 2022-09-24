@@ -62,7 +62,7 @@
         <div class="row mb-4">
             <div class="col-md-6 card my-4 comments">
                 <h3>Comments:</h3>
-                <a href="{% url 'update_comment' pk=comment_id %}" class="btn btn__submit my-2">Update</a>
+                <a href="#" class="btn btn__submit my-2">Update</a>
                 <a href="#" class="btn btn__submit my-2">Delete</a>
                 <div class="card-body">
                     <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
@@ -94,11 +94,12 @@
                     {% else %}
                     <h3>Leave a comment:</h3>
                     <p>Posting as: {{ user.username }}</p>
-                    <form method="post">
+                    <form method="post" action="{% url 'update_comment' id=comment.id %}">
                         {{ comment_form | crispy }}
                         {% csrf_token %}
                         <button type="submit" class="btn btn__submit">Submit</button>
                     </form>
+
                     {% endif %}
                 </div>
             </div>

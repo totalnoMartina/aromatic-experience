@@ -5,6 +5,7 @@ from django.views import generic, View
 from django.contrib import messages
 from .models import Post, Comment
 from .forms import CommentForm
+from django.views.generic.edit import UpdateView, DeleteView
 
 
 class ListOfPosts(generic.ListView):
@@ -74,22 +75,19 @@ class Detail(View):
 
 
 @login_required
-def update_comment(request, pk):
+def update_comment(request, slug, id):
     """ A view to update comments by users who created them/admin """
     post = get_object_or_404(Post, slug=slug)
-    comment = Comment.objects.get(pk=comment_id)
-    form = CommentForm(instance=comment)
-    context = {
-        'form': form,
-        'comment': comment,
-        'post': post
-    }
+    comment = get_object_or_404(Comment, id=id)
+    comment_form = CommentForm()
     if request.method == 'POST':
-        form = CommentForm(request.POST, instance=comment)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Amazing update')
-            
+        comment_form = CommentForm(instance=comment.comment_author)
+        if comment_form.is_valid():
+            comment_form.save()
+            return HttpResponseRedirect('post_detail', slug=slug)  
+        context = {
+            'comment_form': comment_form,
+        }      
     return render(request, 'edit_comment.html', context)
 
 
