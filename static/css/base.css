@@ -284,11 +284,11 @@ button.primaryAction.btn__sign:hover {
     object-fit: cover;
 }
 
-.btn {
+.btn__submit {
     background-color: var(--clr-primary--500);
 }
 
-.btn:hover {
+.btn__submit:hover {
     background-color: var(--clr-primary--100);
 
 }
