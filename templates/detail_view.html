@@ -14,7 +14,7 @@
             {% if "placeholder" in post.related_img.url %}
             <img src="https://www.nicepng.com/png/full/104-1048864_engine-oil-png-background-image-cooking-oil-drop.png" alt="placeholder">
             {% else %}
-            <img src=" {{ post.related_img.url }}" alt="image related to post">
+            <img src="{{ post.related_img.url }}" alt="image related to post">
             {% endif %}
         </div>
     </div>

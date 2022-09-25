@@ -12,7 +12,7 @@
                 </div>
                 <div class="article__header--item">
                     {% if "placeholder" in draft_post.related_img.url %}
-                    <img src="https://www.nicepng.com/png/full/104-1048864_engine-oil-png-background-image-cooking-oil-drop.png" alt="placeholder image">
+                    <img src="https://www.nicepng.com/png/full/104-1048864_engine-oil-png-background-image-cooking-oil-drop.png" class="img-fluid draft__img" alt="placeholder image">
                     {% else %}
                     <img src="{{ draft_post.related_img.url }}" alt="image related to post">
                     {% endif %}

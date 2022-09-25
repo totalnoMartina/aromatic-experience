@@ -192,8 +192,6 @@ button.primaryAction.btn__sign:hover {
     margin: 0;
 }
 
-
-
 /* Landing page style */
 
 .blog-container {
@@ -288,7 +286,7 @@ button.primaryAction.btn__sign:hover {
     color: var(--clr-neutral--900);
     font-size: 1.1rem;
     padding: 1.1em;
-    width: 100%;
+    width: 90%;
 
 }
 
@@ -298,7 +296,8 @@ button.primaryAction.btn__sign:hover {
 
 .article__header--item:last-child img {
     display: block;
-    width: 100%;
+    width: 60%;
+    max-height: 25em;
     object-fit: cover;
 }
 
@@ -308,6 +307,18 @@ button.primaryAction.btn__sign:hover {
 
 .btn__submit:hover {
     background-color: var(--clr-primary--100);
+
+}
+
+button[type=submit] {
+    background-color: rgb(19, 123, 123) !important;
+    color: white !important;
+    border-radius: 13%;
+}
+
+button[type=submit]:hover {
+    background-color: #ef674c !important;
+    border-radius: 13%;
 
 }
 
