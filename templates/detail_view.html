@@ -7,8 +7,7 @@
         <div class="article__header--item">
             <h1 class="post-title">{{ post.title }}</h1>
             <p class="post-subtitle">{{ post.author }} | {{ post.created }}</p>
-            <a href="{% url 'edit_post' slug=post.slug %}" class="btn btn__submit my-2">Update</a>
-            <a href="#" class="btn btn__submit my-2">Delete</a>
+
         </div>
         <div class="article__header--item">
             {% if "placeholder" in post.related_img.url %}

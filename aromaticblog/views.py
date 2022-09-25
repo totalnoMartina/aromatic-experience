@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.views import generic, View
 from django.contrib import messages
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
 from django.views.generic.edit import UpdateView, DeleteView
 
 
@@ -90,18 +90,32 @@ class Detail(View):
         )
 
 
-@login_required
 class PostUpdate(View):
 
     def get(self, request, *args, **kwargs):
         """ A function to get the data of existing post from an author and put it into form """
         post = get_object_or_404(Post, slug=kwargs['slug'])
-        form = P
-        print('this is printing post')
+        if post.status == 0:
+            form = PostForm(instance=post)
+            print('this is printing post')
+            context = {
+                'post': post,
+                'form': form
+            }
+            return render(request, 'edit_post.html', context)
+
+    def post(self, request, *args, **kwargs):
+        post = get_object_or_404(Post, slug=kwargs['slug'])
+        form = PostForm(request.POST, instance=post)
+        if form.is_valid:
+            form.save()
+            return HttpResponseRedirect('/drafts_detail/{}'.format(post.slug))
         context = {
             'post': post,
+            'form': form
         }
         return render(request, 'edit_post.html', context)
+
         # if request.user.is_superuser or request.user.id == post.author.id:
 
 

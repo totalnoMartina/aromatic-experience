@@ -47,6 +47,16 @@ button.primaryAction.btn__sign:hover {
     background-color: #fd9580 !important;
 }
 
+.btn__upd {
+    background-color: #eba027 !important;
+    border-radius: 15% !important;
+}
+
+.btn__upd:hover {
+    background-color: lightcoral !important;
+    columns: white !important;
+}
+
 /* Navigation style */
 
 .nav__container {
