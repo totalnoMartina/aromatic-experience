@@ -2,14 +2,13 @@
 {% load static %}
 {% block content %}
 
-<div class="blog-container">
+<div class="container">
 
     {% for post in drafts_list %}
-    <h2 class="card-title">{{ post.title }}</h2>
-
    <div class="blog">
         <!-- Blog Posts card -->
         <div class="blog__card">
+            <h2 class="card-title">{{ post.title }}</h2>
             <div class="blog__card--image">
                 <!-- Image related to the blog post with a placeholder if no image selected -->
                 {% if "placeholder" in post.related_image.url %}

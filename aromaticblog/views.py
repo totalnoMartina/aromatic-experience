@@ -32,6 +32,7 @@ class DraftDetail(View):
         draft_post = get_object_or_404(Post, slug=kwargs['slug'])
         return render(request, 'draft_detail.html', {'draft_post': draft_post})
 
+
 class Detail(View):
     """ For rendering details of the blog post """
     def get(self, request, slug, *args, **kwargs):
@@ -91,7 +92,7 @@ class Detail(View):
 
 
 class PostUpdate(View):
-
+    """ Updating view class """
     def get(self, request, *args, **kwargs):
         """ A function to get the data of existing post from an author and put it into form """
         post = get_object_or_404(Post, slug=kwargs['slug'])
@@ -110,6 +111,8 @@ class PostUpdate(View):
         if form.is_valid:
             form.save()
             return HttpResponseRedirect('/drafts_detail/{}'.format(post.slug))
+        else:
+            form = PostForm(request.POST, request.FILES, instance=post)
         context = {
             'post': post,
             'form': form,
@@ -117,6 +120,25 @@ class PostUpdate(View):
         return render(request, 'edit_post.html', context)
         
         # if request.user.is_superuser or request.user.id == post.author.id:
+
+class PostDelete(View):
+    """ A class to delete posts that are in draft """
+    def get(self, request, *args, **kwargs):
+        """ A function to get the data of existing post from an author and put it into form """
+        post = get_object_or_404(Post, slug=kwargs['slug'])
+        if post.status == 0:
+            form = PostForm(instance=post)
+            print('this is deleting printing post')
+            context = {
+                'post': post,
+                'form': form
+            }
+            return render(request, 'delete_post.html', context)
+    def post(self, request, *args, **kwargs):
+        post = get_object_or_404(Post, slug=kwargs['slug'])
+        form = PostForm(request.POST, request.FILES, instance=post)
+        form.delete()
+        messages.success(request, 'Post deleted successfully')
 
 
 

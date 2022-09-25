@@ -307,7 +307,6 @@ button.primaryAction.btn__sign:hover {
 
 .btn__submit:hover {
     background-color: var(--clr-primary--100);
-
 }
 
 button[type=submit] {

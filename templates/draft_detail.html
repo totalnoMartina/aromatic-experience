@@ -8,11 +8,11 @@
         <h2 class="card-title">{{ draft_post.title }}</h2>
         <p class="post-subtitle">{{ draft_post.author }} | {{ draft_post.created }}</p>
                     <a href="{% url 'edit_post' slug=draft_post.slug %}" class="btn btn__upd my-2">Update</a>
-                    <a href="#" class="btn btn__cancl my-2">Delete</a>
+                    <a href="{% url 'delete_post' slug=draft_post.slug %}" class="btn btn__cancl my-2">Delete</a>
                 </div>
                 <div class="article__header--item">
                     {% if "placeholder" in draft_post.related_img.url %}
-                    <img src="https://www.nicepng.com/png/full/104-1048864_engine-oil-png-background-image-cooking-oil-drop.png" class="img-fluid draft__img" alt="placeholder image">
+                    <img src="https://www.nicepng.com/png/full/104-1048864_engine-oil-png-background-image-cooking-oil-drop.png" class="img-fluid" alt="placeholder image">
                     {% else %}
                     <img src="{{ draft_post.related_img.url }}" alt="image related to post">
                     {% endif %}

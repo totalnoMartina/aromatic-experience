@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Are You sure you want to delete?</h1>
+<form method="POST" action="#" class="form mb-2" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{post}}
+    <a class="btn btn-outline-black rounded btn__cancl" href="{% url 'drafts' username=request.user.username %}">Yes, Delete</a>
+
+</form>
+{% endblock %}
