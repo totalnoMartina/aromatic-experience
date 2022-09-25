@@ -75,20 +75,35 @@ class Detail(View):
 
 
 @login_required
-def update_comment(request, slug, id):
-    """ A view to update comments by users who created them/admin """
-    post = get_object_or_404(Post, slug=slug)
-    comment = get_object_or_404(Comment, id=id)
-    comment_form = CommentForm()
-    if request.method == 'POST':
-        comment_form = CommentForm(instance=comment.comment_author)
-        if comment_form.is_valid():
-            comment_form.save()
-            return HttpResponseRedirect('post_detail', slug=slug)  
+class PostUpdate(View):
+
+    def get(self, request, *args, **kwargs):
+        """ A function to get the data of existing post from an author and put it into form """
+        post = get_object_or_404(Post, slug=kwargs['slug'])
+        print('this is printing post')
         context = {
-            'comment_form': comment_form,
-        }      
-    return render(request, 'edit_comment.html', context)
+            'post': post,
+        }
+        return render(request, 'edit_post.html', context)
+        # if request.user.is_superuser or request.user.id == post.author.id:
+
+
+
+# @login_required
+# def update_comment(request, slug, id):
+#     """ A view to update comments by users who created them/admin """
+#     post = get_object_or_404(Post, slug=slug)
+#     comment = get_object_or_404(Comment, id=id)
+#     comment_form = CommentForm()
+#     if request.method == 'POST':
+#         comment_form = CommentForm(instance=comment.comment_author)
+#         if comment_form.is_valid():
+#             comment_form.save()
+#             return HttpResponseRedirect('post_detail', slug=slug)  
+#         context = {
+#             'comment_form': comment_form,
+#         }      
+#     return render(request, 'edit_comment.html', context)
 
 
 class TheLikes(View):
