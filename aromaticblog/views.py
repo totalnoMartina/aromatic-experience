@@ -21,8 +21,9 @@ class UsersDraftPost(View):
         if request.user.is_authenticated:
             post_author = get_object_or_404(User, username=kwargs['username'])
             drafts_list = Post.objects.all().filter(
-                status=1, author=post_author
+                status=0, author=post_author
             ).order_by('-created')
+            print(drafts_list)
             return render(request, 'drafts.html', {'drafts_list': drafts_list})
 
 class Detail(View):

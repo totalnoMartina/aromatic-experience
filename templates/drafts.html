@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="blog-container">
+
+    {% for post in drafts_list %}
+    <div class="blog">
+        <!-- Blog Posts card -->
+        <div class="blog__card">
+            <div class="blog__card--image">
+                <!-- Image related to the blog post with a placeholder if no image selected -->
+                {% if "placeholder" in post.related_image.url %}
+                <img class="card-img-top" src="https://www.nicepng.com/png/full/104-1048864_engine-oil-png-background-image-cooking-oil-drop.png" alt="image placeholder for oils">
+                {% else %}
+                <img class="card-img-top" src="{{ post.related_img.url }}" style="height: 250px;" alt="image related to the post">
+                {% endif %}
+            </div>
+            <!-- Author, title and date details -->
+            <div class="blog__card--author">
+                <p class="author text-body">Author: {{ post.author }}</p>
+            </div>
+            <a href="{% url 'post_detail' post.slug %}" class="blog__card--link">
+                <h2 class="card-title">{{ post.title }}</h2>
+                <p class="card-text">{{ post.excerpt }}</p>
+            </a>
+            <div class="blog__card--data">
+                <p>{{ post.created }} <i class="far fa-heart"></i>
+                    {{ post.num_of_likes }}</p>
+            </div>
+        </div>
+    </div>
+
+    {% empty %}
+    <br>
+    <br>
+    <br>
+    <h2>No Drafts found !</h2>
+    <!-- End post looping -->
+    {% endfor %}
+
+</div>
+(% endblock %)
