@@ -49,12 +49,20 @@ button.primaryAction.btn__sign:hover {
 
 .btn__upd {
     background-color: #eba027 !important;
-    border-radius: 15% !important;
 }
 
 .btn__upd:hover {
-    background-color: lightcoral !important;
-    columns: white !important;
+    background-color: rgb(229, 123, 58) !important;
+    color: white !important;
+}
+
+.btn__cancl {
+    background-color: #2a2b2e !important;
+    color: white !important;
+}
+
+.btn__cancl:hover {
+    background-color: #6e2a1d !important;
 }
 
 /* Navigation style */

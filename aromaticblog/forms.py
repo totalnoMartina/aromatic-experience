@@ -5,20 +5,20 @@ from .widgets import CustomClearableFileInput
 
 
 class PostForm(forms.ModelForm):
-
-    
+    """ A form for managing rendering post """
     class Meta:
-        """ A class for displaying body and name of a comment"""
+        """ A class for displaying body and name of a post """
         model = Post
         fields = '__all__'
-        image = forms.ImageField(label='image', required=False,
+        image = forms.FileField(label='image', required=False,
                              widget=CustomClearableFileInput)
     def __init__(self, *args, **kwargs):
-        """ A function that hides the item and user
-        that is updating post so it canot be modified """
+        """ A function that hides the likes and user
+        that is updating post so it cannot be modified """
         super().__init__(*args, **kwargs)
         self.fields['author'].widget = forms.HiddenInput()
         self.fields['likes'].widget = forms.HiddenInput()
+
 
 class CommentForm(forms.ModelForm):
     """ a model for the comment form """
