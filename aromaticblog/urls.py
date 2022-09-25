@@ -1,9 +1,10 @@
 from django.urls import path
-from .views import ListOfPosts, Detail, TheLikes, PostUpdate, UsersDraftPost
+from .views import ListOfPosts, Detail, TheLikes, PostUpdate, UsersDraftPost, DraftDetail
 
 urlpatterns = [
     path('', ListOfPosts.as_view(), name='home'),
     path('drafts/<str:username>', UsersDraftPost.as_view(), name='drafts'),
+    path('drafts_detail/<slug:slug>/', DraftDetail.as_view(), name='draft_detail'),
     path('<slug:slug>/', Detail.as_view(), name='post_detail'),
     path('like/<slug:slug>/', TheLikes.as_view(), name='post_like'),
     path('update/<str:slug>/', PostUpdate, name='edit_post'),

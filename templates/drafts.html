@@ -5,7 +5,9 @@
 <div class="blog-container">
 
     {% for post in drafts_list %}
-    <div class="blog">
+    <h2 class="card-title">{{ post.title }}</h2>
+
+   <div class="blog">
         <!-- Blog Posts card -->
         <div class="blog__card">
             <div class="blog__card--image">
@@ -20,7 +22,7 @@
             <div class="blog__card--author">
                 <p class="author text-body">Author: {{ post.author }}</p>
             </div>
-            <a href="{% url 'post_detail' post.slug %}" class="blog__card--link">
+            <a href="{% url 'draft_detail' post.slug %}" class="blog__card--link">
                 <h2 class="card-title">{{ post.title }}</h2>
                 <p class="card-text">{{ post.excerpt }}</p>
             </a>
@@ -40,4 +42,4 @@
     {% endfor %}
 
 </div>
-(% endblock %)
+{% endblock %}

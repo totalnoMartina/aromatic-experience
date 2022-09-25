@@ -26,6 +26,12 @@ class UsersDraftPost(View):
             print(drafts_list)
             return render(request, 'drafts.html', {'drafts_list': drafts_list})
 
+
+class DraftDetail(View):
+    def get(self, request, *args, **kwargs):
+        draft_post = get_object_or_404(Post, slug=kwargs['slug'])
+        return render(request, 'draft_detail.html', {'draft_post': draft_post})
+
 class Detail(View):
     """ For rendering details of the blog post """
     def get(self, request, slug, *args, **kwargs):
