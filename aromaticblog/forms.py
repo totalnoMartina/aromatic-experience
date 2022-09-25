@@ -10,7 +10,7 @@ class PostForm(forms.ModelForm):
         """ A class for displaying body and name of a post """
         model = Post
         fields = ('title', 'content', 'related_img', 'slug', )        
-        image = forms.FileField(label='image', required=False,
+        image = forms.ImageField(label='image', required=False,
                              widget=CustomClearableFileInput)
 
 

@@ -106,16 +106,16 @@ class PostUpdate(View):
 
     def post(self, request, *args, **kwargs):
         post = get_object_or_404(Post, slug=kwargs['slug'])
-        form = PostForm(request.POST, instance=post)
+        form = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid:
             form.save()
             return HttpResponseRedirect('/drafts_detail/{}'.format(post.slug))
         context = {
             'post': post,
-            'form': form
+            'form': form,
         }
         return render(request, 'edit_post.html', context)
-
+        
         # if request.user.is_superuser or request.user.id == post.author.id:
 
 
