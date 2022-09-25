@@ -9,15 +9,9 @@ class PostForm(forms.ModelForm):
     class Meta:
         """ A class for displaying body and name of a post """
         model = Post
-        fields = '__all__'
+        fields = ('title', 'content', 'related_img', 'slug', )        
         image = forms.FileField(label='image', required=False,
                              widget=CustomClearableFileInput)
-    def __init__(self, *args, **kwargs):
-        """ A function that hides the likes and user
-        that is updating post so it cannot be modified """
-        super().__init__(*args, **kwargs)
-        self.fields['author'].widget = forms.HiddenInput()
-        self.fields['likes'].widget = forms.HiddenInput()
 
 
 class CommentForm(forms.ModelForm):
