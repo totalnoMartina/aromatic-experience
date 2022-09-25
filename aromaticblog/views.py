@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.http import HttpResponseRedirect
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.views import generic, View
 from django.contrib import messages
@@ -8,13 +9,21 @@ from .forms import CommentForm
 from django.views.generic.edit import UpdateView, DeleteView
 
 
-class ListOfPosts(generic.ListView):
+class ListOfPosts(View):
     """ Displaying posts on a landing page """
-    model = Post
-    queryset = Post.objects.filter(status=1).order_by('-created')
-    template_name = 'index.html'
-    paginate_by = 4
+    def get(self, request, *args, **kwargs):
+        post_list = Post.objects.all().filter(status=1).order_by('-created')
+        return render(request, 'index.html', {'post_list': post_list})
 
+
+class UsersDraftPost(View):
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            post_author = get_object_or_404(User, username=kwargs['username'])
+            drafts_list = Post.objects.all().filter(
+                status=1, author=post_author
+            ).order_by('-created')
+            return render(request, 'drafts.html', {'drafts_list': drafts_list})
 
 class Detail(View):
     """ For rendering details of the blog post """
@@ -80,6 +89,7 @@ class PostUpdate(View):
     def get(self, request, *args, **kwargs):
         """ A function to get the data of existing post from an author and put it into form """
         post = get_object_or_404(Post, slug=kwargs['slug'])
+        form = P
         print('this is printing post')
         context = {
             'post': post,
