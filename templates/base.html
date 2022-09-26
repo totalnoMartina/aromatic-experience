@@ -60,7 +60,8 @@
                         <div class="dropdown-menu dropdown__menu" aria-labelledby="navbarDropdownMenuLink">
                             {% if request.user.is_authenticated %}
                             <div class="dropdown__menu--item dropdown__menu--welcome"> Welcome {{user.username}}</div>
-                            <a class="dropdown-item dropdown__menu--item" href='{% url 'drafts' username=request.user.username %}'>My Drafts</a>
+                            <a class="dropdown-item dropdown__menu--item" href="{% url 'drafts' username=request.user.username %}">My Drafts</a>
+                            <a class="dropdown-item dropdown__menu--item" href="{% url 'add_post' username=request.user.username %}" class="btn btn__upd my-2">Add New Post</a>
 
                             {% if request.user.is_superuser %}
                             <!-- Showing to the user under which account username is he logged in -->

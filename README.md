@@ -107,6 +107,10 @@ Django Messages are used to let user know on 'login/logout' status and on commen
 
 ![](media/images/post-detail-pagelogged-out.png?raw=true)
 
+- Users can add posts and save them drafted - image
+- Users can edit posts that are drafted - image
+- Users can delete posts that are drafted - image
+- authentication check for the adding, updating and deleting - image
 
 ![](media/images/messages-signedin.png?raw=true) 
 
@@ -258,5 +262,7 @@ Each of them helped me grow enormously
 
 - Help with documenting deployment was found on this link [How to get started with Git](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#forking-a-repository) and inspired by [Catherine Trevor](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#forking-a-repository)'s README.md example as well as ideas from Iulia Konovalova and Tim Nelson for making README better in details.
 
-Also in the last moment, after having dealt with 'staticfiles' numerous times, I had to find out how to render hero images properly an used the example from Catherine Trevor's 'The Marketing Ally's [repository](https://github.com/CatherineTrevor/the_marketing_ally).
+- Also in the last moment, after having dealt with 'staticfiles' numerous times, I had to find out how to render hero images properly an used the example from Catherine Trevor's 'The Marketing Ally's [repository](https://github.com/CatherineTrevor/the_marketing_ally).
+
+- While testing app for drafted posts to be added, updated, deleted, i had ran into an error of 'ValueError - do not mix args and kwargs in call to reverse, and used solution from stackoverflow post [here](https://stackoverflow.com/questions/26537701/valueerror-dont-mix-args-and-kwargs-in-call-to-reverse)
 

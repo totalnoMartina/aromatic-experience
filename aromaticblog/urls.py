@@ -7,7 +7,7 @@ urlpatterns = [
     path('drafts_detail/<str:username>/<slug:slug>/', DraftDetail.as_view(), name='draft_detail'),
     path('<slug:slug>/', Detail.as_view(), name='post_detail'),
     path('like/<slug:slug>/', TheLikes.as_view(), name='post_like'),
-    path('add_post/<slug:slug>/', PostAdding.as_view(), name='add_post'),
+    path('add_post/<str:username>/', PostAdding.as_view(), name='add_post'),
     path('edit_post/<str:username>/<slug:slug>/', PostUpdate.as_view(), name='edit_post'),
     path('post_confirm_delete/<str:username>/<slug:slug>/', PostDelete.as_view(), name='post_confirm_delete'),
 ]
