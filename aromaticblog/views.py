@@ -6,7 +6,7 @@ from django.views import generic, View
 from django.contrib import messages
 from .models import Post, Comment
 from .forms import CommentForm, PostForm
-from django.views.generic.edit import UpdateView, DeleteView
+from django.views.generic.edit import DeleteView
 
 
 class ListOfPosts(View):
@@ -121,7 +121,7 @@ class PostUpdate(View):
         
         # if request.user.is_superuser or request.user.id == post.author.id:
 
-class PostDelete(View):
+class PostDelete(DeleteView):
     """ A class to delete posts that are in draft """
     def get(self, request, *args, **kwargs):
         """ A function to get the data of existing post from an author and put it into form """
@@ -133,12 +133,14 @@ class PostDelete(View):
                 'post': post,
                 'form': form
             }
-            return render(request, 'delete_post.html', context)
+            return render(request, 'post_confirm_delete.html', context)
     def post(self, request, *args, **kwargs):
+        """ Getting the post data and prefilled form to be deleting them"""
         post = get_object_or_404(Post, slug=kwargs['slug'])
         form = PostForm(request.POST, request.FILES, instance=post)
-        form.delete()
+        post.delete()
         messages.success(request, 'Post deleted successfully')
+        return HttpResponseRedirect('drafts')  
 
 
 
