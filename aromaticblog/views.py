@@ -29,9 +29,10 @@ class UsersDraftPost(View):
 
 class DraftDetail(View):
     def get(self, request, *args, **kwargs):
+        current_user = get_object_or_404(User, username=kwargs['username'])
         draft_post = get_object_or_404(Post, slug=kwargs['slug'])
-        return render(request, 'draft_detail.html', {'draft_post': draft_post})
-
+        if draft_post.author == current_user            
+            return render(request, 'draft_detail.html', {'draft_post': draft_post})
 
 class Detail(View):
     """ For rendering details of the blog post """
@@ -119,9 +120,10 @@ class PostAdding(View):
 class PostUpdate(View):
     """ Updating view class """
     def get(self, request, *args, **kwargs):
-        """ A function to get the data of existing post from an author and put it into form """
+        """ A function to get the data of existing post from an author, add into form """
         post = get_object_or_404(Post, slug=kwargs['slug'])
-        if post.status == 0:
+        current_user = get_object_or_404(User, username=kwargs['username'])
+        if post.status == 0 or post.author == current_user:
             form = PostForm(instance=post)
             print('this is printing post')
             context = {
@@ -133,16 +135,18 @@ class PostUpdate(View):
     def post(self, request, *args, **kwargs):
         post = get_object_or_404(Post, slug=kwargs['slug'])
         form = PostForm(request.POST, request.FILES, instance=post)
-        if form.is_valid:
-            form.save()
-            return HttpResponseRedirect('/drafts_detail/{}'.format(post.slug))
-        else:
-            form = PostForm(request.POST, request.FILES, instance=post)
-        context = {
-            'post': post,
-            'form': form,
-        }
-        return render(request, 'edit_post.html', context)
+        current_user = get_object_or_404(User, username=kwargs['username'])
+        if post.status == 0 or post.author == current_user:
+            if form.is_valid:
+                form.save()
+                return HttpResponseRedirect('/drafts_detail/{}'.format(post.slug))
+            else:
+                form = PostForm(request.POST, request.FILES, instance=post)
+            context = {
+                'post': post,
+                'form': form,
+            }
+            return render(request, 'edit_post.html', context)
         
         # if request.user.is_superuser or request.user.id == post.author.id:
 
@@ -151,7 +155,8 @@ class PostDelete(DeleteView):
     def get(self, request, *args, **kwargs):
         """ A function to get the data of existing post from an author and put it into form """
         post = get_object_or_404(Post, slug=kwargs['slug'])
-        if post.status == 0:
+        current_user = get_object_or_404(User, username=kwargs['username'])
+        if post.status == 0 or post.author == current_user:
             print('this is deleting printing post')
             context = {
                 'post': post,
