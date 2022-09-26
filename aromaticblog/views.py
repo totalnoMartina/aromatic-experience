@@ -175,6 +175,8 @@ def contact_page(request):
     form = ContactUserForm(request.POST)
     if form.is_valid():
         form.save()
+        messages.success(request, 'Thanks for reaching out!')
+
     context = {
             'form': form
         }
