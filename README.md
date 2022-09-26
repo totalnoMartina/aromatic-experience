@@ -66,8 +66,9 @@ For Issues management- User Stories, a kanban board is used
 
 [#10](https://github.com/totalnoMartina/aromatic-experience/issues/10). Create DB Diagram to be able to visualise the path of users within the app
 
-[#11](https://github.com/totalnoMartina/aromatic-experience/issues/11). Implement Dajngo messages so that users are notified whenever any action took effect ???
+[#11](https://github.com/totalnoMartina/aromatic-experience/issues/11). Implement Dajngo messages so that users are notified whenever any action took effect
 
+[#14](https://github.com/totalnoMartina/aromatic-experience/issues/14). Create a contact form for user to be able to contact administrator
 
 ### Issues left for further improvement
 
