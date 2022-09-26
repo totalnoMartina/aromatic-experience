@@ -90,6 +90,31 @@ class Detail(View):
             },
         )
 
+class PostAdding(View):
+    """ Creating view class """
+    def get(self, request, *args, **kwargs):
+        """ A function to create posts """
+        form = PostForm()
+        context = {
+            'form': form
+        }
+        return render(request, 'add_post.html', context)
+
+    def post(self, request, *args, **kwargs):
+        """ Handling post request """
+        form = PostForm(request.POST)
+        user = get_object_or_404(User, username=request.user.username)
+        if form.is_valid:
+            form.save()
+            return HttpResponseRedirect('/drafts/{}'.format(user.username))
+        else:
+            form = PostForm()
+        context = {
+            'form': form,
+        }
+        return render(request, 'add_post.html', context)
+        
+
 
 class PostUpdate(View):
     """ Updating view class """
@@ -127,20 +152,18 @@ class PostDelete(DeleteView):
         """ A function to get the data of existing post from an author and put it into form """
         post = get_object_or_404(Post, slug=kwargs['slug'])
         if post.status == 0:
-            form = PostForm(instance=post)
             print('this is deleting printing post')
             context = {
                 'post': post,
-                'form': form
             }
             return render(request, 'post_confirm_delete.html', context)
     def post(self, request, *args, **kwargs):
         """ Getting the post data and prefilled form to be deleting them"""
         post = get_object_or_404(Post, slug=kwargs['slug'])
-        form = PostForm(request.POST, request.FILES, instance=post)
+        user = get_object_or_404(User, username=request.user.username)
         post.delete()
         messages.success(request, 'Post deleted successfully')
-        return HttpResponseRedirect('drafts')  
+        return HttpResponseRedirect('/drafts/{}'.format(user.username))  
 
 
 

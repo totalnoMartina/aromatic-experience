@@ -9,7 +9,7 @@ class PostForm(forms.ModelForm):
     class Meta:
         """ A class for displaying body and name of a post """
         model = Post
-        fields = ('title', 'content', 'related_img', 'slug', 'status', )        
+        fields = ('title', 'content', 'related_img', 'slug', )        
         image = forms.ImageField(label='image', required=False,
                              widget=CustomClearableFileInput)
 

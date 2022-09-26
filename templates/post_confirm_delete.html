@@ -7,6 +7,8 @@
     {% csrf_token %}
     {{post}}
     <input type="submit" value="Confirm">
+    <a class="btn btn-outline-black rounded btn__cancl" href="{% url 'drafts' username=request.user.username %}">Cancel</a>
+
 
 </form>
 {% endblock %}
