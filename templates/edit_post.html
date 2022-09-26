@@ -18,8 +18,7 @@
             {% endfor %}
         
             <div class="text-center">
-                <a class="btn btn-outline-black rounded btn__cancl" href="{% url 'drafts' username=request.user.username %}">Cancel</a>
-                <input class="btn btn-black rounded btn__upd" type="submit" value="Update">
+                <a class="btn btn-outline-black rounded btn__cancl" href="{% url 'draft_detail' post.slug username=request.user.username %}">Cancel</a>                <input class="btn btn-black rounded btn__upd" type="submit" value="Update">
             </div>
         </form>
         </div>
