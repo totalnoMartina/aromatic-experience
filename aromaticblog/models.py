@@ -13,7 +13,7 @@ class Post(models.Model):
     related_img = CloudinaryField('image', default='placeholder')
     slug = models.SlugField(max_length=150, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE,
-        related_name='blog_posts')
+        related_name='blog_posts', null=True)
     excerpt = models.TextField(blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -52,3 +52,19 @@ class Comment(models.Model):
     def __str__(self):
         """ A helper method to display data saved """
         return f"Comment {self.body} by {self.name}"
+
+
+class ContactUser(models.Model):
+    """ A model for users to contact admin """
+    name = models.CharField(max_length=250, null=True, blank=True)
+    email_users = models.EmailField()
+    message = models.TextField(max_length=1000)
+    msg_sent = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        """ To create list of users that sent a message, first are on top """
+        ordering = ["msg_sent"]
+
+    def __str__(self):
+        """ A helper method to display data saved """
+        return f"Message {self.message} by {self.name}"

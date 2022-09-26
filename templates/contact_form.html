@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1>Thanks for geting in touch!</h1>
+    <div class="row text-center">
+       <br>
+        <p>We will respond within a week, Thanks!</p>
+        <form method='post'>
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type='submit' class='btn__submit'>Send Message</button>
+        </form>
+    </div>
+   
+
+</div>
+
+{% endblock %}

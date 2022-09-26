@@ -1,6 +1,6 @@
 """ A django module to manipulate models """
 from django import forms
-from .models import Comment, Post
+from .models import Comment, Post, ContactUser
 from .widgets import CustomClearableFileInput
 
 
@@ -9,7 +9,7 @@ class PostForm(forms.ModelForm):
     class Meta:
         """ A class for displaying body and name of a post """
         model = Post
-        fields = ('title', 'content', 'related_img', )        
+        fields = ('title', 'content', 'related_img', 'slug', )        
         image = forms.ImageField(label='image', required=False,
                              widget=CustomClearableFileInput)
 
@@ -20,3 +20,11 @@ class CommentForm(forms.ModelForm):
         """ A class for displaying body and name of a comment"""
         model = Comment
         fields = ('body', 'name', )
+
+
+class ContactUserForm(forms.ModelForm):
+    """ a model for the comment form """
+    class Meta:
+        """ A class for displaying body and name of a comment"""
+        model = ContactUser
+        fields = ('email_users', 'name', 'message', )

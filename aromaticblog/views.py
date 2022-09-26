@@ -4,8 +4,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.views import generic, View
 from django.contrib import messages
-from .models import Post, Comment
-from .forms import CommentForm, PostForm
+from .models import Post, Comment, ContactUser
+from .forms import CommentForm, PostForm, ContactUserForm
 from django.views.generic.edit import DeleteView
 
 
@@ -170,22 +170,15 @@ class PostDelete(DeleteView):
         return HttpResponseRedirect('/drafts/{}'.format(user.username))  
 
 
-
-# @login_required
-# def update_comment(request, slug, id):
-#     """ A view to update comments by users who created them/admin """
-#     post = get_object_or_404(Post, slug=slug)
-#     comment = get_object_or_404(Comment, id=id)
-#     comment_form = CommentForm()
-#     if request.method == 'POST':
-#         comment_form = CommentForm(instance=comment.comment_author)
-#         if comment_form.is_valid():
-#             comment_form.save()
-#             return HttpResponseRedirect('post_detail', slug=slug)  
-#         context = {
-#             'comment_form': comment_form,
-#         }      
-#     return render(request, 'edit_comment.html', context)
+def contact_page(request):
+    """ A view to return homepage """
+    form = ContactUserForm(request.POST)
+    if form.is_valid():
+        form.save()
+    context = {
+            'form': form
+        }
+    return render(request, 'contact_form.html', context)
 
 
 class TheLikes(View):
