@@ -1,6 +1,9 @@
 from pathlib import Path
 import os
 import sys
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 import dj_database_url
 from django.contrib.messages import constants as messages
 if os.path.isfile('env.py'):
@@ -128,7 +131,7 @@ TEMPLATES = [
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
-                'crispy_forms.templatetags.crispy_forms_field',
+                'crispy_forms.templatetags.crispy_forms_field',],
         },
     },
 ]

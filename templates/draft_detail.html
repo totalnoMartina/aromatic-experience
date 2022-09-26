@@ -7,8 +7,8 @@
         <div class="article__header--item">
         <h2 class="card-title">{{ draft_post.title }}</h2>
         <p class="post-subtitle">{{ draft_post.author }} | {{ draft_post.created }}</p>
-            <a href="{% url 'edit_post' slug=draft_post.slug username=request.user.username %}" class="btn btn__upd my-2">Update</a>
-            <a href="{% url 'post_confirm_delete' slug=draft_post.slug username=request.user.username %}" class="btn btn__cancl my-2">Delete</a>                
+            <a href="{% url 'edit_post' username=request.user.username slug=draft_post.slug %}" class="btn btn__upd my-2">Update</a>
+            <a href="{% url 'post_confirm_delete' username=request.user.username slug=draft_post.slug %}" class="btn btn__cancl my-2">Delete</a>                
         </div>
                 <div class="article__header--item">
                     {% if "placeholder" in draft_post.related_img.url %}

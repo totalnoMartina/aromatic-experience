@@ -10,5 +10,5 @@ urlpatterns = [
     path('add_post/<slug:slug>/', PostAdding.as_view(), name='add_post'),
     path('edit_post/<str:username>/<slug:slug>/', PostUpdate.as_view(), name='edit_post'),
     path('post_confirm_delete/<str:username>/<slug:slug>/', PostDelete.as_view(), name='post_confirm_delete'),
-
+]
     # path('update/<slug:slug>/comment_id', views.update_comment, name='update_comment'),

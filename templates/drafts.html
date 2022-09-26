@@ -21,7 +21,7 @@
             <div class="blog__card--author">
                 <p class="author text-body">Author: {{ post.author }}</p>
             </div>
-            <a href="{% url 'draft_detail' post.slug username=request.user.username %}" class="blog__card--link">                <h2 class="card-title">{{ post.title }}</h2>
+            <a href="{% url 'draft_detail' username=request.user.username slug=post.slug %}" class="blog__card--link">                <h2 class="card-title">{{ post.title }}</h2>
                 <p class="card-text">{{ post.excerpt }}</p>
             </a>
             <div class="blog__card--data">
