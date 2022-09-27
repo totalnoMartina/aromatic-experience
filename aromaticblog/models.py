@@ -29,7 +29,7 @@ class Post(models.Model):
 
     # Post model method for the slug creation automatically when the post is saved
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.name, allow_unicode=True)
+        self.slug = slugify(self.title, allow_unicode=True)
         super().save(*args, **kwargs)
 
     def __str__(self):
