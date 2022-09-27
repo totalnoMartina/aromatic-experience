@@ -26,6 +26,8 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
+/* Button styles */
+
 button.primaryAction.btn__sign {
     background-color: bisque;
     border-radius: 15%;
@@ -35,16 +37,6 @@ button.primaryAction.btn__sign {
 button.primaryAction.btn__sign:hover {
     background-color: lightcoral;
     color: wheat;
-}
-
-.btn__submit {
-    background-color: var(--clr-primary--500);
-    border-radius: 13%;
-}
-
-.btn__submit:hover {
-    background-color: var(--clr-primary--100);
-    border-radius: 13%;
 }
 
 .btn__sign {
@@ -69,7 +61,6 @@ button.primaryAction.btn__sign:hover {
 .btn__cancl {
     background-color: #2a2b2e !important;
     color: white !important;
-    padding: 1rem;
 }
 
 .btn__cancl:hover {
@@ -81,7 +72,7 @@ button.primaryAction.btn__sign:hover {
     color: white;
 }
 
-.btn__confirm:hover {
+.btn_confirm:hover {
     background-color: #2a2b2e !important;
 }
 
@@ -93,6 +84,29 @@ button.primaryAction.btn__sign:hover {
 .btn__del:hover {
     background-color: var(--clr-primary--900) !important;
 }
+
+.btn__submit {
+    background-color: var(--clr-primary--500);
+    border-radius: 11%;
+
+}
+
+.btn__submit:hover {
+    background-color: var(--clr-primary--100);
+    border-radius: 11%;
+}
+
+button[type=submit] {
+    background-color: rgb(19, 123, 123) !important;
+    color: white !important;
+    border-radius: 11%;
+}
+
+button[type=submit]:hover {
+    background-color: #ef674c !important;
+    border-radius: 11%;
+}
+
 
 /* Navigation style */
 
@@ -329,7 +343,6 @@ button.primaryAction.btn__sign:hover {
     max-height: 25em;
     object-fit: cover;
 }
-
 
 .likes__data {
     width: 100%;

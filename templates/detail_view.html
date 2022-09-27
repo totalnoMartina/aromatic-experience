@@ -88,21 +88,20 @@
             {% if user.is_authenticated %}
             <div class="col-md-6 card my-3">
                 <div class="card-body rounded">
+                    <h3>Leave a comment:</h3>
                     <form method="post" class="w-25">
                         {%csrf_token%}
                         {{comment_form.as_p}}
                         <button type="submit">Submit Comment</button>
                     </form>
-                    <!-- For later -->
-                    {% if commented %}
-                    <div class="alert alert-success" role="alert">
-                        Your comment is awaiting approval
-                    </div>
-                    {% else %}
-                    <h3>Leave a comment:</h3>
-                    <p>Posting as: {{ user.username }}</p>
-
-                    {% endif %}
+            <!-- For later -->
+            {% if commented %}
+            <div class="alert alert-success" role="alert">
+                Your comment is awaiting approval
+            </div>
+            {% else %}
+            <p>Posting as: {{ user.username }}</p>
+            {% endif %}
                 </div>
             </div>
             {% endif %}
