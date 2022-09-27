@@ -110,7 +110,7 @@ class PostAdding(View):
         """ Handling post request """
         form = PostForm(request.POST)
         user = get_object_or_404(User, username=request.user.username)
-        if form.is_valid:
+        if form.is_valid():
             # Cancel the save method temporarily
             post = form.save(commit=False)
             # put user in the field author from request
