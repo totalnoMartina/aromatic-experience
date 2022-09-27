@@ -107,7 +107,6 @@ button[type=submit]:hover {
     border-radius: 11%;
 }
 
-
 /* Navigation style */
 
 .nav__container {
@@ -383,7 +382,6 @@ button[type=submit]:hover {
 .likes .d-inline button {
     border: none;
 }
-
 
 .likes .d-inline button .fas {
     color: var(--clr-primary--500);
