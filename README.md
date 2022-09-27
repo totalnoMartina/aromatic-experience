@@ -16,6 +16,7 @@ The link to live site can be found [here](https://aromatic-martina.herokuapp.com
    * [Scope](#scope)
    * [Features](#features)
    * [Structure](#structure)
+   * [Bug and issues](#bugs-and-issues)
    * [Browser Compatibility](#browser-compatibility)
 * [Skeleton](#skeleton)
    * [Wireframes](#wireframes)
@@ -129,6 +130,13 @@ This is the original, first idea of a layout ![](media/images/first_layout.png?r
 Second idea of a layout ![](media/images/final-layout.png?raw=true)
 
 Final idea of a layout ![](media/images/final-img.png?raw=true)
+
+## Bugs and issues
+
+One of the bugs appeared after trying to target the argument os reaching for the username and slug but in 2 different ways so this error got solvedwith the help of [this link](https://stackoverflow.com/questions/26537701/valueerror-dont-mix-args-and-kwargs-in-call-to-reverse)
+
+For fixing the bug of not shiwing contact form properly, i had help [here](https://stackoverflow.com/questions/44133562/django-add-placeholder-text-to-form-field)
+
 ## Browser Compatibility
 
 The Website is made in [Chrome Browser](https://www.google.com/intl/en_ie/chrome/) on a Chromebook, to be exact --> Chrome is made possible by the Chromium open source project as well as other open source software.

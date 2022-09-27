@@ -63,7 +63,7 @@
             </div>
         </div>
         <div class="row mb-4">
-            <div class="col-md-6 card my-4 comments">
+            <div class="col-md-6 card my-3 comments">
                 <h3>Comments:</h3>
                 {% comment %} Extra Title {% endcomment %}
                 <div class="card-body">
@@ -86,8 +86,13 @@
                 </div>
             </div>
             {% if user.is_authenticated %}
-            <div class="col-md-4 card my-4">
+            <div class="col-md-6 card my-3">
                 <div class="card-body rounded">
+                    <form method="post" class="w-25">
+                        {%csrf_token%}
+                        {{comment_form.as_p}}
+                        <button type="submit">Submit Comment</button>
+                    </form>
                     <!-- For later -->
                     {% if commented %}
                     <div class="alert alert-success" role="alert">
