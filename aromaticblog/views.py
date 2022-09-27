@@ -108,7 +108,7 @@ class PostAdding(View):
 
     def post(self, request, *args, **kwargs):
         """ Handling post request """
-        form = PostForm(request.POST)
+        form = PostForm(request.POST, request.FILES)
         user = get_object_or_404(User, username=request.user.username)
         if form.is_valid():
             # Cancel the save method temporarily
@@ -144,7 +144,8 @@ class PostUpdate(View):
         form = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid:
             form.save()
-            return HttpResponseRedirect('/drafts_detail/{}'.format(post.slug))
+            current_user = get_object_or_404(User, username=kwargs['username'])
+            return HttpResponseRedirect('/drafts_detail/{username}/{slug}/'.format(username = current_user.username, slug = post.slug))
         else:
             form = PostForm(request.POST, request.FILES, instance=post)
         context = {
@@ -181,7 +182,8 @@ def contact_page(request):
     if form.is_valid():
         form.save()
         messages.success(request, 'Thanks for reaching out!')
-
+        post_list = Post.objects.all().filter(status=1).order_by('-created')
+        return render(request, 'index.html', {'post_list': post_list})
     context = {
             'form': form
         }
