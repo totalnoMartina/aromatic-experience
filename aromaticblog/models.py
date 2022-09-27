@@ -25,6 +25,11 @@ class Post(models.Model):
         """ Using the order to be reversed for the most recent posts """
         ordering = ['-created']
 
+    # Post model method for the slug creation automatically when the post is saved
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name, allow_unicode=True)
+        super().save(*args, **kwargs)
+
     def __str__(self):
         """ A helper method for displaying the  """
         return f"A post named {self.title} was posted by {self.author}"

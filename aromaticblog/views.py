@@ -111,7 +111,12 @@ class PostAdding(View):
         form = PostForm(request.POST)
         user = get_object_or_404(User, username=request.user.username)
         if form.is_valid:
-            form.save()
+            # Cancel the save method temporarily
+            post = form.save(commit=False)
+            # put user in the field author from request
+            post.author = request.user
+            #save form
+            post.save()
             return HttpResponseRedirect('/drafts/{}'.format(user.username))
         else:
             form = PostForm()
