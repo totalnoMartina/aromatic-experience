@@ -62,17 +62,19 @@
                             <div class="dropdown__menu--item dropdown__menu--welcome"> Welcome {{user.username}}</div>
                             <a class="dropdown-item dropdown__menu--item" href="{% url 'drafts' username=request.user.username %}">My Drafts</a>
                             <a class="dropdown-item dropdown__menu--item" href="{% url 'add_post' username=request.user.username %}" class="btn btn__upd my-2">Add New Post</a>
+                            <a class="dropdown-item dropdown__menu--item" href="{% url 'home' %}" class="btn btn__upd my-2">Home</a>
 
                             {% if request.user.is_superuser %}
                             <!-- Showing to the user under which account username is he logged in -->
                             <a class="dropdown-item dropdown__menu--item" href="{% url 'admin:index' %}">Blog Management</a>
                             {% endif %}
+                            <a class="dropdown-item dropdown__menu--item" href="{% url 'contact_page' %}">Contact Us here!</a>
+
                             <a class="dropdown-item dropdown__menu--item" href="{% url 'account_logout' %}">Logout</a>
                             {% else %}
                             <a class="dropdown-item dropdown__menu--item" href="{% url 'account_signup' %}">Register</a>
                             <a class="dropdown-item dropdown__menu--item" href="{% url 'account_login' %}"> Login</a>
                             {% endif %}
-                            <a class="dropdown-item dropdown__menu--item" href="{% url 'contact_page' %}">Contact Us here!</a>
 
                         </div>
                     </li>

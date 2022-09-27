@@ -37,6 +37,16 @@ button.primaryAction.btn__sign:hover {
     color: wheat;
 }
 
+.btn__submit {
+    background-color: var(--clr-primary--500);
+    border-radius: 13%;
+}
+
+.btn__submit:hover {
+    background-color: var(--clr-primary--100);
+    border-radius: 13%;
+}
+
 .btn__sign {
     background-color: #F6E0DF !important;
     border-radius: 15% !important;
@@ -59,10 +69,29 @@ button.primaryAction.btn__sign:hover {
 .btn__cancl {
     background-color: #2a2b2e !important;
     color: white !important;
+    padding: 1rem;
 }
 
 .btn__cancl:hover {
-    background-color: #6e2a1d !important;
+    background-color: #A86867 !important;
+}
+
+.btn__confirm {
+    background-color: #8c8787 !important;
+    color: white;
+}
+
+.btn__confirm:hover {
+    background-color: #2a2b2e !important;
+}
+
+.btn__del {
+    background-color: #db7d4a !important;
+    color: white !important;
+}
+
+.btn__del:hover {
+    background-color: var(--clr-primary--900) !important;
 }
 
 /* Navigation style */
@@ -301,25 +330,6 @@ button.primaryAction.btn__sign:hover {
     object-fit: cover;
 }
 
-.btn__submit {
-    background-color: var(--clr-primary--500);
-}
-
-.btn__submit:hover {
-    background-color: var(--clr-primary--100);
-}
-
-button[type=submit] {
-    background-color: rgb(19, 123, 123) !important;
-    color: white !important;
-    border-radius: 13%;
-}
-
-button[type=submit]:hover {
-    background-color: #ef674c !important;
-    border-radius: 13%;
-
-}
 
 .likes__data {
     width: 100%;

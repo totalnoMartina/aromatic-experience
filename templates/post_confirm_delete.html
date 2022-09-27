@@ -6,8 +6,8 @@
 <form method="POST" action="#" class="form mb-2" enctype="multipart/form-data">
     {% csrf_token %}
     {{post}}
-    <input type="submit" value="Confirm">
-    <a class="btn btn-outline-black rounded btn__cancl" href="{% url 'draft_detail' post.slug username=request.user.username %}">Cancel</a>
+    <button type="submit" class="btn__confirm border-0 rounded p-1">Confirm</button> |
+    <a class="btn rounded btn__del p-1" href="{% url 'draft_detail' slug=post.slug username=request.user.username %}">Cancel</a>
 
 </form>
 {% endblock %}
