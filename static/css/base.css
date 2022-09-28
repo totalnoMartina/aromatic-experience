@@ -87,13 +87,13 @@ button.primaryAction.btn__sign:hover {
 }
 
 .btn__submit {
-    background-color: var(--clr-primary--500);
+    background-color: var(--clr-primary--500) !important;
     border-radius: 11%;
 
 }
 
 .btn__submit:hover {
-    background-color: var(--clr-primary--100);
+    background-color: var(--clr-primary--100) !important;
     border-radius: 11%;
 }
 
@@ -323,7 +323,7 @@ button[type=submit]:hover {
     text-align: center;
     max-width: 30rem;
     padding: 1em 2em;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .form {

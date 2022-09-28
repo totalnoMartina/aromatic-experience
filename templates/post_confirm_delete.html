@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}
 
+{% block extra_css %}
+<style>
+.main__container {
+text-align: center 
+}
+
+</style>
+{%endblock%}
+{% block content %}
 <h1>Are You sure you want to delete?</h1>
 <form method="POST" action="#" class="form mb-2" enctype="multipart/form-data">
     {% csrf_token %}

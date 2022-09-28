@@ -100,7 +100,7 @@
                     <form method="post" class="w-25">
                         {%csrf_token%}
                         {{comment_form.as_p}}
-                        <button type="submit">Submit Comment</button>
+                        <button type="submit" class="btn">Submit Comment</button>
                     </form>
             <!-- For later -->
             {% if commented %}

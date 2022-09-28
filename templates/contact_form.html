@@ -4,18 +4,18 @@
 
 
 {% block content %}
-<div class="form__container">
-    <h1>Thanks for geting in touch!</h1>
+<div class="form__container text-center ">
+    <h1>Thanks for contacting us!</h1>
     <p>We will respond within a week, Thanks!</p>
 
-    <div class="row text-center">
+    <div class="row">
        <br>
-        <form method='post' class="form">
+        <form method='post' class="form bg-white rounded shadow mx-2">
             {% csrf_token %}
             {% for field in form %}
-          <div class="w-100"> {{ field }} </div> 
+          <div class="w-100 my-1"> {{ field }} </div> 
             {% endfor %}
-            <button type='submit' class='btn__submit'>Send Message</button>
+            <button type='submit' class="btn mb-2">Send Message</button>
         </form>
     </div>
    
