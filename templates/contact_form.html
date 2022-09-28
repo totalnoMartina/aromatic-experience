@@ -4,13 +4,13 @@
 
 
 {% block content %}
-<div class="form__container text-center ">
+<div class="form__container text-center p-2">
     <h1>Thanks for contacting us!</h1>
     <p>We will respond within a week, Thanks!</p>
 
     <div class="row">
        <br>
-        <form method='post' class="form bg-white rounded shadow mx-2">
+        <form method='post' class="form bg-white rounded shadow mx-2 p-3">
             {% csrf_token %}
             {% for field in form %}
           <div class="w-100 my-1"> {{ field }} </div> 
