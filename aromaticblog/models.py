@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-#import slugify from django utils
+# import slugify from django utils
 from django.utils.text import slugify
 
 # Status of the posts, so that if not ready to be published, is stored

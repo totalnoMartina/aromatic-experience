@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.views import View
 from django.contrib import messages
-from .models import Post, Comment, ContactUser
+from .models import Post
 from .forms import CommentForm, PostForm, ContactUserForm
 from django.views.generic.edit import DeleteView
 
@@ -13,7 +13,6 @@ class ListOfPosts(View):
     def get(self, request, *args, **kwargs):
         post_list = Post.objects.all().filter(status=1).order_by('-created')
         return render(request, 'index.html', {'post_list': post_list})
-        
 
 
 class UsersDraftPost(View):
@@ -37,6 +36,7 @@ class DraftDetail(View):
         draft_post = get_object_or_404(Post, slug=kwargs['slug'])
         if draft_post.author == current_user:
             return render(request, 'draft_detail.html', {'draft_post': draft_post})
+
 
 class Detail(View):
     """ For rendering details of the blog post """
@@ -95,6 +95,7 @@ class Detail(View):
             },
         )
 
+
 class PostAdding(View):
     """ Creating view class """
     def get(self, request, *args, **kwargs):
@@ -114,7 +115,7 @@ class PostAdding(View):
             post = form.save(commit=False)
             # put user in the field author from request
             post.author = request.user
-            #save form
+            # save form
             post.save()
             return HttpResponseRedirect('/drafts/{}'.format(user.username))
         else:
@@ -144,7 +145,9 @@ class PostUpdate(View):
         if form.is_valid:
             form.save()
             current_user = get_object_or_404(User, username=kwargs['username'])
-            return HttpResponseRedirect('/drafts_detail/{username}/{slug}/'.format(username = current_user.username, slug = post.slug))
+            return HttpResponseRedirect(
+                '/drafts_detail/{username}/{slug}/'.format(
+                    username=current_user.username, slug=post.slug))
         else:
             form = PostForm(request.POST, request.FILES, instance=post)
         context = {
@@ -152,8 +155,7 @@ class PostUpdate(View):
             'form': form,
         }
         return render(request, 'edit_post.html', context)
-        
-        # if request.user.is_superuser or request.user.id == post.author.id:
+
 
 class PostDelete(DeleteView):
     """ A class to delete posts that are in draft """
@@ -166,13 +168,14 @@ class PostDelete(DeleteView):
                 'post': post,
             }
             return render(request, 'post_confirm_delete.html', context)
+
     def post(self, request, *args, **kwargs):
         """ Getting the post data and prefilled form to be deleting them"""
         post = get_object_or_404(Post, slug=kwargs['slug'])
         user = get_object_or_404(User, username=request.user.username)
         post.delete()
         messages.success(request, 'Post deleted successfully')
-        return HttpResponseRedirect('/drafts/{}'.format(user.username))  
+        return HttpResponseRedirect('/drafts/{}'.format(user.username))
 
 
 def contact_page(request):
@@ -202,5 +205,3 @@ class TheLikes(View):
             post.likes.add(request.user)
         # Redirecting to the post detail page
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
-

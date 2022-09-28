@@ -13,6 +13,7 @@ class PostAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content',)
 
+
 # Register Models
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
@@ -25,6 +26,7 @@ class CommentAdmin(admin.ModelAdmin):
     def approve_comments(self, request, queryset):
         """ A function for changing comments from 'draft' to approved """
         queryset.update(approved=True)
+
 
 @admin.register(ContactUser)
 class ContactUserAdmin(admin.ModelAdmin):

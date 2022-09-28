@@ -1,7 +1,7 @@
 from django.test import TestCase
 import unittest
 from django.contrib.auth.models import User
-from .models import Post, Comment
+from .models import Post
 
 
 class TestModels(TestCase):

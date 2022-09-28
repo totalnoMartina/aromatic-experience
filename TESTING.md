@@ -71,6 +71,11 @@ Python code was checked using [PEP8 Validator](http://pep8online.com/)
 
 ![PEP8 Validator](media/images/pep8-wsgi.png?raw=true)
 
+## Flake8 Validation 
+
+![Flake8 Validator](media/images/flake8.png?raw=true)
+
+
 ## Database Entity Relationship Diagram
 ![ERD](media/images/erd-full.png?raw=true)
 
@@ -88,9 +93,11 @@ The relationship between data models are straightforward, there is a User with a
 A 'favicon' error showing up in Chrome Developer Tools while Inspecting, resolved with code for HTML that uses element of 'link' for and empty 'href'.
 A smooth scroll was tried with JavaScript code, with a method of 'animate' which somehow did not work and after the idea of 'scroll-behavior: smooth;' in css for html element it worked better.
 
+I did not understand CRUD in practical sense, and making the post adding/editing/deleting made me understand much better.
+I tried again on Comments but have not really made it work so i will have this for future consideration of features
 ### Unfixed bugs
 At the moment 'Facebook Login' is in the 'Login' page, instead on a 'SignUp Page', I cannot seem to find any videos about controlling 'allauth' templates, also, waiting until last moment to check if this if working.
-Tried to implement Update/Delete Comments, most tutorials show how to do same, but with Post only, so I could not understand how to manipulate a comment that is between a post and user. I tried about 4 times and unfrotunately, it seems to me I did not understand some important part that needs to be to put these pieces together. 
+Tried to implement Update/Delete Comments, most tutorials show how to do same, but with Post only, so I could not understand how to manipulate a comment that is between a post and user. I tried about 4 times and unfortunately, it seems to me I did not understand some important part that needs to be to put these pieces together. 
 Iphone S6 screen outlook is not fixable, also smooth-scroll behaviour doesn't work on 'Safari'
 I will keep learning.
 Many of my bugs are connected to all these three months of working on this project, as there was a 'Contact Form', 'Sending Email' function, 'Booking apartments' function, and now while learning they seem all like 'Bugs' but I am completely aware that the steps that I am taking are possibly not as accurate as I am wanting them to be, so I am really planning on making PP5 so much better, and not to go astray in many topics. I could say that this is the outcome of my personal panic mode. Just keep trying until the last moment. There were times, while making this project, when the new type of bug would make me happy as opposed to the same ones.

@@ -1,7 +1,6 @@
 """ A django module for testing """
 import unittest
 from django.test import TestCase, Client, SimpleTestCase
-from django.urls import reverse
 from django.db import models
 from django.test.utils import isolate_apps
 
