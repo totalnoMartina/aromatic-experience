@@ -2,19 +2,13 @@
 {% load static %}
 {% block extra_css %}
 <style>
-.draft__cards {
-    display:flex;
-}
 
-.blog__card {
-    max-width: 20rem;
-}
 
 </style>
 {%endblock%}
 {% block content %}
 
-<div class="container w-100 draft__cards">
+<div class="draft__cards">
 <div class="blog-container">
     {% for post in drafts_list %}
    <div class="blog">
@@ -37,12 +31,11 @@
                 <p class="card-text">{{ post.excerpt }}</p>
             </a>
             <div class="blog__card--data">
-                <p>{{ post.created }} <i class="far fa-heart"></i>
-                    {{ post.num_of_likes }}</p>
+                <p>{{ post.created }} </p>
             </div>
         </div>
     </div>
-</div>
+
     {% empty %}
     <br>
     <br>
@@ -50,6 +43,4 @@
     <h2>No Drafts found !</h2>
     <!-- End post looping -->
     {% endfor %}
-
-{% comment %} </div> {% endcomment %}
 {% endblock %}
