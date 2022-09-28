@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 col-md-8 form__container">
-            <h1>Update Your Drafts</h1>
+            <h1>Update Drafts</h1>
         <form method="POST" action="#" class="form mb-2" enctype="multipart/form-data">
             {% csrf_token %}
             {% for field in form %}
@@ -19,7 +19,8 @@
             {% endfor %}
         
             <div class="text-center">
-                <a class="btn btn-outline-black rounded btn__cancl" href="{% url 'draft_detail' slug=post.slug username=request.user.username %}">Cancel</a>                <input class="btn btn-black rounded btn__upd" type="submit" value="Update">
+                <a class="btn btn-outline-black rounded btn__cancl m-1" href="{% url 'draft_detail' slug=post.slug username=request.user.username %}">Cancel</a>                
+                <input class="btn rounded btn__upd m-1" type="submit" value="Update">
             </div>
         </form>
         </div>
