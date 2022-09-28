@@ -82,39 +82,60 @@ For Issues management- User Stories, a kanban board is used
 Mostly for a small business owners usage, possibly for the ones who work from home, even though it is easily maintained to be a regular little hobby on the side. Essential oils - topic oriented, targeting aromatherapy benefits and connect all interested with the commenting feature, providing relevant informations. Help small business connected to aromatherapy grow.
 ## Features
 
-- Authentication System - Users can login and easily comment/like
+- Authentication System - Users can login and easily comment/like posts
 
 Homepage for first time users to 'Register' or 'Login'
-![](media/images/login-reg.png?raw=true)
+![Login on home page](media/images/login-reg.png?raw=true)
+
+- Homepage large screens
+![Homepage](media/images/homepage-feature.png?raw=true)
 
 - 'Sign Up' page
 
-![](media/images/signup.png?raw=true)
+![Sign Up page](media/images/signup.png?raw=true)
 
 - Administrator can manipulate comments that are going to be published, approve them
 
-![](media/images/admin-comment-approve.png?raw=true)
+![Admin Django](media/images/admin-comment-approve.png?raw=true)
 
 Django Messages are used to let user know on 'login/logout' status and on commenting sent to be approved
 
-![](media/images/messages-signedin.png?raw=true)
-![](media/images/messages-signedout.png?raw=true)
+![Signed In](media/images/messages-signedin.png?raw=true)
+![Signed Out](media/images/messages-signedout.png?raw=true)
 
 - Not able to screenshot but there is a snippet of JavaScipt code for Navigation to toggle close (if clicked) when user cliks outside of the navbar
 - Facebook login not entirely set up (At the moment, there is a bug, which does not allow login using Facebook, but it worked once before, so after trying, I decided to leave it there until I turn debug to False to see final effect)
-- Deleted Facebook code to be only regular login/register
-![](media/images/fb-log-fail.png?raw=true)
+- Final conclusion : Deleted Facebook code to be only regular login/register, still unable to locate anchor tag for listed facebook link that is not working
+
+![Facebook login fail](media/images/fb-log-fail.png?raw=true)
 
 - User cannot comment if not logged in
 
-![](media/images/post-detail-pagelogged-out.png?raw=true)
+![No comment for unregistered users](media/images/no-comment-for-users-without-reg.png?raw=true)
 
-- Users can add posts and save them drafted - image
-- Users can edit posts that are drafted - image
-- Users can delete posts that are drafted - image
-- authentication check for the adding, updating and deleting - image
+- Users can add posts and save them drafted 
 
-![](media/images/messages-signedin.png?raw=true) 
+![Add post Feature](media/images/adding-post-feat.png?raw=true)
+
+- Users can edit posts that are drafted
+
+![Editing post Feature](media/images/edit-post-feat.png?raw=true)
+
+- Users can delete posts that are drafted
+
+![Delete post Feature](media/images/delete-post-feature.png?raw=true)
+
+- Drafts Page
+
+![Drafts page](media/images/drafts-feat.png?raw=true)
+
+- Contact Feature
+
+![Contact Feature](media/images/contact-feature.png?raw=true)
+
+- Signed In message feature
+
+![Signed in Message](media/images/messages-signedin.png?raw=true) 
 
 **Future features**
 
