@@ -102,7 +102,7 @@ Django Messages are used to let user know on 'login/logout' status and on commen
 
 - Not able to screenshot but there is a snippet of JavaScipt code for Navigation to toggle close (if clicked) when user cliks outside of the navbar
 - Facebook login not entirely set up (At the moment, there is a bug, which does not allow login using Facebook, but it worked once before, so after trying, I decided to leave it there until I turn debug to False to see final effect)
-
+- Deleted Facebook code to be only regular login/register
 ![](media/images/fb-log-fail.png?raw=true)
 
 - User cannot comment if not logged in
@@ -130,12 +130,6 @@ This is the original, first idea of a layout ![](media/images/first_layout.png?r
 Second idea of a layout ![](media/images/final-layout.png?raw=true)
 
 Final idea of a layout ![](media/images/final-img.png?raw=true)
-
-## Bugs and issues
-
-One of the bugs appeared after trying to target the argument os reaching for the username and slug but in 2 different ways so this error got solvedwith the help of [this link](https://stackoverflow.com/questions/26537701/valueerror-dont-mix-args-and-kwargs-in-call-to-reverse)
-
-For fixing the bug of not shiwing contact form properly, i had help [here](https://stackoverflow.com/questions/44133562/django-add-placeholder-text-to-form-field)
 
 ## Browser Compatibility
 

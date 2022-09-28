@@ -90,10 +90,16 @@ The relationship between data models are straightforward, there is a User with a
 ![Database models scheme](media/images/user-stories-git.png?raw=true)
 ## Bugs 
 ### Fixed Bugs
+
 A 'favicon' error showing up in Chrome Developer Tools while Inspecting, resolved with code for HTML that uses element of 'link' for and empty 'href'.
 A smooth scroll was tried with JavaScript code, with a method of 'animate' which somehow did not work and after the idea of 'scroll-behavior: smooth;' in css for html element it worked better.
 
-I did not understand CRUD in practical sense, and making the post adding/editing/deleting made me understand much better.
+- One of the bugs appeared after trying to target the argument os reaching for the username and slug but in 2 different ways so this error got solvedwith the help of [this link](https://stackoverflow.com/questions/26537701/valueerror-dont-mix-args-and-kwargs-in-call-to-reverse)
+
+- For fixing the bug of not showing contact form properly, i had help [here](https://stackoverflow.com/questions/44133562/django-add-placeholder-text-to-form-field)
+
+- I did not understand CRUD in practical sense while submitting fist time - making the post adding/editing/deleting made me understand much better.
+
 I tried again on Comments but have not really made it work so i will have this for future consideration of features
 ### Unfixed bugs
 At the moment 'Facebook Login' is in the 'Login' page, instead on a 'SignUp Page', I cannot seem to find any videos about controlling 'allauth' templates, also, waiting until last moment to check if this if working.
