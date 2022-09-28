@@ -24,7 +24,7 @@ Edit post
 
 
 ### CSS3
-Image of the CSS3 validation shows an error in the '.blog' class (line 198) that specifies positioning of the blog elements which are rendered using Jinja (Django), and that includes image, date, title, author's name, likes and content of the post. The code for this styling is helping responsiveness, and works impeccable on different screen devices keeping a consistent layout and this is why I am keeping it this way. I will look more into better ways of doing this so there is no errors.
+Image of the CSS3 validation shows an error in the '.blog' class (line 198) that specifies positioning of the blog elements which are rendered using Jinja (Django), and that includes image, date, title, author's name, likes and content of the post. The code for this styling is helping responsiveness, and works impeccable on different screen devices keeping a consistent layout and this is why I decided to keep it this way. Edit: Also, this error is still there as the blog is majority of the layout so it is relevant i keep this working, so i leave it this way.
 ![CSS3 Validator](media/images/css-validation-error.png?raw=true)
 ### JavaScript Validator
 For validating JavaScript code [JSHint](https://jshint.com/) is used 

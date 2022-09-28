@@ -98,7 +98,7 @@ class Detail(View):
 class PostAdding(View):
     """ Creating view class """
     def get(self, request, *args, **kwargs):
-        """ A function to create posts """
+        """ A function to render form for adding posts """
         form = PostForm()
         context = {
             'form': form
