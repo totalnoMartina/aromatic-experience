@@ -32,7 +32,7 @@
             <div class="blog__card--image">
                 <!-- Image related to the blog post with a placeholder if no image selected -->
                 {% if "placeholder" in post.related_image.url %}
-                <img class="card-img-top" src="https://www.nicepng.com/png/full/104-1048864_engine-oil-png-background-image-cooking-oil-drop.png" alt="image placeholder for oils">
+                <img src="{{ MEDIA_URL }}oildrop.png" class="img-fluid" alt="placeholder">
                 {% else %}
                 <img class="card-img-top" src="{{ post.related_img.url }}" style="height: 250px;" alt="image related to the post">
                 {% endif %}

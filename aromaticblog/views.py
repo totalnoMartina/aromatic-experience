@@ -28,7 +28,6 @@ class UsersDraftPost(View):
             context = {
                 'drafts_list': drafts_list,
             }
-            print(drafts_list)
             return render(request, 'drafts.html', context)
 
 
