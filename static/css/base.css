@@ -237,7 +237,7 @@ button[type=submit]:hover {
 /* Landing page style */
 
 .blog-container {
-    width: 90%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     grid-auto-flow: dense;
