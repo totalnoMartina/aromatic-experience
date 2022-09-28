@@ -30,13 +30,19 @@ body {
 /* Button styles */
 
 button.primaryAction.btn__sign {
-    background-color: bisque;
+    background-color: bisque !important;
+    border-radius: 15%;
+    border-color: transparent;
+}
+
+button.secondaryAction.btn__sign {
+    background-color: bisque !important;
     border-radius: 15%;
     border-color: transparent;
 }
 
 button.primaryAction.btn__sign:hover {
-    background-color: lightcoral;
+    background-color: lightcoral !important;
     color: wheat;
 }
 

@@ -7,6 +7,13 @@
 text-align: center 
 }
 
+.form {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
 </style>
 {%endblock%}
 {% block content %}
@@ -14,8 +21,8 @@ text-align: center
 <form method="POST" action="#" class="form mb-2" enctype="multipart/form-data">
     {% csrf_token %}
     {{post}}
-    <button type="submit" class="btn__confirm border-0 rounded p-1">Confirm</button> |
-    <a class="btn rounded btn__del p-1" href="{% url 'draft_detail' slug=post.slug username=request.user.username %}">Cancel</a>
+    <button type="submit" class="btn__confirm border-0 rounded p-1 m-1">Confirm</button> |
+    <a class="btn rounded btn__del p-0 m-1" href="{% url 'draft_detail' slug=post.slug username=request.user.username %}">Cancel</a>
 
 </form>
 {% endblock %}
