@@ -18,6 +18,7 @@ html {
 /* Root style */
 body {
     width: 100%;
+    min-height: 100vh;
     background-color: var(--clr-primary--100);
     display: flex;
     flex-direction: column;
@@ -308,6 +309,37 @@ button[type=submit]:hover {
     margin-top: 1.5em;
 }
 
+/* Draft Detail page */
+
+.form__container {
+    -webkit-box-shadow: 0px 4px 16px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -3px rgba(0, 0, 0, 0.75);
+    background-color: green;
+    border-radius: 0.6em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 30rem;
+    padding: 1em 2em;
+}
+
+.form {
+    width: 100%;
+    background-color: beige;
+    margin: 0 auto;
+}
+
+.form div {
+    margin: 0 !important;
+}
+
+.form input,
+.form textarea {
+    90%;
+}
+
 /* Details - article style */
 
 .article {
@@ -388,6 +420,17 @@ button[type=submit]:hover {
 }
 
 /* Footer Styles  */
+
+.main__container {
+    margin-top: 10vh;
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 auto !important;
+    max-width: 100rem;
+}
 
 .footer__main {
     margin-top: 6vh;
