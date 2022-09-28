@@ -14,6 +14,7 @@ class ListOfPosts(View):
     def get(self, request, *args, **kwargs):
         post_list = Post.objects.all().filter(status=1).order_by('-created')
         return render(request, 'index.html', {'post_list': post_list})
+        
 
 
 class UsersDraftPost(View):
