@@ -6,7 +6,8 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-8 form__container">
+            <h1>Update Your Drafts</h1>
         <form method="POST" action="#" class="form mb-2" enctype="multipart/form-data">
             {% csrf_token %}
             {% for field in form %}

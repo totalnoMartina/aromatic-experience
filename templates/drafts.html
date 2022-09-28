@@ -1,8 +1,20 @@
 {% extends 'base.html' %}
-{% comment %} {% load static %} {% endcomment %}
+{% load static %}
+{% block extra_css %}
+<style>
+.draft__cards {
+    display:flex;
+}
+
+.blog__card {
+    max-width: 20rem;
+}
+
+</style>
+{%endblock%}
 {% block content %}
 
-<div class="container">
+<div class="container w-100 draft__cards">
 <div class="blog-container">
     {% for post in drafts_list %}
    <div class="blog">
@@ -39,5 +51,5 @@
     <!-- End post looping -->
     {% endfor %}
 
-</div>
+{% comment %} </div> {% endcomment %}
 {% endblock %}
