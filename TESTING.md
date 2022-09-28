@@ -3,9 +3,25 @@
 HTML5 and CSS3 documents have been validated using [Validator W3](https://validator.w3.org/)
 ### HTML5
 Index Page
-![Index Validator](media/images/index-validated.png?raw=true)
+![Index Validator](media/images/homepage-ar-validated-html.png?raw=true)
 Detail Page
-![Detail page Validator](media/images/detail-validated.png?raw=true)
+![Detail page Validator](media/images/detail-valid-html.png?raw=true)
+
+Add Post - draft
+![Add post page Validator](media/images/add-post-valid-html.png?raw=true)
+
+Edit post - drafts
+![Edit post page Validator](media/images/edit-draft-valid-html.png?raw=true)
+
+My Drafts
+![Drafts page Validator](media/images/drafts-valid-html.png?raw=true)
+
+Delete post - drafts
+![Delete posts page Validator](media/images/delete_post-valid-html.png?raw=true)
+
+Edit post
+![Edit post page Validator](media/images/edit-draft-valid-html.png?raw=true)
+
 
 ### CSS3
 Image of the CSS3 validation shows an error in the '.blog' class (line 198) that specifies positioning of the blog elements which are rendered using Jinja (Django), and that includes image, date, title, author's name, likes and content of the post. The code for this styling is helping responsiveness, and works impeccable on different screen devices keeping a consistent layout and this is why I am keeping it this way. I will look more into better ways of doing this so there is no errors.
