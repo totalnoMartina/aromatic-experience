@@ -13,11 +13,13 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'  # The page can be displayed in a frame of same origin
 
 ALLOWED_HOSTS = ['aromatic-martina.herokuapp.com', 'localhost']
+
+CSRF_TRUSTED_ORIGINS = ['aromatic-martina.herokuapp.com', 'aromatic-martina.herokuapp.com/accounts/']
 
 # Add Render.com URL to allowed hosts
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
@@ -34,7 +36,6 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.facebook',
     'crispy_forms',
     'django.contrib.staticfiles',
     'cloudinary_storage',
