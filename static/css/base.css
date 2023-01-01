@@ -327,12 +327,12 @@ button[type=submit]:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 35rem;
+    max-width: 29rem;
     padding: 1em 2em;
 }
 
 .form {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -342,7 +342,7 @@ button[type=submit]:hover {
 
 .form input,
 .form textarea {
-    width: 90%;
+    width: 60%;
 }
 
 .form input {
@@ -695,7 +695,7 @@ button[type=submit]:hover {
 @media all and (max-width: 495px) {
 
     .comments {
-        width: 100%;
+        width: 80%;
         margin: 0;
     }
 

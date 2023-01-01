@@ -20,6 +20,9 @@ class CommentForm(forms.ModelForm):
         """ A class for displaying body and name of a comment"""
         model = Comment
         fields = ('body', 'name', )
+        widgets = {
+          'body': forms.Textarea(attrs={'rows':15, 'cols':20}),
+        }
 
 
 class ContactUserForm(forms.ModelForm):
